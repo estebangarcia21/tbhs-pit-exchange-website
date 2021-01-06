@@ -1,0 +1,6 @@
+/*** Global Styles ***/
+@import "globals.css";
+@import "tailwind.css";
+
+/*** Custom TailwindCSS Styles ***/
+@import "custom/text-wrap.css";

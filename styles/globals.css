@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Rubik&display=swap");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Roboto:wght@400;700&display=swap");
 
 * {
     box-sizing: border-box;
@@ -15,5 +11,5 @@ label {
 
 p,
 a {
-    font-family: "Rubik", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
