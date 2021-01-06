@@ -14,8 +14,8 @@ export const StandardForm = ({
     children,
 }: StandardFormProps & Children) => {
     return (
-        <form className="flex flex-col shadow px-12 py-6 w-full max-w-md mb-2">
-            <h1 className="text-4xl font-extrabold py-2 mb-2">{title}</h1>
+        <form className="flex flex-col shadow px-12 py-8 w-full max-w-md mb-2 bg-white rounded-xl text-black">
+            <h1 className="text-4xl font-extrabold mb-2">{title}</h1>
 
             {children}
         </form>
