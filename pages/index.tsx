@@ -29,7 +29,7 @@ const Index = () => {
             </Head>
 
             <main>
-                <div className="flex flex-row flex-wrap justify-evenly p-12">
+                <div className="text-white flex flex-row flex-wrap justify-evenly p-12 bg-gradient-to-r from-indigo-500 to-blue-500">
                     <div className="flex flex-col h-auto justify-center mb-8 mr-5">
                         <animated.h1
                             style={createEntryAnimation(titleAnimationRef)}
@@ -40,7 +40,7 @@ const Index = () => {
 
                         <animated.p
                             style={createEntryAnimation(paragraphAnimationRef)}
-                            className="max-w-md"
+                            className="max-w-md lg:text-lg"
                         >
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Mollitia corrupti dolore qui illum asperiores
@@ -67,6 +67,60 @@ const Index = () => {
                             Create an Account
                         </StandardForm.Button>
                     </StandardForm>
+                </div>
+
+                <div className="text-center pt-8 px-8 space-y-4">
+                    <h1 className="font-bold text-5xl">Buy, Sell, Profit.</h1>
+
+                    <p className="text-gray-600 lg:text-lg">
+                        Sell your items through an intuitive yet easy to use
+                        dashboard where you can see real time biddings on your
+                        item.
+                    </p>
+                </div>
+
+                <div className="flex flex-row justify-center flex-wrap p-8">
+                    <div className="w-full max-w-sm shadow text-center">
+                        <div className="bg-green-300 p-4 rounded-t-sm text-xl">
+                            Stocks
+                        </div>
+
+                        <div className="flex flex-row my-2 justify-between px-4">
+                            <p>
+                                <span className="text-red-400">MKL</span> &rarr;
+                                FP$5
+                            </p>
+
+                            <p>0.152%</p>
+                        </div>
+
+                        <div className="flex flex-row my-2 justify-between px-4">
+                            <p>
+                                <span className="text-green-400">TBH</span>{" "}
+                                &rarr; FP$12
+                            </p>
+
+                            <p>2.358%</p>
+                        </div>
+
+                        <div className="flex flex-row my-2 justify-between px-4">
+                            <p>
+                                <span className="text-green-400">TBH</span>{" "}
+                                &rarr; FP$48
+                            </p>
+
+                            <p>1.012%</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p className="text-gray-600 md:wrap-text-30">
+                            Analyze your trades in real time. With a modalviewer
+                            Analyze your trades in real time. With a modalviewer
+                            Analyze your trades in real time. With a modalviewer
+                            Analyze your trades in real time. With a modalviewer
+                        </p>
+                    </div>
                 </div>
             </main>
         </div>
