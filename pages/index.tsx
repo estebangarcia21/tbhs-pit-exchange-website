@@ -1,7 +1,6 @@
 import { StandardForm } from "@App/components/forms/standard-form";
 import { useIndexAnimations } from "@App/components/pages/index/animations";
 import { useIndexStyles } from "@App/styles/pages";
-import { composeClassName } from "@App/utils/tailwind-css";
 import Head from "next/head";
 import { animated } from "react-spring";
 
