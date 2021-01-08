@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "generate": "graphql-codegen"
     },
     "dependencies": {
         "@play-when-visible/react-spring": "^1.0.5",
