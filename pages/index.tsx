@@ -1,26 +1,22 @@
-import { StandardForm } from "@App/components/lib/forms/standard-form";
+import { StandardForm } from "@App/components/forms/standard-form";
+import { useIndexAnimations } from "@App/components/pages/index/animations";
+import { useIndexStyles } from "@App/styles/pages";
+import { composeClassName } from "@App/utils/tailwind-css";
 import Head from "next/head";
-import { MutableRefObject, useRef } from "react";
-import { animated, useChain, useSpring } from "react-spring";
+import { animated } from "react-spring";
 
 const Index = () => {
-    const createEntryAnimation = (ref: MutableRefObject<undefined>) =>
-        useSpring({
-            from: {
-                opacity: 0,
-                transform: "translateX(-100px)",
-            },
-            to: {
-                opacity: 1,
-                transform: "translateX(0px)",
-            },
-            ref,
-        });
+    const { text, auctionText, header } = useIndexStyles();
 
-    const titleAnimationRef = useRef();
-    const paragraphAnimationRef = useRef();
-
-    useChain([titleAnimationRef, paragraphAnimationRef], [0, 0.35]);
+    const {
+        createEntryAnimation,
+        paragraphAnimationRef,
+        titleAnimationRef,
+        auctionTextEntryAnimation,
+        auctionTextEntryAnimationRef,
+        auctionsEntryAnimation,
+        auctionsEntryAnimationRef,
+    } = useIndexAnimations();
 
     return (
         <div>
@@ -70,19 +66,25 @@ const Index = () => {
                 </div>
 
                 <div className="text-center pt-8 px-8 space-y-4">
-                    <h1 className="font-bold text-5xl">Buy, Sell, Profit.</h1>
+                    <h1 className={header}>Buy, Sell, Profit.</h1>
 
-                    <p className="text-gray-600 lg:text-lg">
+                    <p className={text}>
                         Sell your items through an intuitive yet easy to use
                         dashboard where you can see real time biddings on your
                         item.
                     </p>
                 </div>
 
-                <div className="flex flex-row justify-center flex-wrap p-8">
-                    <div className="w-full max-w-sm shadow text-center">
-                        <div className="bg-green-300 p-4 rounded-t-sm text-xl">
-                            Stocks
+                <div
+                    ref={auctionsEntryAnimationRef}
+                    className="flex flex-row justify-center flex-wrap m-8 space-y-8 md:space-y-0 content-center"
+                >
+                    <animated.div
+                        style={auctionsEntryAnimation}
+                        className="w-full max-w-sm shadow text-center"
+                    >
+                        <div className="bg-gradient-to-r text-white to-indigo-500 from-blue-600 p-4 rounded-t-sm text-xl">
+                            <h1>Auctions</h1>
                         </div>
 
                         <div className="flex flex-row my-2 justify-between px-4">
@@ -111,15 +113,21 @@ const Index = () => {
 
                             <p>1.012%</p>
                         </div>
-                    </div>
+                    </animated.div>
 
-                    <div>
-                        <p className="text-gray-600 md:wrap-text-30">
-                            Analyze your trades in real time. With a modalviewer
-                            Analyze your trades in real time. With a modalviewer
-                            Analyze your trades in real time. With a modalviewer
-                            Analyze your trades in real time. With a modalviewer
-                        </p>
+                    <div
+                        ref={auctionTextEntryAnimationRef}
+                        className="h-auto flex flex-col justify-center"
+                    >
+                        <animated.div style={auctionTextEntryAnimation}>
+                            <p className={auctionText}>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Nihil quam sit vel culpa id
+                                dolores deserunt quo laboriosam eius sed qui
+                                natus voluptas tenetur, quibusdam ipsa veniam!
+                                Porro, quae vel.
+                            </p>
+                        </animated.div>
                     </div>
                 </div>
             </main>

@@ -13,7 +13,7 @@ export const StandardForm = ({
     children,
 }: StandardFormProps & Children) => {
     return (
-        <form className="flex flex-col shadow px-12 py-8 w-full max-w-md mb-2 bg-white rounded-xl text-black">
+        <form className="flex flex-col shadow px-10 py-8 w-full max-w-sm mb-2 rounded-md bg-white text-black">
             <h1 className="text-4xl font-extrabold mb-2">{title}</h1>
 
             {children}
@@ -33,12 +33,15 @@ StandardForm.Input = ({
 }: InputProps & Children) => {
     return (
         <>
-            <label htmlFor={htmlFor} className="font-bold text-xl">
+            {/* <label htmlFor={htmlFor} className="text-l font-medium">
                 {children}
-            </label>
+            </label> */}
             <input
                 id={htmlFor}
-                className={focusable("bg-gray-200 rounded-sm my-2 py-2 px-3.5")}
+                className={focusable(
+                    "border border-gray-300 rounded-sm my-2 py-2 px-3.5"
+                )}
+                placeholder={children.toString()}
                 type={type}
             />
         </>
@@ -60,7 +63,7 @@ StandardForm.Button = ({
             <button
                 type={type}
                 className={focusable(
-                    "bg-black rounded-sm mt-5 p-4 text-white text-center cursor-pointer hover:bg-gray-900"
+                    "bg-black rounded-sm mt-4 px-4 py-2.5 text-white text-center cursor-pointer hover:bg-gray-900"
                 )}
             >
                 {children}
