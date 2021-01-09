@@ -1,0 +1,11 @@
+query Me {
+    me {
+        id
+        email
+        password
+        minecraftAccount {
+            uuid
+            verificationToken
+        }
+    }
+}
