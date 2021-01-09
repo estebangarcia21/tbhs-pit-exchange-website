@@ -2,7 +2,7 @@ import { Children } from "@App/utils/children";
 import Link from "next/link";
 
 const focusable = (classValues: string) =>
-    `${classValues} focus:outline-none focus:ring transition focus:border-blue-200`;
+    `${classValues} focus:outline-none transition focus:border-blue-500`;
 
 interface StandardFormProps {
     title: string;
@@ -13,7 +13,7 @@ export const StandardForm = ({
     children,
 }: StandardFormProps & Children) => {
     return (
-        <form className="flex flex-col shadow px-10 py-8 w-full max-w-sm mb-2 rounded-md bg-white text-black">
+        <form className="flex flex-col shadow px-10 py-8 w-full max-w-sm rounded-md bg-white text-black">
             <h1 className="text-4xl font-extrabold mb-2">{title}</h1>
 
             {children}
@@ -33,9 +33,6 @@ StandardForm.Input = ({
 }: InputProps & Children) => {
     return (
         <>
-            {/* <label htmlFor={htmlFor} className="text-l font-medium">
-                {children}
-            </label> */}
             <input
                 id={htmlFor}
                 className={focusable(
