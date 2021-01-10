@@ -1,5 +1,5 @@
-import { Tab } from "@App/components/pages/index/tab";
-import { Transaction } from "@App/components/pages/index/transaction";
+import { Tab } from "@App/components/pages/index/Tab";
+import { Transaction } from "@App/components/pages/index/Transaction";
 import Head from "next/head";
 
 const Dashboard = () => {
