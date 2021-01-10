@@ -13,7 +13,7 @@ export const StandardForm = ({
     children,
 }: StandardFormProps & Children) => {
     return (
-        <form className="flex flex-col shadow px-10 py-8 w-full max-w-sm rounded-md bg-white text-black">
+        <form className="flex flex-col shadow px-10 py-8 w-full min-w-375 rounded-md bg-white text-black">
             <h1 className="text-4xl font-extrabold mb-2">{title}</h1>
 
             {children}
