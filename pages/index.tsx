@@ -4,7 +4,7 @@ import { useIndexCharts } from "@App/components/pages/index/useIndexCharts";
 import {
     UserAmountDocument,
     UserAmountQuery,
-} from "@App/generated/graphqlTypes";
+} from "@App/generated/graphql-types";
 import { API_URL } from "@App/utils/constants";
 import request from "graphql-request";
 import Head from "next/head";
