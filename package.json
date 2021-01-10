@@ -5,17 +5,12 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-<<<<<<< HEAD
         "start": "next start",
         "generate": "graphql-codegen"
-=======
-        "start": "next start"
->>>>>>> 61d22e1910c491041fa53b55e20d93a2600a52ca
     },
     "dependencies": {
         "@play-when-visible/react-spring": "^1.0.5",
         "autoprefixer": "^10.1.0",
-<<<<<<< HEAD
         "axios": "^0.21.1",
         "canvasjs-react-charts": "^1.0.5",
         "chart.js": "^2.9.4",
@@ -27,17 +22,10 @@
         "react": "17.0.1",
         "react-dom": "17.0.1",
         "react-query": "^3.5.11",
-=======
-        "next": "10.0.4",
-        "postcss": "^8.2.2",
-        "react": "17.0.1",
-        "react-dom": "17.0.1",
->>>>>>> 61d22e1910c491041fa53b55e20d93a2600a52ca
         "react-spring": "^8.0.27",
         "tailwindcss": "^2.0.2"
     },
     "devDependencies": {
-<<<<<<< HEAD
         "@graphql-codegen/cli": "^1.20.0",
         "@graphql-codegen/typescript-graphql-request": "^3.0.0",
         "@graphql-codegen/typescript-operations": "^1.17.13",
@@ -47,10 +35,6 @@
         "@types/node": "^14.14.20",
         "@types/react": "^17.0.0",
         "@types/react-query": "^1.1.2",
-=======
-        "@types/node": "^14.14.20",
-        "@types/react": "^17.0.0",
->>>>>>> 61d22e1910c491041fa53b55e20d93a2600a52ca
         "typescript": "^4.1.3"
     }
 }
