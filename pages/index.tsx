@@ -1,29 +1,17 @@
-import { StandardForm } from "@App/components/forms/standard-form";
-import { useIndexAnimations } from "@App/components/pages/index/animations";
+import { InformationCard } from "@App/components/pages/index/InformationCard";
+import { Navbar } from "@App/components/pages/index/Navbar";
+import { useIndexCharts } from "@App/components/pages/index/useIndexCharts";
 import {
     UserAmountDocument,
     UserAmountQuery,
 } from "@App/generated/graphql-types";
-import { useIndexStyles } from "@App/styles/pages";
 import { API_URL } from "@App/utils/constants";
-import { composeClassName as concatClassName } from "@App/utils/tailwind-css";
 import request from "graphql-request";
 import Head from "next/head";
 import { useQuery } from "react-query";
-import { animated } from "react-spring";
 
-const Index = ({ data: initialData }) => {
-    const { text, auctionText, header, navButton } = useIndexStyles();
-
-    const {
-        createEntryAnimation,
-        paragraphAnimationRef,
-        titleAnimationRef,
-        auctionTextEntryAnimation,
-        auctionTextEntryAnimationRef,
-        auctionsEntryAnimation,
-        auctionsEntryAnimationRef,
-    } = useIndexAnimations();
+const Index2 = ({ data: initialData }) => {
+    const { NetValueChart } = useIndexCharts();
 
     const { data } = useQuery<UserAmountQuery>("userAmount", getUserAmount, {
         initialData: initialData.userAmount,
@@ -35,157 +23,66 @@ const Index = ({ data: initialData }) => {
                 <title>The Blue Hats Market</title>
             </Head>
 
-            <main className="overflow-hidden">
-                <div className="bg-gradient-to-r from-indigo-500 to-blue-500">
-                    <nav className="h-16 bg-transparent mr-2">
-                        <ul className="flex flex-row justify-end flex-wrap content-center h-full">
-                            <li>
-                                <a className={navButton}>Log In</a>
-                            </li>
-                            <li>
-                                <a className={navButton}>Create an Account</a>
-                            </li>
-                        </ul>
-                    </nav>
+            <main>
+                <Navbar />
 
-                    <div className="text-white flex flex-row flex-wrap justify-evenly p-12">
-                        <div className="flex flex-col h-auto justify-center mb-8 mr-5">
-                            <animated.h1
-                                style={createEntryAnimation(titleAnimationRef)}
-                                className="text-7xl font-extrabold pb-4"
-                            >
-                                The Global <br /> Pit Market
-                            </animated.h1>
-
-                            <animated.p
-                                style={createEntryAnimation(
-                                    paragraphAnimationRef
-                                )}
-                                className="max-w-md lg:text-lg"
-                            >
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Mollitia corrupti dolore qui
-                                illum asperiores molestiae deserunt sapiente,
-                                consequatur facere, at numquam, necessitatibus
-                                quos cum? Ex adipisci rerum quae dolor hic.
-                            </animated.p>
-                        </div>
-
-                        <div className="hidden md:block">
-                            <StandardForm title="Log In">
-                                <StandardForm.Input htmlFor="email">
-                                    Email
-                                </StandardForm.Input>
-
-                                <StandardForm.Input
-                                    type="password"
-                                    htmlFor="password"
-                                >
-                                    Password
-                                </StandardForm.Input>
-
-                                <StandardForm.Button
-                                    type="submit"
-                                    href="/login"
-                                >
-                                    Login
-                                </StandardForm.Button>
-
-                                <StandardForm.Button href="/create-an-account">
-                                    Create an Account
-                                </StandardForm.Button>
-                            </StandardForm>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="py-10 px-7">
-                    <div className="text-center mt-5 flex flex-row flex-wrap justify-center font-bold">
-                        <div>
-                            <h1 className="text-xl">
-                                Trade With{" "}
-                                <span className="text-green-500">
-                                    {data.userAmount}
-                                </span>{" "}
-                                Players on the Market
-                            </h1>
-                        </div>
-
-                        <div className="w-full max-w-2xl shadow"></div>
-                    </div>
-
-                    <h1
-                        className={concatClassName(header)(
-                            "text-center tracking-wide m-5"
-                        )}
-                    >
-                        ···
+                <div className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-6">
+                    <h1 className="font-extrabold text-5xl md:text-6xl text-gray-900 mt-12">
+                        Trade For What You Want.
                     </h1>
 
-                    <div className="text-center space-y-4">
-                        <h1 className={header}>Buy, Sell, and Profit.</h1>
+                    <h2 className="text-xl text-gray-600 font-medium my-2">
+                        Join the market that{" "}
+                        <span className="text-green-600">
+                            {data.userAmount}
+                        </span>{" "}
+                        players are trading with through a{" "}
+                        <span className="text-blue-600">
+                            simple and intuitive
+                        </span>{" "}
+                        dashboard.
+                    </h2>
 
-                        <p className={text}>
-                            Sell your items through an intuitive yet easy to use
-                            dashboard where you can see real time biddings on
-                            your item.
-                        </p>
+                    <div className="my-8 flex flex-row flex-wrap justify-center xl:justify-between">
+                        <InformationCard
+                            title="Keep Track of Your Trades"
+                            gradientVariants="from-lightBlue-400 to-indigo-500"
+                        >
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Qui vero numquam perspiciatis libero odit.
+                            Random Stuff.
+                        </InformationCard>
+
+                        <InformationCard
+                            title="Monitor Your Net Income"
+                            gradientVariants="from-green-400 to-cyan-500"
+                        >
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Qui vero numquam perspiciatis libero odit.
+                            Random Stuff.
+                        </InformationCard>
+
+                        <InformationCard
+                            title="Manage Your Sales"
+                            gradientVariants="from-orange-400 to-pink-500"
+                        >
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Qui vero numquam perspiciatis libero odit.
+                            Random Stuff.
+                        </InformationCard>
                     </div>
 
-                    <div
-                        ref={auctionsEntryAnimationRef}
-                        className="flex flex-row justify-center flex-wrap my-8 space-y-8 md:space-y-0 content-center"
-                    >
-                        <animated.div
-                            style={auctionsEntryAnimation}
-                            className="w-full max-w-sm shadow text-center"
-                        >
-                            <div className="bg-gradient-to-r text-white to-indigo-500 from-blue-600 p-4 rounded-t-sm text-xl">
-                                <h1>Auctions</h1>
-                            </div>
+                    <h1 className="text-4xl font-bold text-gray-900">
+                        Visualize Your Data
+                    </h1>
 
-                            <div className="flex flex-row my-2 justify-between px-4">
-                                <p>
-                                    <span className="text-red-400">MKL</span>{" "}
-                                    &rarr; FP$5
-                                </p>
+                    <h2 className="text-xl text-gray-600 font-medium my-2">
+                        Visualize your trades with easy to understand graphs to
+                        fully understand your trade history.
+                    </h2>
 
-                                <p>0.152%</p>
-                            </div>
-
-                            <div className="flex flex-row my-2 justify-between px-4">
-                                <p>
-                                    <span className="text-green-400">TBH</span>{" "}
-                                    &rarr; FP$12
-                                </p>
-
-                                <p>2.358%</p>
-                            </div>
-
-                            <div className="flex flex-row my-2 justify-between px-4">
-                                <p>
-                                    <span className="text-green-400">TBH</span>{" "}
-                                    &rarr; FP$48
-                                </p>
-
-                                <p>1.012%</p>
-                            </div>
-                        </animated.div>
-
-                        <div
-                            ref={auctionTextEntryAnimationRef}
-                            className="h-auto flex flex-col justify-center"
-                        >
-                            <animated.div style={auctionTextEntryAnimation}>
-                                <p className={auctionText}>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Nihil quam sit vel culpa
-                                    id dolores deserunt quo laboriosam eius sed
-                                    qui natus voluptas tenetur, quibusdam ipsa
-                                    veniam! Porro, quae vel.
-                                </p>
-                            </animated.div>
-                        </div>
+                    <div className="my-6 mb-24">
+                        <NetValueChart />
                     </div>
                 </div>
             </main>
@@ -209,4 +106,4 @@ export const getStaticProps = async () => {
 const getUserAmount = async () =>
     await request<UserAmountQuery>(API_URL, UserAmountDocument);
 
-export default Index;
+export default Index2;
