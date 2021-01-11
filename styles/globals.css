@@ -10,6 +10,7 @@ label {
 }
 
 p,
-a {
+a,
+span {
     font-family: "Roboto", sans-serif;
 }
