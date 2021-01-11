@@ -1,16 +1,17 @@
 import { InformationCard } from "@App/components/pages/index/InformationCard";
 import { Navbar } from "@App/components/pages/index/Navbar";
 import { useIndexCharts } from "@App/components/pages/index/useIndexCharts";
+import { useIndexStyles } from "@App/components/pages/index/useIndexStyles";
 import {
     UserAmountDocument,
     UserAmountQuery,
 } from "@App/generated/graphql-types";
-import { API_URL } from "@App/utils/constants";
-import request from "graphql-request";
+import { serverClient } from "@App/utils/server-client";
 import Head from "next/head";
 import { useQuery } from "react-query";
 
 const Index2 = ({ data: initialData }) => {
+    const { Section, Title, Subtitle } = useIndexStyles();
     const { NetValueChart } = useIndexCharts();
 
     const { data } = useQuery<UserAmountQuery>("userAmount", getUserAmount, {
@@ -23,7 +24,7 @@ const Index2 = ({ data: initialData }) => {
                 <title>The Blue Hats Market</title>
             </Head>
 
-            <main>
+            <main className="dark:bg-gray-900">
                 <Navbar />
 
                 <div className="max-w-screen-lg xl:max-w-screen-xl mx-auto px-6">
@@ -31,17 +32,18 @@ const Index2 = ({ data: initialData }) => {
                         Trade For What You Want.
                     </h1>
 
-                    <h2 className="text-xl text-gray-600 font-medium my-2">
-                        Join the market that{" "}
+                    <Subtitle>
+                        Join the website that{" "}
                         <span className="text-green-600">
                             {data.userAmount}
                         </span>{" "}
-                        players are trading with through a{" "}
+                        players from The Hypixel Pit are using to trade with
+                        through a{" "}
                         <span className="text-blue-600">
                             simple and intuitive
                         </span>{" "}
                         dashboard.
-                    </h2>
+                    </Subtitle>
 
                     <div className="my-8 flex flex-row flex-wrap justify-center xl:justify-between">
                         <InformationCard
@@ -72,14 +74,31 @@ const Index2 = ({ data: initialData }) => {
                         </InformationCard>
                     </div>
 
-                    <h1 className="text-4xl font-bold text-gray-900">
-                        Visualize Your Data
-                    </h1>
+                    <Title>Find Oppurtinites to Sell Your Items</Title>
 
-                    <h2 className="text-xl text-gray-600 font-medium my-2">
-                        Visualize your trades with easy to understand graphs to
-                        fully understand your trade history.
-                    </h2>
+                    <Section>
+                        <div className="flex flex-row">
+                            <div className="w-1/2">
+                                <Subtitle>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Possimus blanditiis
+                                    tempore nihil adipisci? Dolorem similique
+                                    voluptate dolores est, facilis, esse
+                                    voluptatum veritatis qui fuga expedita animi
+                                    harum tempora, repellendus natus!
+                                </Subtitle>
+                            </div>
+                        </div>
+                    </Section>
+
+                    <Section>
+                        <Title>Visualize Your Results</Title>
+
+                        <Subtitle>
+                            Visualize your trades with easy to understand graphs
+                            to fully understand your trade history.
+                        </Subtitle>
+                    </Section>
 
                     <div className="my-6 mb-24">
                         <NetValueChart />
@@ -104,6 +123,6 @@ export const getStaticProps = async () => {
 };
 
 const getUserAmount = async () =>
-    await request<UserAmountQuery>(API_URL, UserAmountDocument);
+    await serverClient.request<UserAmountQuery>(UserAmountDocument);
 
 export default Index2;
