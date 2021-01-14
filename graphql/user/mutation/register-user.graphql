@@ -1,0 +1,9 @@
+mutation RegisterUser($email: String!, $password: String!) {
+    registerUser(data: { email: $email, password: $password }) {
+        successful
+        error {
+            object
+            message
+        }
+    }
+}
