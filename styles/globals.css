@@ -5,12 +5,13 @@
 }
 
 h1,
+h2,
 label {
     font-family: "Inter", sans-serif;
 }
 
 p,
 a,
-span {
+li {
     font-family: "Roboto", sans-serif;
 }
