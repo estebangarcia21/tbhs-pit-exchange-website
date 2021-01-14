@@ -123,6 +123,17 @@ export type LoginMutation = { login: (
     & { error?: Maybe<Pick<AuthorizationError, 'object' | 'message'>> }
   ) };
 
+export type RegisterUserMutationVariables = Exact<{
+  email: Scalars['String'];
+  password: Scalars['String'];
+}>;
+
+
+export type RegisterUserMutation = { registerUser: (
+    Pick<AuthResponse, 'successful'>
+    & { error?: Maybe<Pick<AuthorizationError, 'object' | 'message'>> }
+  ) };
+
 export type ResetPasswordMutationVariables = Exact<{
   email: Scalars['String'];
 }>;
@@ -144,6 +155,17 @@ export type UserAmountQuery = Pick<Query, 'userAmount'>;
 export const LoginDocument = gql`
     mutation Login($email: String!, $password: String!) {
   login(data: {email: $email, password: $password}) {
+    successful
+    error {
+      object
+      message
+    }
+  }
+}
+    `;
+export const RegisterUserDocument = gql`
+    mutation RegisterUser($email: String!, $password: String!) {
+  registerUser(data: {email: $email, password: $password}) {
     successful
     error {
       object
@@ -181,6 +203,9 @@ export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = 
   return {
     Login(variables: LoginMutationVariables, requestHeaders?: Headers): Promise<LoginMutation> {
       return withWrapper(() => client.request<LoginMutation>(print(LoginDocument), variables, requestHeaders));
+    },
+    RegisterUser(variables: RegisterUserMutationVariables, requestHeaders?: Headers): Promise<RegisterUserMutation> {
+      return withWrapper(() => client.request<RegisterUserMutation>(print(RegisterUserDocument), variables, requestHeaders));
     },
     ResetPassword(variables: ResetPasswordMutationVariables, requestHeaders?: Headers): Promise<ResetPasswordMutation> {
       return withWrapper(() => client.request<ResetPasswordMutation>(print(ResetPasswordDocument), variables, requestHeaders));
