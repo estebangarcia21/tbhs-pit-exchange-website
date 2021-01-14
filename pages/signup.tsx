@@ -9,13 +9,12 @@ import { Footer } from "@App/components/global/Footer";
 import { Content, MainContent } from "@App/components/global/Layout";
 import { Navbar } from "@App/components/global/Navbar";
 import {
-    LoginDocument,
-    LoginMutation,
-    LoginMutationVariables,
+    RegisterUserDocument,
+    RegisterUserMutation,
+    RegisterUserMutationVariables,
 } from "@App/generated/graphql-types";
 import { serverClient } from "@App/utils/server-client";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -23,24 +22,29 @@ import { useForm } from "react-hook-form";
 interface FormInputs {
     email: string;
     password: string;
+    confirmPassword: string;
 }
 
-const Login = () => {
+const Signup = () => {
     const router = useRouter();
 
-    const { register, handleSubmit, errors } = useForm<FormInputs>();
-    const [loginResponse, setLoginResponse] = useState<LoginMutation>();
+    const { register, handleSubmit, errors, watch } = useForm<FormInputs>();
+    const [loginResponse, setLoginResponse] = useState<RegisterUserMutation>();
 
-    const onSubmit = async ({ email, password }: FormInputs) => {
+    const onSubmit = async ({
+        email,
+        password,
+        confirmPassword,
+    }: FormInputs) => {
         const data = await serverClient.request<
-            LoginMutation,
-            LoginMutationVariables
-        >(LoginDocument, {
+            RegisterUserMutation,
+            RegisterUserMutationVariables
+        >(RegisterUserDocument, {
             email,
             password,
         });
 
-        if (data.login.successful) {
+        if (data.registerUser.successful) {
             router.push("/dashboard");
         } else {
             setLoginResponse(data);
@@ -50,7 +54,7 @@ const Login = () => {
     return (
         <div>
             <Head>
-                <title>Login</title>
+                <title>Sign Up</title>
             </Head>
 
             <Content>
@@ -59,7 +63,7 @@ const Login = () => {
                 <MainContent>
                     <div className="mx-auto max-w-xl">
                         <StandardForm
-                            title="Login"
+                            title="Sign Up"
                             handleSubmit={handleSubmit(onSubmit)}
                         >
                             <StandardForm.Input
@@ -72,10 +76,15 @@ const Login = () => {
                                 Email
                             </StandardForm.Input>
 
-                            {loginResponse?.login.error.object === "email" &&
+                            {loginResponse?.registerUser.error.object ===
+                                "email" &&
                                 noErrors(errors) && (
                                     <span className="text-xs text-red-500">
-                                        * {loginResponse?.login.error.message}
+                                        *{" "}
+                                        {
+                                            loginResponse?.registerUser.error
+                                                .message
+                                        }
                                     </span>
                                 )}
 
@@ -92,31 +101,54 @@ const Login = () => {
                                 Password
                             </StandardForm.Input>
 
-                            {loginResponse?.login.error.object === "password" &&
+                            {loginResponse?.registerUser.error.object ===
+                                "password" &&
                                 noErrors(errors) && (
                                     <span className="text-xs text-red-500">
-                                        * {loginResponse?.login.error.message}
+                                        *{" "}
+                                        {
+                                            loginResponse?.registerUser.error
+                                                .message
+                                        }
                                     </span>
                                 )}
 
-                            {errors.password && (
+                            {errors.password ? (
                                 <span className="text-xs text-red-500">
                                     * {errors.password.message}
+                                </span>
+                            ) : (
+                                !loginResponse && (
+                                    <span className="text-xs text-gray-600">
+                                        Must be between 4 and 32 characters long
+                                    </span>
+                                )
+                            )}
+
+                            <StandardForm.Input
+                                htmlFor="confirmPassword"
+                                type="password"
+                                inRef={register({
+                                    ...requiredFieldValidation,
+                                    ...passwordValidation,
+                                    validate: value =>
+                                        value === watch("password") ||
+                                        "Password do not match",
+                                })}
+                            >
+                                Confirm Password
+                            </StandardForm.Input>
+
+                            {errors.confirmPassword && (
+                                <span className="text-xs text-red-500">
+                                    * {errors.confirmPassword.message}
                                 </span>
                             )}
 
                             <StandardForm.Button type="submit">
-                                Login
+                                Sign Up
                             </StandardForm.Button>
                         </StandardForm>
-
-                        <div className="flex flex-row justify-center">
-                            <Link href="/login/reset-password">
-                                <a className="text-gray-500 transition hover:text-gray-600">
-                                    Forgot Password?
-                                </a>
-                            </Link>
-                        </div>
                     </div>
                 </MainContent>
 
@@ -126,4 +158,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;
