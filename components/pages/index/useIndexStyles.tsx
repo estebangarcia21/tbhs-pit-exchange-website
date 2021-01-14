@@ -12,8 +12,13 @@ const Subtitle = withChildren(({ children }) => {
     return <p className="text-xl text-gray-600 font-medium my-2">{children}</p>;
 });
 
+const SectionHalfContainer = withChildren(({ children }) => {
+    return <div className="w-1/2">{children}</div>;
+});
+
 export const useIndexStyles = () => ({
     Section,
     Title,
     Subtitle,
+    SectionHalfContainer,
 });
