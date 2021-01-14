@@ -44,6 +44,10 @@ const NetValueChart = () => {
                 ],
             },
             options: {
+                animation: {
+                    duration: 750,
+                    easing: "easeOutCubic",
+                },
                 scales: {
                     yAxes: [
                         {
