@@ -1,28 +1,6 @@
 import { useDashboardCharts } from "@App/components/pages/dashboard/useDashboardCharts";
 import Head from "next/head";
-
-const Card = ({ title, __inject }: { title?: string; __inject?: string }) => {
-    return (
-        <figure
-            className={`flex flex-col bg-white shadow-lg rounded-md py-4 px-6 ${__inject}`}
-        >
-            <div className="w-full flex flex-row">
-                <p className="text-xl font-semibold">
-                    {title ? title : "Net Value"}
-                </p>
-            </div>
-
-            <div className="flex h-40 flex-col text-center justify-center">
-                <h1 className="font-bold text-4xl">
-                    32
-                    <span className="text-base align-top">FPB</span>
-                </h1>
-
-                <h2 className="font-medium text-2xl">IN &darr;</h2>
-            </div>
-        </figure>
-    );
-};
+import Image from "next/image";
 
 const Dashboard = () => {
     const { NetValueChart } = useDashboardCharts();
@@ -34,18 +12,67 @@ const Dashboard = () => {
             </Head>
 
             <main>
-                <div className="flex flex-row justify-center">
-                    <div className="max-w-screen-lg w-full grid gap-5 m-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                        <Card title="Trade Requests" __inject="row-span-3" />
-                        <Card __inject="col-span-2" />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card __inject="col-span-3" />
-                        <Card />
-                        <Card />
-                        <Card />
+                <div className="flex flex-row">
+                    <aside className="w-72 min-h-screen sticky top-0 bg-dark-blue-gray">
+                        <div className="flex flex-col">
+                            <img
+                                className="rounded-full w-24 h-24 my-5 mx-auto"
+                                src="/images/pfp.jpg"
+                            />
+
+                            <h1 className="font-semibold text-white text-center">
+                                Stevemmmmm
+                            </h1>
+
+                            <div></div>
+                        </div>
+                    </aside>
+
+                    <div className="flex flex-col w-full min-h-screen bg-gray-100">
+                        <header className="w-full h-56 bg-white p-12 relative">
+                            <h1 className="font-bold text-4xl">
+                                Weekly Summary
+                            </h1>
+
+                            <h2 className="mt-1">
+                                A summary of your weekly trading
+                                accomplishments.
+                            </h2>
+
+                            <div className="absolute bottom-0">
+                                <div className="flex flex-row space-x-10">
+                                    <div className="w-max cursor-pointer">
+                                        <h1 className="mb-2 px-2 font-medium">
+                                            Overall
+                                        </h1>
+
+                                        <div className="h-0.5 bg-cyan-500" />
+                                    </div>
+
+                                    <div className="w-max cursor-pointer">
+                                        <h1 className="mb-2 px-2 font-medium text-gray-500">
+                                            Trades In
+                                        </h1>
+
+                                        <div className="h-0.5 bg-cyan-500 hidden" />
+                                    </div>
+
+                                    <div className="w-max cursor-pointer">
+                                        <h1 className="mb-2 px-2 font-medium text-gray-500">
+                                            Trades Out
+                                        </h1>
+
+                                        <div className="h-0.5 bg-cyan-500 hidden" />
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div>
+                            <div className="my-5">
+                                <div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
