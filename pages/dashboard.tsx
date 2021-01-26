@@ -2,6 +2,7 @@ import { useDashboardCharts } from "@App/components/pages/dashboard/useDashboard
 import { withChildren } from "@App/utils/children";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 type State = "Overview" | "Trades Out" | "Trades In";
@@ -38,8 +39,8 @@ const Dashboard = () => {
 
       <main>
         <div className="flex flex-row">
-          <aside className="w-72 min-h-screen sticky py-12 px-6 top-0 bg-gradient-to-b from-gray-50 to-gray-100 border border-r border-gray-200">
-            <div className="flex flex-col">
+          <aside className="w-72 min-h-screen sticky pt-12 pb-6 px-6 top-0 bg-gradient-to-b from-gray-50 to-gray-100 border border-r border-gray-200">
+            <div className="flex flex-col h-full">
               <img
                 className="rounded w-20 h-20 mx-auto mb-5"
                 src="https://crafatar.com/avatars/066a5000-7852-4871-8ad1-10861a90f0fd"
@@ -67,10 +68,23 @@ const Dashboard = () => {
                   Economy News
                 </li>
               </ul>
+
+              <div className="mt-auto">
+                <Link href="/dashboad">
+                  <a className="inline-block text-center mb-3 py-2 w-full text-black border border-black rounded-sm transition hover:bg-gray-900 hover:text-white">
+                    View Trades
+                  </a>
+                </Link>
+                <Link href="/dashboad">
+                  <a className="inline-block text-center py-2 w-full bg-black rounded-sm transition hover:bg-gray-900 text-white">
+                    Create a Trade
+                  </a>
+                </Link>
+              </div>
             </div>
           </aside>
 
-          <div className="flex flex-col w-full min-h-screen bg-gray-100">
+          <div className="flex flex-col min-h-screen bg-gray-100">
             <header className="w-full bg-white p-12 pb-0 relative space-y-7">
               <div>
                 <h1 className="font-bold text-4xl text-gray-900">
