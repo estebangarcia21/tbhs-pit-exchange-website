@@ -1,21 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Roboto:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 
 * {
     box-sizing: border-box;
 }
 
 h1,
-h2,
-label {
-    font-family: "Inter", sans-serif;
-    /* font-family: "Montserrat", sans-serif; */
+h2 {
+    font-family: "Roboto", sans-serif;
+}
+
+h3,
+label,
+a,
+button {
+    font-family: "Open sans", sans-serif;
 }
 
 p,
-a,
 li {
-    font-family: "Roboto", sans-serif;
-    /* font-family: "Inter", sans-serif; */
-    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Open sans", sans-serif;
 }

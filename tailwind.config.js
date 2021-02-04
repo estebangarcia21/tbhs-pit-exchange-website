@@ -13,6 +13,7 @@ module.exports = {
             cyan: "#22d3ee",
             "cyan-500": "#06b6d4",
             "dark-blue-gray": "#39414e",
+            "purple-blue": "#4B36F8",
         },
     },
 };
