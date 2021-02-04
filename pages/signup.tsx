@@ -131,7 +131,7 @@ const Signup = () => {
                                 inRef={register({
                                     ...requiredFieldValidation,
                                     ...passwordValidation,
-                                    validate: value =>
+                                    validate: (value) =>
                                         value === watch("password") ||
                                         "Password do not match",
                                 })}

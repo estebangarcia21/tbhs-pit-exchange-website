@@ -86,7 +86,7 @@ StandardForm.Error = ({ error }: ErrorProps) => {
 };
 
 export const noErrors = (errors: DeepMap<unknown, FieldError>) =>
-    !Object.values(errors).some(k => k !== null);
+    !Object.values(errors).some((k) => k !== null);
 
 export const emailValidationRule: ValidationRule<RegExp> = {
     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
