@@ -1,6 +1,6 @@
-import { Tab } from "@App/components/pages/index/Tab";
-import { Transaction } from "@App/components/pages/index/Transaction";
-import { useSessionAuth } from "@App/utils/hooks/useSessionAuth";
+import { Tab } from "components/pages/index/Tab";
+import { Transaction } from "components/pages/index/Transaction";
+import { useSessionAuth } from "utils/hooks/useSessionAuth";
 import Head from "next/head";
 
 const Dashboard = () => {

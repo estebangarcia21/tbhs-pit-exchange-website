@@ -1,4 +1,4 @@
-import { withChildren } from "@App/utils/children";
+import { withChildren } from "utils/children";
 import Link from "next/link";
 
 const Section = withChildren<{ title: string }>(({ title, children }) => {

@@ -1,18 +1,18 @@
-import { InformationCard } from "@App/components/pages/index/InformationCard";
-import { Navbar } from "@App/components/global/Navbar";
-import { useIndexCharts } from "@App/components/pages/index/useIndexCharts";
-import { useIndexStyles } from "@App/components/pages/index/useIndexStyles";
+import { InformationCard } from "components/pages/index/InformationCard";
+import { Navbar } from "components/global/Navbar";
+import { useIndexCharts } from "components/pages/index/useIndexCharts";
+import { useIndexStyles } from "components/pages/index/useIndexStyles";
 import {
     Query,
     UserAmountDocument,
     UserAmountQuery,
-} from "@App/generated/graphql-types";
-import { serverClient } from "@App/utils/server-client";
+} from "generated/graphql-types";
+import { serverClient } from "utils/server-client";
 import Head from "next/head";
 import { useQuery } from "react-query";
 import { GetStaticProps } from "next";
-import { Footer } from "@App/components/global/Footer";
-import { Content, MainContent } from "@App/components/global/Layout";
+import { Footer } from "components/global/Footer";
+import { Content, MainContent } from "components/global/Layout";
 
 interface PageProps {
     userAmount: Pick<Query, "userAmount">;

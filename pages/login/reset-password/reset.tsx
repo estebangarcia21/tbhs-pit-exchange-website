@@ -2,7 +2,7 @@ import {
     passwordValidation,
     requiredFieldValidation,
     StandardForm,
-} from "@App/components/forms/StandardForm";
+} from "components/forms/StandardForm";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";

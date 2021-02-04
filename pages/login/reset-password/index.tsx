@@ -3,13 +3,13 @@ import {
     noErrors,
     requiredFieldValidation,
     StandardForm,
-} from "@App/components/forms/StandardForm";
+} from "components/forms/StandardForm";
 import {
     ResetPasswordDocument,
     ResetPasswordMutation,
     ResetPasswordMutationVariables,
-} from "@App/generated/graphql-types";
-import { serverClient } from "@App/utils/server-client";
+} from "generated/graphql-types";
+import { serverClient } from "utils/server-client";
 import Head from "next/head";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

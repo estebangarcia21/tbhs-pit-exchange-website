@@ -1,4 +1,4 @@
-import "@App/styles/index.css";
+import "styles/index.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();

@@ -1,8 +1,4 @@
-import {
-    MeDocument,
-    MeQuery,
-    MeQueryVariables,
-} from "@App/generated/graphql-types";
+import { MeDocument, MeQuery, MeQueryVariables } from "generated/graphql-types";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useQuery } from "react-query";

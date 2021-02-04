@@ -1,4 +1,4 @@
-import { Children } from "@App/utils/children";
+import { Children } from "utils/children";
 
 interface TransactionProps {
     provider: string;

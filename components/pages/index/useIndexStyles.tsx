@@ -1,18 +1,18 @@
-import { withChildren } from "@App/utils/children";
+import { Children } from "utils/children";
 
-const Section = withChildren(({ children }) => {
+const Section = ({ children }: Children) => {
     return <section className="mb-5">{children}</section>;
-});
+};
 
-const Title = withChildren(({ children }) => {
+const Title = ({ children }: Children) => {
     return <h1 className="text-4xl font-bold text-gray-900">{children}</h1>;
 });
 
-const Subtitle = withChildren(({ children }) => {
+const Subtitle = ({ children }: Children) => {
     return <p className="text-xl text-gray-600 font-medium my-2">{children}</p>;
 });
 
-const SectionHalfContainer = withChildren(({ children }) => {
+const SectionHalfContainer = ({ children }: Children) => {
     return <div className="w-1/2">{children}</div>;
 });
 

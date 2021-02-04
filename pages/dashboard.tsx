@@ -1,5 +1,5 @@
-import { useDashboardCharts } from "@App/components/pages/dashboard/useDashboardCharts";
-import { Children } from "@App/utils/children";
+import { useDashboardCharts } from "components/pages/dashboard/useDashboardCharts";
+import { Children } from "utils/children";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
