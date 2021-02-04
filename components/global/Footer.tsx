@@ -1,7 +1,11 @@
-import { withChildren } from "utils/children";
+import { Children } from "utils/children";
 import Link from "next/link";
 
-const Section = withChildren<{ title: string }>(({ title, children }) => {
+interface SectionProps extends Children {
+    title: string;
+}
+
+const Section = ({ title, children }: SectionProps) => {
     return (
         <ul className="flex flex-col mb-5 sm:mx-10">
             <li className="text-lg font-bold">{title}</li>
@@ -9,9 +13,13 @@ const Section = withChildren<{ title: string }>(({ title, children }) => {
             {children}
         </ul>
     );
-});
+};
 
-const Item = withChildren<{ href: string }>(({ href, children }) => {
+interface ItemProps extends Children {
+    href: string;
+}
+
+const Item = ({ href, children }: ItemProps) => {
     return (
         <Link href={href}>
             <a className="text-gray-600 w-max transition hover:text-blue-600">
@@ -19,7 +27,7 @@ const Item = withChildren<{ href: string }>(({ href, children }) => {
             </a>
         </Link>
     );
-});
+};
 
 export const Footer = () => {
     return (
@@ -29,7 +37,6 @@ export const Footer = () => {
                     <Item href="/">Contact Support</Item>
                 </Section>
                 <Section title="Privacy">
-                    <Item href="/">Your Data</Item>
                     <Item href="/">Cookie Policy</Item>
                 </Section>
 
