@@ -14,11 +14,8 @@ h2 {
 h3,
 label,
 a,
-button {
-    font-family: "Open sans", sans-serif;
-}
-
-p,
-li {
+button,
+li,
+p {
     font-family: "Open sans", sans-serif;
 }
