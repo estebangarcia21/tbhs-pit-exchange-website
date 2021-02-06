@@ -1,4 +1,5 @@
 import { GraphQLClient } from 'graphql-request';
+import { HeadersInit } from 'graphql-request/dist/types.dom';
 import { print } from 'graphql';
 import gql from 'graphql-tag';
 export type Maybe<T> = T | null;
@@ -150,6 +151,11 @@ export type ResetPasswordResponse = {
   errorMessage?: Maybe<Scalars['String']>;
 };
 
+export type ContentsFragment = (
+  Pick<InventoryItem, 'slot' | 'itemId' | 'dye'>
+  & { enchants: Array<Pick<Enchant, 'name' | 'description' | 'level'>> }
+);
+
 export type LoginMutationVariables = Exact<{
   email: Scalars['String'];
   password: Scalars['String'];
@@ -184,12 +190,30 @@ export type MeQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type MeQuery = { me?: Maybe<Pick<User, 'id'>> };
 
+export type PitInventoryQueryVariables = Exact<{
+  uuid: Scalars['String'];
+}>;
+
+
+export type PitInventoryQuery = { pitInventory?: Maybe<{ player: Array<ContentsFragment>, enderChest: Array<ContentsFragment>, stash: Array<ContentsFragment>, mysticWell?: Maybe<Array<ContentsFragment>> }> };
+
 export type UserAmountQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type UserAmountQuery = Pick<Query, 'userAmount'>;
 
-
+export const ContentsFragmentDoc = gql`
+    fragment Contents on InventoryItem {
+  slot
+  itemId
+  dye
+  enchants {
+    name
+    description
+    level
+  }
+}
+    `;
 export const LoginDocument = gql`
     mutation Login($email: String!, $password: String!) {
   login(data: {email: $email, password: $password}) {
@@ -227,6 +251,24 @@ export const MeDocument = gql`
   }
 }
     `;
+export const PitInventoryDocument = gql`
+    query PitInventory($uuid: String!) {
+  pitInventory(uuid: $uuid) {
+    player {
+      ...Contents
+    }
+    enderChest {
+      ...Contents
+    }
+    stash {
+      ...Contents
+    }
+    mysticWell {
+      ...Contents
+    }
+  }
+}
+    ${ContentsFragmentDoc}`;
 export const UserAmountDocument = gql`
     query UserAmount {
   userAmount
@@ -239,19 +281,22 @@ export type SdkFunctionWrapper = <T>(action: () => Promise<T>) => Promise<T>;
 const defaultWrapper: SdkFunctionWrapper = sdkFunction => sdkFunction();
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
-    Login(variables: LoginMutationVariables, requestHeaders?: Headers): Promise<LoginMutation> {
+    Login(variables: LoginMutationVariables, requestHeaders?: HeadersInit): Promise<LoginMutation> {
       return withWrapper(() => client.request<LoginMutation>(print(LoginDocument), variables, requestHeaders));
     },
-    RegisterUser(variables: RegisterUserMutationVariables, requestHeaders?: Headers): Promise<RegisterUserMutation> {
+    RegisterUser(variables: RegisterUserMutationVariables, requestHeaders?: HeadersInit): Promise<RegisterUserMutation> {
       return withWrapper(() => client.request<RegisterUserMutation>(print(RegisterUserDocument), variables, requestHeaders));
     },
-    ResetPassword(variables: ResetPasswordMutationVariables, requestHeaders?: Headers): Promise<ResetPasswordMutation> {
+    ResetPassword(variables: ResetPasswordMutationVariables, requestHeaders?: HeadersInit): Promise<ResetPasswordMutation> {
       return withWrapper(() => client.request<ResetPasswordMutation>(print(ResetPasswordDocument), variables, requestHeaders));
     },
-    Me(variables?: MeQueryVariables, requestHeaders?: Headers): Promise<MeQuery> {
+    Me(variables?: MeQueryVariables, requestHeaders?: HeadersInit): Promise<MeQuery> {
       return withWrapper(() => client.request<MeQuery>(print(MeDocument), variables, requestHeaders));
     },
-    UserAmount(variables?: UserAmountQueryVariables, requestHeaders?: Headers): Promise<UserAmountQuery> {
+    PitInventory(variables: PitInventoryQueryVariables, requestHeaders?: HeadersInit): Promise<PitInventoryQuery> {
+      return withWrapper(() => client.request<PitInventoryQuery>(print(PitInventoryDocument), variables, requestHeaders));
+    },
+    UserAmount(variables?: UserAmountQueryVariables, requestHeaders?: HeadersInit): Promise<UserAmountQuery> {
       return withWrapper(() => client.request<UserAmountQuery>(print(UserAmountDocument), variables, requestHeaders));
     }
   };
