@@ -1,0 +1,10 @@
+fragment Contents on InventoryItem {
+    slot
+    itemId
+    dye
+    enchants {
+        name
+        description
+        level
+    }
+}
