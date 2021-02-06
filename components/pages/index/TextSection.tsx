@@ -23,7 +23,7 @@ export const TextSection = ({
             <div className="lg:w-1/2">
                 <h3 className="font-medium text-3xl md:text-4xl">{title}</h3>
 
-                <p className="my-4">{children}</p>
+                <p className="my-4 leading-8">{children}</p>
             </div>
 
             <img src={imgPath} className="hidden lg:block lg:w-1/2 h-64" />
