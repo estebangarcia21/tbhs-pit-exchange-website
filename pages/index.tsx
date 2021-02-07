@@ -31,7 +31,12 @@ export default function Index() {
 
                         <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
                             The Pit Exchange is a free to use managed trading
+<<<<<<< HEAD
                             service for The Hypixel Pit created by Stevemmmmm
+=======
+                            service for The Hypixel Pit brought to you by
+                            Stevemmmmm
+>>>>>>> 2c00dcd14f04133e385df4f14c741f53358adbe5
                         </h2>
 
                         <div className="flex flex-col sm:flex-row justify-between space-x-7">
