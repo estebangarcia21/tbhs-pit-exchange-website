@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Footer } from "components/global/Footer";
 import { Button } from "components/pages/index/Button";
 import { Content } from "components/pages/index/Content";
 import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard";
@@ -31,9 +31,8 @@ export default function Index() {
                                 </h1>
 
                                 <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
-                                    The Pit Exchange is a free to use managed
-                                    trading service for the Hypixel Pit created
-                                    by Stevemmmmm
+                                    The Pit Exchange is an free and easy to use
+                                    trading service for the Hypixel Pit
                                 </h2>
 
                                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:space-x-7">
@@ -52,7 +51,7 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className="my-12 flex flex-row justify-between flex-wrap">
+                        <div className="my-12 flex flex-row mx-auto xl:justify-between flex-wrap max-w-3xl xl:max-w-none">
                             <InfoCard title="Watch" icon={BsEye}>
                                 Watch for trade requests and offers in realtime.
                                 Maximize your potential profit by monitoring the
@@ -71,10 +70,10 @@ export default function Index() {
                             <VerticalDivider />
 
                             <InfoCard title="Repeat" icon={BsArrowRepeat}>
-                                The Pit Exchange manages all of your trading in
-                                one place. Quickly create trades without the
-                                burden of having to search through countless
-                                discord servers.
+                                The Pit Exchange takes care of all your trading
+                                business in one place. Trade without the burden
+                                of having to search through countless discord
+                                servers.
                             </InfoCard>
                         </div>
                     </div>
@@ -175,6 +174,8 @@ export default function Index() {
                         </div>
                     </div>
                 </Content>
+
+                <Footer />
             </main>
         </div>
     );
