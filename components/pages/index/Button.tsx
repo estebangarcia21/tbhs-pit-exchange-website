@@ -9,7 +9,7 @@ interface ButtonProps extends Children {
 export const Button = ({ children, href, white }: ButtonProps) => {
     const styles = white
         ? "text-gray-800 border border-gray-300 bg-white hover:bg-gray-100"
-        : "bg-rose-500 text-white hover:bg-rose-600";
+        : "bg-teal-500 text-white hover:bg-teal-600";
 
     return (
         <Link href={href}>

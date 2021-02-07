@@ -25,14 +25,14 @@ export default function Index() {
                             <div className=" text-left md:text-left text-coolGray-800 max-w-xl lg:w-1/2">
                                 <h1 className="font-bold text-5xl lg:text-6xl">
                                     Connecting the{" "}
-                                    <span className="text-rose-500">
+                                    <span className="text-teal-500">
                                         Hypixel Pit's Economy
                                     </span>
                                 </h1>
 
                                 <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
-                                    The Pit Exchange is an free and easy to use
-                                    trading service for the Hypixel Pit
+                                    The Pit Exchange is a trading service for
+                                    the community of the Hypixel Pit
                                 </h2>
 
                                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:space-x-7">
@@ -86,33 +86,14 @@ export default function Index() {
                                 title="Intelligent Trade Searching"
                                 imgPath="/Root.svg"
                             >
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Nunc auctor ultricies sapien.
-                                Nullam rhoncus tortor sed iaculis gravida. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing
-                                elit. Nunc auctor ultricies sapien. Nullam
-                                rhoncus tortor sed iaculis gravida. Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit.
-                                Nunc auctor ultricies sapien. Nullam rhoncus
-                                tortor sed iaculis gravida.
-                                <ul className="ml-5 my-5 space-y-3">
-                                    <li className="flex flex-row items-center">
-                                        <FaCheck className="mr-3" />
-                                        Search by multiple enchant names
-                                    </li>
-                                    <li className="flex flex-row items-center">
-                                        <FaCheck className="mr-3" />
-                                        Search by player name or uuid
-                                    </li>
-                                    <li className="flex flex-row items-center">
-                                        <FaCheck className="mr-3" />
-                                        Search by similar item
-                                    </li>
-                                </ul>
-                                <button className="flex flex-row items-center justify-center py-2 w-full font-semibold rounded-3xl bg-white text-black transition hover:bg-gray-100">
-                                    <FaSearch className="mr-2" /> Try Searching
-                                    for Your Next Trade
-                                </button>
+                                The Pit Exchange features a strong search engine
+                                that makes it easy to find the items that you
+                                want to trade for. Instead of manually searching
+                                through various discord servers and pit lobbies,
+                                search through a single search bar by an
+                                enchant, a combination of enchants, enchant
+                                levels, player names, player UUIDs, item UUIDs,
+                                pants color, and more.
                             </TextSection>
 
                             <HorizontalDivider />
@@ -122,15 +103,16 @@ export default function Index() {
                                 imgPath="/mag.svg"
                                 alignRight
                             >
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Nunc auctor ultricies sapien.
-                                Nullam rhoncus tortor sed iaculis gravida. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing
-                                elit. Nunc auctor ultricies sapien. Nullam
-                                rhoncus tortor sed iaculis gravida. Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit.
-                                Nunc auctor ultricies sapien. Nullam rhoncus
-                                tortor sed iaculis gravida.
+                                The Pit Exchange keeps track of all of your
+                                previous trades while giving a total trade value
+                                according to the{" "}
+                                <strong>Item Value Index (IVI)</strong>. The Pit
+                                Exchange also monitors your value as a player
+                                compared to other pit players according to the{" "}
+                                <strong>Player Value Index (PVI)</strong>. Use
+                                The Pit Exchange to get insightful value
+                                estimates from trades to maximize your profit
+                                from trades and minimize value loss.
                             </TextSection>
 
                             <HorizontalDivider />

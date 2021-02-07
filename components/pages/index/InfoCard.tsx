@@ -8,8 +8,9 @@ interface InfoCard extends Children {
 
 export const InfoCard = ({ icon: Icon, title, children }: InfoCard) => {
     return (
-        <div className="flex-grow md:m-5 xl:m-0 sm:flex-grow-0 sm:w-80 py-5">
-            <Icon className="text-3xl text-rose-500" />
+        <div className="relative flex-grow md:m-5 xl:m-0 sm:flex-grow-0 sm:w-80 py-5">
+            <Icon className="text-3xl text-purpleBlue" />
+            <Icon className="absolute top-7 left-2 opacity-50 text-3xl text-teal-400" />
 
             <h2 className="my-1 tracking-wide font-medium text-2xl text-coolGray-800">
                 {title}
