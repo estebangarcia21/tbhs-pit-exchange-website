@@ -1,7 +1,10 @@
 import { Button } from "components/pages/index/Button";
 import { Content } from "components/pages/index/Content";
-import { InfoCard } from "components/pages/index/InfoCard";
-import { Divider, TextSection } from "components/pages/index/TextSection";
+import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard";
+import {
+    HorizontalDivider,
+    TextSection,
+} from "components/pages/index/TextSection";
 import Head from "next/head";
 import { BiDollarCircle } from "react-icons/bi";
 import { BsArrowRepeat, BsEye } from "react-icons/bs";
@@ -11,63 +14,51 @@ export default function Index() {
     return (
         <div>
             <Head>
-                <title>The Metropolitan</title>
+                <title>The Pit Exchange</title>
             </Head>
 
-            <nav className="h-20 bg-white flex flex-row items-center justify-center">
-                <ul className="flex flex-row items-center">
-                    <li>
-                        <a className="font-bold cursor-pointer text-gray-500 m-5 transition hover:text-rose-500">
-                            Mystic Searcher
-                        </a>
-                    </li>
-                    <li>
-                        <a className="font-bold cursor-pointer text-gray-500 m-5 transition hover:text-rose-500">
-                            Donate
-                        </a>
-                    </li>
-                    <li>
-                        <a className="font-bold cursor-pointer text-gray-500 m-5 transition hover:text-rose-500">
-                            Browse Trades
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
             <main>
+                {/* <img src="/Root.svg" className="w-64 absolute right-0" /> */}
+
                 <Content>
-                    <div className="text-center text-gray-900 px-4 md:px-12">
-                        <h1 className="font-semibold text-4xl lg:text-6xl">
+                    <div className="mt-14 text-left md:text-left text-coolGray-800 max-w-xl">
+                        <h1 className="font-bold text-4xl lg:text-6xl">
                             Connecting the{" "}
                             <span className="text-rose-500">
                                 Hypixel Pit's Economy
                             </span>
                         </h1>
 
-                        <h2 className="mt-5 text-xl font-base text-gray-500">
-                            The Metropolitan is a managed trading service for
-                            The Hypixel Pit
+                        <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
+                            The Pit Exchange is a free to use managed trading
+                            service for The Hypixel Pit created by Stevemmmmm
                         </h2>
 
-                        <div className="flex flex-col-reverse sm:flex-row justify-center">
+                        <div className="flex flex-col sm:flex-row justify-between space-x-7">
+                            <Button href="/signup">Sign Up</Button>
                             <Button href="/login" white>
                                 Log In
                             </Button>
-                            <Button href="/signup">Sign Up</Button>
                         </div>
                     </div>
 
-                    <div className="my-12 flex flex-row justify-center flex-wrap">
+                    <div className="my-12 flex flex-row justify-between flex-wrap">
                         <InfoCard title="Watch" icon={BsEye}>
                             Watch realtime trade requests and offerings.
                             Maximize your potential profit by monitoring the
                             market from an easy and intutive dashboard.
                         </InfoCard>
+
+                        <VerticalDivider />
+
                         <InfoCard title="Trade" icon={BiDollarCircle}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Nunc auctor ultricies sapien. Nullam rhoncus
                             tortor sed iaculis gravida.
                         </InfoCard>
+
+                        <VerticalDivider />
+
                         <InfoCard title="Repeat" icon={BsArrowRepeat}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Nunc auctor ultricies sapien. Nullam rhoncus
@@ -76,12 +67,7 @@ export default function Index() {
                     </div>
                 </Content>
 
-                <div
-                    className="mt-5 px-5 py-28 bg-purple-blue text-white transform -skew-y-6"
-                    style={{
-                        transform: "origin(100% 0)",
-                    }}
-                >
+                <div className="mt-5 px-5 py-28 bg-purpleBlue text-white transform -skew-y-6">
                     <Content>
                         <div className="transform skew-y-6">
                             <TextSection
@@ -117,7 +103,7 @@ export default function Index() {
                                 </button>
                             </TextSection>
 
-                            <Divider />
+                            <HorizontalDivider />
 
                             <TextSection
                                 title="Trade Logging and Monitoring"
@@ -135,7 +121,7 @@ export default function Index() {
                                 tortor sed iaculis gravida.
                             </TextSection>
 
-                            <Divider />
+                            <HorizontalDivider />
 
                             <TextSection
                                 title="Personalized Markets"

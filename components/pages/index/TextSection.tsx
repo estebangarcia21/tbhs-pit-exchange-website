@@ -31,7 +31,7 @@ export const TextSection = ({
     );
 };
 
-export const Divider = () => {
+export const HorizontalDivider = () => {
     return (
         <div className="my-12 border-b border-dashed border-white opacity-10" />
     );
