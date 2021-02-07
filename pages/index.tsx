@@ -18,52 +18,55 @@ export default function Index() {
             </Head>
 
             <main>
-                {/* <img src="/Root.svg" className="w-64 absolute right-0" /> */}
-
                 <Content>
-                    <div className="mt-14 text-left md:text-left text-coolGray-800 max-w-xl">
-                        <h1 className="font-bold text-4xl lg:text-6xl">
-                            Connecting the{" "}
-                            <span className="text-rose-500">
-                                Hypixel Pit's Economy
-                            </span>
-                        </h1>
+                    <div className="px-4 md:px-0">
+                        <div className="mt-14 text-left md:text-left text-coolGray-800 max-w-xl">
+                            <h1 className="font-bold text-5xl lg:text-6xl">
+                                Connecting the{" "}
+                                <span className="text-rose-500">
+                                    Hypixel Pit's Economy
+                                </span>
+                            </h1>
 
-                        <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
-                            The Pit Exchange is a free to use managed trading
-                            service for The Hypixel Pit created by Stevemmmmm
-                        </h2>
+                            <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
+                                The Pit Exchange is a free to use managed
+                                trading service for the Hypixel Pit created by
+                                Stevemmmmm
+                            </h2>
 
-                        <div className="flex flex-col sm:flex-row justify-between space-x-7">
-                            <Button href="/signup">Sign Up</Button>
-                            <Button href="/login" white>
-                                Log In
-                            </Button>
+                            <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:space-x-7">
+                                <Button href="/signup">Sign Up</Button>
+                                <Button href="/login" white>
+                                    Log In
+                                </Button>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="my-12 flex flex-row justify-between flex-wrap">
-                        <InfoCard title="Watch" icon={BsEye}>
-                            Watch realtime trade requests and offerings.
-                            Maximize your potential profit by monitoring the
-                            market from an easy and intutive dashboard.
-                        </InfoCard>
+                        <div className="my-12 flex flex-row justify-between flex-wrap">
+                            <InfoCard title="Watch" icon={BsEye}>
+                                Watch for trade requests and offers in realtime.
+                                Maximize your potential profit by monitoring the
+                                market from a simple and intutive dashboard.
+                            </InfoCard>
 
-                        <VerticalDivider />
+                            <VerticalDivider />
 
-                        <InfoCard title="Trade" icon={BiDollarCircle}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nunc auctor ultricies sapien. Nullam rhoncus
-                            tortor sed iaculis gravida.
-                        </InfoCard>
+                            <InfoCard title="Trade" icon={BiDollarCircle}>
+                                Easily make trades by searching for open trades
+                                or by offering for an item that a player has.
+                                Utilize a powerful search tool to find your next
+                                trade.
+                            </InfoCard>
 
-                        <VerticalDivider />
+                            <VerticalDivider />
 
-                        <InfoCard title="Repeat" icon={BsArrowRepeat}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nunc auctor ultricies sapien. Nullam rhoncus
-                            tortor sed iaculis gravida.
-                        </InfoCard>
+                            <InfoCard title="Repeat" icon={BsArrowRepeat}>
+                                The Pit Exchange manages all of your trading in
+                                one place. Quickly create trades without the
+                                burden of having to search through countless
+                                discord servers.
+                            </InfoCard>
+                        </div>
                     </div>
                 </Content>
 
