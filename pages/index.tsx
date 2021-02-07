@@ -9,7 +9,6 @@ import {
 import Head from "next/head";
 import { BiDollarCircle } from "react-icons/bi";
 import { BsArrowRepeat, BsEye } from "react-icons/bs";
-import { FaCheck, FaSearch } from "react-icons/fa";
 
 export default function Index() {
     return (
@@ -32,7 +31,7 @@ export default function Index() {
 
                                 <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
                                     The Pit Exchange is a trading service for
-                                    the community of the Hypixel Pit
+                                    thecommunity of the Hypixel Pit
                                 </h2>
 
                                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:space-x-7">
