@@ -58,10 +58,10 @@ export default function Index() {
                     </div>
 
                     <div className="my-12 flex flex-row justify-center flex-wrap">
-                        <InfoCard title="Observe" icon={BsEye}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nunc auctor ultricies sapien. Nullam rhoncus
-                            tortor sed iaculis gravida.
+                        <InfoCard title="Watch" icon={BsEye}>
+                            Watch realtime trade requests and offerings.
+                            Maximize your potential profit by monitoring the
+                            market from an easy and intutive dashboard.
                         </InfoCard>
                         <InfoCard title="Trade" icon={BiDollarCircle}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -76,72 +76,82 @@ export default function Index() {
                     </div>
                 </Content>
 
-                <div className="mt-5 p-5 bg-purple-blue text-white">
+                <div
+                    className="mt-5 px-5 py-28 bg-purple-blue text-white transform -skew-y-6"
+                    style={{
+                        transform: "origin(100% 0)",
+                    }}
+                >
                     <Content>
-                        <TextSection
-                            title="Intelligent Trade Searching"
-                            imgPath="/Root.svg"
-                        >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nunc auctor ultricies sapien. Nullam rhoncus
-                            tortor sed iaculis gravida. Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Nunc auctor
-                            ultricies sapien. Nullam rhoncus tortor sed iaculis
-                            gravida. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Nunc auctor ultricies sapien.
-                            Nullam rhoncus tortor sed iaculis gravida.
-                            <ul className="ml-5 my-5 space-y-3">
-                                <li className="flex flex-row items-center">
-                                    <FaCheck className="mr-3" />
-                                    Search by multiple enchant names
-                                </li>
-                                <li className="flex flex-row items-center">
-                                    <FaCheck className="mr-3" />
-                                    Search by player name or uuid
-                                </li>
-                                <li className="flex flex-row items-center">
-                                    <FaCheck className="mr-3" />
-                                    Search by similar item
-                                </li>
-                            </ul>
-                            <button className="flex flex-row items-center justify-center py-2 w-full font-semibold rounded-3xl bg-white text-black transition hover:bg-gray-100">
-                                <FaSearch className="mr-2" /> Try Searching for
-                                Your Next Trade
-                            </button>
-                        </TextSection>
+                        <div className="transform skew-y-6">
+                            <TextSection
+                                title="Intelligent Trade Searching"
+                                imgPath="/Root.svg"
+                            >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Nunc auctor ultricies sapien.
+                                Nullam rhoncus tortor sed iaculis gravida. Lorem
+                                ipsum dolor sit amet, consectetur adipiscing
+                                elit. Nunc auctor ultricies sapien. Nullam
+                                rhoncus tortor sed iaculis gravida. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit.
+                                Nunc auctor ultricies sapien. Nullam rhoncus
+                                tortor sed iaculis gravida.
+                                <ul className="ml-5 my-5 space-y-3">
+                                    <li className="flex flex-row items-center">
+                                        <FaCheck className="mr-3" />
+                                        Search by multiple enchant names
+                                    </li>
+                                    <li className="flex flex-row items-center">
+                                        <FaCheck className="mr-3" />
+                                        Search by player name or uuid
+                                    </li>
+                                    <li className="flex flex-row items-center">
+                                        <FaCheck className="mr-3" />
+                                        Search by similar item
+                                    </li>
+                                </ul>
+                                <button className="flex flex-row items-center justify-center py-2 w-full font-semibold rounded-3xl bg-white text-black transition hover:bg-gray-100">
+                                    <FaSearch className="mr-2" /> Try Searching
+                                    for Your Next Trade
+                                </button>
+                            </TextSection>
 
-                        <Divider />
+                            <Divider />
 
-                        <TextSection
-                            title="Trade Logging and Monitoring"
-                            imgPath="/mag.svg"
-                            alignRight
-                        >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nunc auctor ultricies sapien. Nullam rhoncus
-                            tortor sed iaculis gravida. Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Nunc auctor
-                            ultricies sapien. Nullam rhoncus tortor sed iaculis
-                            gravida. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Nunc auctor ultricies sapien.
-                            Nullam rhoncus tortor sed iaculis gravida.
-                        </TextSection>
+                            <TextSection
+                                title="Trade Logging and Monitoring"
+                                imgPath="/mag.svg"
+                                alignRight
+                            >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Nunc auctor ultricies sapien.
+                                Nullam rhoncus tortor sed iaculis gravida. Lorem
+                                ipsum dolor sit amet, consectetur adipiscing
+                                elit. Nunc auctor ultricies sapien. Nullam
+                                rhoncus tortor sed iaculis gravida. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit.
+                                Nunc auctor ultricies sapien. Nullam rhoncus
+                                tortor sed iaculis gravida.
+                            </TextSection>
 
-                        <Divider />
+                            <Divider />
 
-                        <TextSection
-                            title="Personalized Markets"
-                            imgPath="/mag.svg"
-                        >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nunc auctor ultricies sapien. Nullam rhoncus
-                            tortor sed iaculis gravida. Lorem ipsum dolor sit
-                            amet, consectetur adipiscing elit. Nunc auctor
-                            ultricies sapien. Nullam rhoncus tortor sed iaculis
-                            gravida. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Nunc auctor ultricies sapien.
-                            Nullam rhoncus tortor sed iaculis gravida.
-                        </TextSection>
+                            <TextSection
+                                title="Personalized Markets"
+                                imgPath="/mag.svg"
+                            >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Nunc auctor ultricies sapien.
+                                Nullam rhoncus tortor sed iaculis gravida. Lorem
+                                ipsum dolor sit amet, consectetur adipiscing
+                                elit. Nunc auctor ultricies sapien. Nullam
+                                rhoncus tortor sed iaculis gravida. Lorem ipsum
+                                dolor sit amet, consectetur adipiscing elit.
+                                Nunc auctor ultricies sapien. Nullam rhoncus
+                                tortor sed iaculis gravida.
+                            </TextSection>
+                        </div>
                     </Content>
                 </div>
 

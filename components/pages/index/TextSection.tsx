@@ -33,6 +33,6 @@ export const TextSection = ({
 
 export const Divider = () => {
     return (
-        <div className="my-12 bg-white border-b border-gray-100 opacity-10" />
+        <div className="my-12 border-b border-dashed border-white opacity-10" />
     );
 };
