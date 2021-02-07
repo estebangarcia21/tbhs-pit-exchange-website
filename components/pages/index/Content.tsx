@@ -1,8 +1,16 @@
 import { Children } from "utils/children";
 
-export const Content = ({ children }: Children) => {
+interface ContentProps extends Children {
+    noXPadding?: boolean;
+}
+
+export const Content = ({ noXPadding, children }: ContentProps) => {
     return (
-        <div className="mx-auto max-w-7xl px-4 py-2 md:px-16 md:py-12">
+        <div
+            className={`mx-auto max-w-7xl ${
+                !noXPadding && "px-4 md:px-16"
+            } py-2 md:py-12`}
+        >
             {children}
         </div>
     );
