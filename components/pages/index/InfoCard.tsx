@@ -22,6 +22,6 @@ export const InfoCard = ({ icon: Icon, title, children }: InfoCard) => {
 
 export const VerticalDivider = () => {
     return (
-        <div className="w-0.5 border-r h-auto border-dashed border-gray-300" />
+        <div className="hidden lg:block w-0.5 border-r h-auto border-dashed border-gray-300" />
     );
 };
