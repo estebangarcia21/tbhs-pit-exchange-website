@@ -31,7 +31,7 @@ export default function Index() {
 
                                 <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
                                     The Pit Exchange is a trading service for
-                                    thecommunity of the Hypixel Pit
+                                    the community of the Hypixel Pit
                                 </h2>
 
                                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:space-x-7">
