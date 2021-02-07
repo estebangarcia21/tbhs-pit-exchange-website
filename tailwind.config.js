@@ -4,12 +4,18 @@ module.exports = {
     purge: ["./pages/**/*.tsx", "./components/**/*.tsx", "./styles/**/*.tsx"],
     darkMode: "class",
     theme: {
-        minWidth: {
-            375: "375px",
+        extend: {
+            height: {
+                500: "500px",
+            },
+            minWidth: {
+                375: "375px",
+            },
         },
         colors: {
             ...colors,
             purpleBlue: "#4B36F8",
+            grayBlueTint: "#F6F9FC",
         },
     },
 };
