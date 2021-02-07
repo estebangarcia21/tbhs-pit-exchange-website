@@ -9,11 +9,7 @@ module.exports = {
         },
         colors: {
             ...colors,
-            "light-blue": "#0ea5e9",
-            cyan: "#22d3ee",
-            "cyan-500": "#06b6d4",
-            "dark-blue-gray": "#39414e",
-            "purple-blue": "#4B36F8",
+            purpleBlue: "#4B36F8",
         },
     },
 };
