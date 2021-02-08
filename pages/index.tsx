@@ -107,7 +107,7 @@ const Index = () => {
 
                             <TextSection
                                 title="Trade Logging and Monitoring"
-                                imgPath="/mag.svg"
+                                imgPath="/images/index/trend-graph.svg"
                                 alignRight
                             >
                                 The Pit Exchange keeps track of all of your
