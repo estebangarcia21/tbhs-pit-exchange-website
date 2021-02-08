@@ -7,7 +7,7 @@ interface ContentProps extends Children {
 export const Content = ({ noXPadding, children }: ContentProps) => {
     return (
         <div
-            className={`mx-auto max-w-7xl ${
+            className={`relative z-10 mx-auto max-w-7xl ${
                 !noXPadding && "px-4 md:px-16"
             } py-2 md:py-12`}
         >

@@ -1,6 +1,7 @@
 import { Footer } from "components/global/Footer";
 import { Button } from "components/pages/index/Button";
 import { Content } from "components/pages/index/Content";
+import { Cube, Camera } from "components/pages/index/Cube";
 import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard";
 import {
     HorizontalDivider,
@@ -9,6 +10,7 @@ import {
 import Head from "next/head";
 import { BiDollarCircle } from "react-icons/bi";
 import { BsArrowRepeat, BsEye } from "react-icons/bs";
+import { Canvas } from "react-three-fiber";
 
 export default function Index() {
     return (
@@ -18,6 +20,16 @@ export default function Index() {
             </Head>
 
             <main>
+                <img
+                    src="/circles.svg"
+                    className="absolute w-96 left-12 top-96 z-0"
+                />
+                <img
+                    src="/circles.svg"
+                    className="absolute w-96 right-12 top-36"
+                />
+                {/* <img src="/line.svg" className="absolute transform" /> */}
+
                 <Content>
                     <div className="px-4 md:px-0 overflow-hidden">
                         <div className="flex flex-row items-center mt-14">
@@ -43,10 +55,12 @@ export default function Index() {
                             </div>
 
                             <div className="hidden lg:block lg:w-1/2 ml-16">
-                                <img
-                                    src="/Root.svg"
-                                    className="border border-gray-300 rounded-md"
-                                />
+                                <Canvas style={{ height: "425px" }}>
+                                    <Camera />
+                                    <ambientLight />
+                                    <pointLight position={[10, 10, 10]} />
+                                    <Cube />
+                                </Canvas>
                             </div>
                         </div>
 
