@@ -16,7 +16,7 @@ const Section = ({ title, odd, children }: SectionProps) => {
     return (
         <ul
             className={`flex flex-col space-y-1 ${
-                odd ? "" : "border-l"
+                odd ?? "sm:border-l"
             } lg:border-l border-gray-200 border-dashed h-auto px-6 pb-6`}
         >
             <li className="text-md font-semibold">{title}</li>
@@ -42,8 +42,8 @@ export const Footer = () => {
     return (
         <div className="bg-grayBlueTint">
             <Content>
-                <footer className="grid grid-cols-2 lg:grid-cols-4 justify-center min-h-64 py-6">
-                    <div className="px-6 lg:px-0">
+                <footer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-64 py-6">
+                    <div className="px-6 lg:px-0 mb-6">
                         <h1 className="font-bold text-2xl mr-10">
                             The Pit Exchange
                         </h1>

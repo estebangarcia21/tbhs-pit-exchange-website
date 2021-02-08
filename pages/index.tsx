@@ -13,7 +13,7 @@ import { BiDollarCircle } from "react-icons/bi"
 import { BsArrowRepeat, BsEye } from "react-icons/bs"
 import { Canvas } from "react-three-fiber"
 
-export default function Index() {
+const Index = () => {
     return (
         <div>
             <Head>
@@ -27,15 +27,15 @@ export default function Index() {
                 <Content>
                     <div className="px-4 md:px-0 overflow-hidden">
                         <div className="flex flex-row items-center mt-14">
-                            <div className=" text-left md:text-left text-coolGray-800 max-w-xl lg:w-1/2">
-                                <h1 className="font-bold text-5xl lg:text-6xl">
+                            <div className="text-left md:text-left text-coolGray-800 max-w-xl lg:w-1/2">
+                                <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl">
                                     Connecting the{" "}
                                     <span className="text-teal-500">
                                         Hypixel Pit's Economy
                                     </span>
                                 </h1>
 
-                                <h2 className="mt-5 font-semibold text-xl font-base text-coolGray-700">
+                                <h2 className="mt-5 font-semibold text-md sm:text-xl font-base text-coolGray-700">
                                     The Pit Exchange is a trading service for
                                     the community of the Hypixel Pit
                                 </h2>
@@ -156,10 +156,6 @@ export default function Index() {
                                 <li>Start making trades</li>
                             </ol>
                         </div>
-
-                        <div className="w-96 h-96 shadow-lg rounded-lg p-12 mr-16">
-                            <h2>Join today!</h2>
-                        </div>
                     </div>
                 </Content>
 
@@ -168,3 +164,5 @@ export default function Index() {
         </div>
     )
 }
+
+export default Index
