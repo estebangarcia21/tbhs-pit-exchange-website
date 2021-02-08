@@ -5,15 +5,20 @@ import { Children } from "utils/children";
 
 interface SectionProps extends Children {
     title: string;
+    odd?: boolean;
 }
 
 interface ItemProps extends Children {
     href: string;
 }
 
-const Section = ({ title, children }: SectionProps) => {
+const Section = ({ title, odd, children }: SectionProps) => {
     return (
-        <ul className="flex flex-col w-64 space-y-1 border-l border-gray-200 border-dashed h-auto px-6">
+        <ul
+            className={`flex flex-col space-y-1 ${
+                odd ? "" : "border-l"
+            } lg:border-l border-gray-200 border-dashed h-auto px-6 pb-6`}
+        >
             <li className="text-md font-semibold">{title}</li>
 
             {children}
@@ -37,8 +42,8 @@ export const Footer = () => {
     return (
         <div className="bg-grayBlueTint">
             <Content>
-                <footer className="flex flex-row justify-center h-64">
-                    <div>
+                <footer className="grid grid-cols-2 lg:grid-cols-4 justify-center min-h-64 py-6">
+                    <div className="px-6 lg:px-0">
                         <h1 className="font-bold text-2xl mr-10">
                             The Pit Exchange
                         </h1>
@@ -48,25 +53,23 @@ export const Footer = () => {
                         </h2>
                     </div>
 
-                    <ul className="flex flex-col sm:flex-row sm:justify-center">
-                        <Section title="Community">
-                            <Item href="/">Support</Item>
-                            <Item href="/">Community Guidelines</Item>
-                            <Item href="/">Discord</Item>
-                        </Section>
+                    <Section title="Community">
+                        <Item href="/">Support</Item>
+                        <Item href="/">Community Guidelines</Item>
+                        <Item href="/">Discord</Item>
+                    </Section>
 
-                        <Section title="Legal">
-                            <Item href="/">Account Security</Item>
-                            <Item href="/">Cookie Policy</Item>
-                            <Item href="/">Donations</Item>
-                        </Section>
+                    <Section title="Legal" odd>
+                        <Item href="/">Account Security</Item>
+                        <Item href="/">Cookie Policy</Item>
+                        <Item href="/">Donations</Item>
+                    </Section>
 
-                        <Section title="Company">
-                            <Item href="/">Stevemmmmm</Item>
-                            <Item href="/">The Blue Hats</Item>
-                            <Item href="/">Terms of Service</Item>
-                        </Section>
-                    </ul>
+                    <Section title="Company">
+                        <Item href="/">Stevemmmmm</Item>
+                        <Item href="/">The Blue Hats</Item>
+                        <Item href="/">Terms of Service</Item>
+                    </Section>
                 </footer>
             </Content>
         </div>

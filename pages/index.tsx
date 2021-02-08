@@ -120,15 +120,14 @@ export default function Index() {
                                 title="Personalized Markets"
                                 imgPath="/mag.svg"
                             >
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Nunc auctor ultricies sapien.
-                                Nullam rhoncus tortor sed iaculis gravida. Lorem
-                                ipsum dolor sit amet, consectetur adipiscing
-                                elit. Nunc auctor ultricies sapien. Nullam
-                                rhoncus tortor sed iaculis gravida. Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit.
-                                Nunc auctor ultricies sapien. Nullam rhoncus
-                                tortor sed iaculis gravida.
+                                Create personilized markets to start your own
+                                business in the Pit. Advertise your items, your
+                                rates, and your available trading times in a
+                                discoverable market. Compare your prices to
+                                similar markets and use the IVI to always
+                                deliver the lowest possible prices for your
+                                customers while still gaining profit and
+                                boosting your overall score on the PVI.
                             </TextSection>
                         </div>
                     </Content>

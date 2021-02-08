@@ -11,6 +11,9 @@ module.exports = {
             minWidth: {
                 375: "375px",
             },
+            minHeight: {
+                64: "16rem",
+            },
         },
         colors: {
             ...colors,
