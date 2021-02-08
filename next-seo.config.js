@@ -5,4 +5,4 @@ export default {
         url: "https://www.url.ie/",
         site_name: "SiteName",
     },
-};
+}

@@ -1,4 +1,4 @@
-const withPWA = require("next-pwa");
+const withPWA = require("next-pwa")
 
 module.exports = withPWA({
     pwa: {
@@ -10,4 +10,4 @@ module.exports = withPWA({
     images: {
         domains: ["crafatar.com"],
     },
-});
+})

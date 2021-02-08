@@ -2,23 +2,23 @@ import {
     passwordValidation,
     requiredFieldValidation,
     StandardForm,
-} from "components/forms/StandardForm";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useForm } from "react-hook-form";
+} from "components/forms/StandardForm"
+import Head from "next/head"
+import { useRouter } from "next/router"
+import { useForm } from "react-hook-form"
 
 interface FormInputs {
-    password: string;
-    confirmPassword: string;
+    password: string
+    confirmPassword: string
 }
 
 const Reset = () => {
-    const { handleSubmit, register, errors } = useForm<FormInputs>();
+    const { handleSubmit, register, errors } = useForm<FormInputs>()
 
-    const router = useRouter();
-    const { token } = router.query;
+    const router = useRouter()
+    const { token } = router.query
 
-    const onSubmit = ({ password, confirmPassword }: FormInputs) => {};
+    const onSubmit = ({ password, confirmPassword }: FormInputs) => {}
 
     return (
         <div>
@@ -73,7 +73,7 @@ const Reset = () => {
                 </div>
             </main>
         </div>
-    );
-};
+    )
+}
 
-export default Reset;
+export default Reset

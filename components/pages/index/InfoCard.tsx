@@ -1,9 +1,9 @@
-import { IconType } from "react-icons/lib";
-import { Children } from "utils/children";
+import { IconType } from "react-icons/lib"
+import { Children } from "utils/children"
 
 interface InfoCard extends Children {
-    title: string;
-    icon: IconType;
+    title: string
+    icon: IconType
 }
 
 export const InfoCard = ({ icon: Icon, title, children }: InfoCard) => {
@@ -18,11 +18,11 @@ export const InfoCard = ({ icon: Icon, title, children }: InfoCard) => {
 
             <p className="text-coolGray-600 leading-7">{children}</p>
         </div>
-    );
-};
+    )
+}
 
 export const VerticalDivider = () => {
     return (
         <div className="hidden xl:block w-0.5 border-r h-auto border-dashed border-gray-300" />
-    );
-};
+    )
+}

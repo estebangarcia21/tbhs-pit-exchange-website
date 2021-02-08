@@ -4,32 +4,32 @@ import {
     passwordValidation,
     requiredFieldValidation,
     StandardForm,
-} from "components/forms/StandardForm";
-import { Footer } from "components/global/Footer";
-import { Content, MainContent } from "components/global/Layout";
-import { Navbar } from "components/global/Navbar";
+} from "components/forms/StandardForm"
+import { Footer } from "components/global/Footer"
+import { Content, MainContent } from "components/global/Layout"
+import { Navbar } from "components/global/Navbar"
 import {
     RegisterUserDocument,
     RegisterUserMutation,
     RegisterUserMutationVariables,
-} from "generated/graphql-types";
-import { serverClient } from "utils/server-client";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+} from "generated/graphql-types"
+import { serverClient } from "utils/server-client"
+import Head from "next/head"
+import { useRouter } from "next/router"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
 
 interface FormInputs {
-    email: string;
-    password: string;
-    confirmPassword: string;
+    email: string
+    password: string
+    confirmPassword: string
 }
 
 const Signup = () => {
-    const router = useRouter();
+    const router = useRouter()
 
-    const { register, handleSubmit, errors, watch } = useForm<FormInputs>();
-    const [loginResponse, setLoginResponse] = useState<RegisterUserMutation>();
+    const { register, handleSubmit, errors, watch } = useForm<FormInputs>()
+    const [loginResponse, setLoginResponse] = useState<RegisterUserMutation>()
 
     const onSubmit = async ({
         email,
@@ -42,14 +42,14 @@ const Signup = () => {
         >(RegisterUserDocument, {
             email,
             password,
-        });
+        })
 
         if (data.registerUser.successful) {
-            router.push("/dashboard");
+            router.push("/dashboard")
         } else {
-            setLoginResponse(data);
+            setLoginResponse(data)
         }
-    };
+    }
 
     return (
         <div>
@@ -155,7 +155,7 @@ const Signup = () => {
                 <Footer />
             </Content>
         </div>
-    );
-};
+    )
+}
 
-export default Signup;
+export default Signup

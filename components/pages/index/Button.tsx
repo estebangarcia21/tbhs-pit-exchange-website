@@ -1,15 +1,15 @@
-import Link from "next/link";
-import { Children } from "utils/children";
+import Link from "next/link"
+import { Children } from "utils/children"
 
 interface ButtonProps extends Children {
-    href: string;
-    white?: boolean;
+    href: string
+    white?: boolean
 }
 
 export const Button = ({ children, href, white }: ButtonProps) => {
     const styles = white
         ? "text-gray-800 border border-gray-300 bg-white hover:bg-gray-100"
-        : "bg-teal-500 text-white hover:bg-teal-600";
+        : "bg-teal-500 text-white hover:bg-teal-600"
 
     return (
         <Link href={href}>
@@ -19,5 +19,5 @@ export const Button = ({ children, href, white }: ButtonProps) => {
                 {children}
             </a>
         </Link>
-    );
-};
+    )
+}

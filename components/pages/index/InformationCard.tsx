@@ -1,8 +1,8 @@
-import { Children } from "utils/children";
+import { Children } from "utils/children"
 
 interface InformationCardProps extends Children {
-    title: string;
-    gradientVariants: string;
+    title: string
+    gradientVariants: string
 }
 
 export const InformationCard = ({
@@ -22,5 +22,5 @@ export const InformationCard = ({
                 <p>{children}</p>
             </div>
         </figure>
-    );
-};
+    )
+}

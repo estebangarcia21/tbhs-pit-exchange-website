@@ -1,4 +1,4 @@
-const colors = require("tailwindcss/colors");
+const colors = require("tailwindcss/colors")
 
 module.exports = {
     purge: ["./pages/**/*.tsx", "./components/**/*.tsx", "./styles/**/*.tsx"],
@@ -21,4 +21,4 @@ module.exports = {
             grayBlueTint: "#F6F9FC",
         },
     },
-};
+}

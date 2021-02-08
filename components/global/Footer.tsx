@@ -1,15 +1,15 @@
-import { Content } from "components/pages/index/Content";
-import Link from "next/link";
-import React from "react";
-import { Children } from "utils/children";
+import { Content } from "components/pages/index/Content"
+import Link from "next/link"
+import React from "react"
+import { Children } from "utils/children"
 
 interface SectionProps extends Children {
-    title: string;
-    odd?: boolean;
+    title: string
+    odd?: boolean
 }
 
 interface ItemProps extends Children {
-    href: string;
+    href: string
 }
 
 const Section = ({ title, odd, children }: SectionProps) => {
@@ -23,8 +23,8 @@ const Section = ({ title, odd, children }: SectionProps) => {
 
             {children}
         </ul>
-    );
-};
+    )
+}
 
 const Item = ({ href, children }: ItemProps) => {
     return (
@@ -35,8 +35,8 @@ const Item = ({ href, children }: ItemProps) => {
                 </a>
             </Link>
         </li>
-    );
-};
+    )
+}
 
 export const Footer = () => {
     return (
@@ -73,5 +73,5 @@ export const Footer = () => {
                 </footer>
             </Content>
         </div>
-    );
-};
+    )
+}

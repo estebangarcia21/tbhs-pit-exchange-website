@@ -1,13 +1,13 @@
-import { Children } from "utils/children";
-import { FormEvent } from "react";
-import { DeepMap, FieldError, ValidationRule } from "react-hook-form";
+import { Children } from "utils/children"
+import { FormEvent } from "react"
+import { DeepMap, FieldError, ValidationRule } from "react-hook-form"
 
 const focusable = (classValues: string) =>
-    `${classValues} focus:outline-none transition focus:border-blue-500`;
+    `${classValues} focus:outline-none transition focus:border-blue-500`
 
 interface StandardFormProps {
-    title: string;
-    handleSubmit: (event: FormEvent<HTMLFormElement>) => void;
+    title: string
+    handleSubmit: (event: FormEvent<HTMLFormElement>) => void
 }
 
 export const StandardForm = ({
@@ -24,13 +24,13 @@ export const StandardForm = ({
 
             {children}
         </form>
-    );
-};
+    )
+}
 
 interface InputProps {
-    htmlFor: string;
-    inRef: React.LegacyRef<HTMLInputElement>;
-    type?: "text" | "password";
+    htmlFor: string
+    inRef: React.LegacyRef<HTMLInputElement>
+    type?: "text" | "password"
 }
 
 StandardForm.Input = ({
@@ -52,11 +52,11 @@ StandardForm.Input = ({
                 type={type}
             />
         </>
-    );
-};
+    )
+}
 
 interface ButtonProps {
-    type?: "button" | "submit" | "reset";
+    type?: "button" | "submit" | "reset"
 }
 
 StandardForm.Button = ({
@@ -72,26 +72,26 @@ StandardForm.Button = ({
         >
             {children}
         </button>
-    );
-};
+    )
+}
 
 interface ErrorProps {
-    error: FieldError;
+    error: FieldError
 }
 
 StandardForm.Error = ({ error }: ErrorProps) => {
     return error ? (
         <span className="text-xs text-red-500">* {error.message}</span>
-    ) : null;
-};
+    ) : null
+}
 
 export const noErrors = (errors: DeepMap<unknown, FieldError>) =>
-    !Object.values(errors).some((k) => k !== null);
+    !Object.values(errors).some((k) => k !== null)
 
 export const emailValidationRule: ValidationRule<RegExp> = {
     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
     message: "Please enter a valid e-mail address",
-};
+}
 
 export const passwordValidation = {
     minLength: {
@@ -102,11 +102,11 @@ export const passwordValidation = {
         value: 32,
         message: "Must be less than 32 characters long",
     },
-};
+}
 
 export const requiredFieldValidation = {
     required: {
         value: true,
         message: "Required field",
     },
-};
+}

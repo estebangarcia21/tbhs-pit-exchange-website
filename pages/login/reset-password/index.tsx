@@ -3,24 +3,24 @@ import {
     noErrors,
     requiredFieldValidation,
     StandardForm,
-} from "components/forms/StandardForm";
+} from "components/forms/StandardForm"
 import {
     ResetPasswordDocument,
     ResetPasswordMutation,
     ResetPasswordMutationVariables,
-} from "generated/graphql-types";
-import { serverClient } from "utils/server-client";
-import Head from "next/head";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+} from "generated/graphql-types"
+import { serverClient } from "utils/server-client"
+import Head from "next/head"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
 
 interface FormInputs {
-    email: string;
+    email: string
 }
 
 const ForgotPassword = () => {
-    const { handleSubmit, register, errors } = useForm<FormInputs>();
-    const [submitResult, setSubmitResult] = useState<ResetPasswordMutation>();
+    const { handleSubmit, register, errors } = useForm<FormInputs>()
+    const [submitResult, setSubmitResult] = useState<ResetPasswordMutation>()
 
     const onSubmit = async ({ email }: FormInputs) => {
         const data = await serverClient.request<
@@ -28,10 +28,10 @@ const ForgotPassword = () => {
             ResetPasswordMutationVariables
         >(ResetPasswordDocument, {
             email,
-        });
+        })
 
-        setSubmitResult(data);
-    };
+        setSubmitResult(data)
+    }
 
     return (
         <div>
@@ -89,7 +89,7 @@ const ForgotPassword = () => {
                 </div>
             </main>
         </div>
-    );
-};
+    )
+}
 
-export default ForgotPassword;
+export default ForgotPassword

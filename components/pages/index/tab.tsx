@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
 
 interface TabProps {
-    name: string;
-    icon: string;
-    href: string;
+    name: string
+    icon: string
+    href: string
 }
 
 export const Tab = ({ icon, href, name }: TabProps) => {
@@ -22,5 +22,5 @@ export const Tab = ({ icon, href, name }: TabProps) => {
                 </a>
             </div>
         </Link>
-    );
-};
+    )
+}

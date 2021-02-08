@@ -1,8 +1,8 @@
-import Chart from "chart.js";
-import { useEffect, useRef } from "react";
+import Chart from "chart.js"
+import { useEffect, useRef } from "react"
 
 const NetValueChart = () => {
-    const chartRef = useRef(null);
+    const chartRef = useRef(null)
 
     useEffect(() => {
         new Chart(chartRef.current.getContext("2d"), {
@@ -58,14 +58,14 @@ const NetValueChart = () => {
                     ],
                 },
             },
-        });
-    });
+        })
+    })
 
     return (
         <div>
             <canvas ref={chartRef} />
         </div>
-    );
-};
+    )
+}
 
-export const useIndexCharts = () => ({ NetValueChart });
+export const useIndexCharts = () => ({ NetValueChart })

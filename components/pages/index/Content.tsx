@@ -1,7 +1,7 @@
-import { Children } from "utils/children";
+import { Children } from "utils/children"
 
 interface ContentProps extends Children {
-    noXPadding?: boolean;
+    noXPadding?: boolean
 }
 
 export const Content = ({ noXPadding, children }: ContentProps) => {
@@ -13,5 +13,5 @@ export const Content = ({ noXPadding, children }: ContentProps) => {
         >
             {children}
         </div>
-    );
-};
+    )
+}

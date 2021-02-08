@@ -1,10 +1,10 @@
-import { Children } from "utils/children";
+import { Children } from "utils/children"
 
 interface TransactionProps {
-    provider: string;
-    amount: number;
-    currency: "FP" | "GM";
-    imgPath?: string;
+    provider: string
+    amount: number
+    currency: "FP" | "GM"
+    imgPath?: string
 }
 
 const Text = ({ children }: Children) => {
@@ -12,8 +12,8 @@ const Text = ({ children }: Children) => {
         <div className="w-1/2 px-4">
             <div className="text-right">{children}</div>
         </div>
-    );
-};
+    )
+}
 
 export const Transaction = ({
     imgPath,
@@ -39,5 +39,5 @@ export const Transaction = ({
                 </Text>
             </div>
         </div>
-    );
-};
+    )
+}

@@ -1,9 +1,9 @@
-import { Children } from "utils/children";
+import { Children } from "utils/children"
 
 interface TextSectionProps extends Children {
-    title: string;
-    imgPath: string;
-    alignRight?: boolean;
+    title: string
+    imgPath: string
+    alignRight?: boolean
 }
 
 export const TextSection = ({
@@ -28,11 +28,11 @@ export const TextSection = ({
 
             <img src={imgPath} className="hidden lg:block lg:w-1/2 h-64" />
         </div>
-    );
-};
+    )
+}
 
 export const HorizontalDivider = () => {
     return (
         <div className="my-16 border-b border-dashed border-white border-opacity-20" />
-    );
-};
+    )
+}

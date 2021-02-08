@@ -1,16 +1,16 @@
-import { Footer } from "components/global/Footer";
-import { Button } from "components/pages/index/Button";
-import { Content } from "components/pages/index/Content";
-import { Cube, Camera } from "components/pages/index/Cube";
-import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard";
+import { Footer } from "components/global/Footer"
+import { Button } from "components/pages/index/Button"
+import { Content } from "components/pages/index/Content"
+import { Cube, Camera } from "components/pages/index/Cube"
+import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard"
 import {
     HorizontalDivider,
     TextSection,
-} from "components/pages/index/TextSection";
-import Head from "next/head";
-import { BiDollarCircle } from "react-icons/bi";
-import { BsArrowRepeat, BsEye } from "react-icons/bs";
-import { Canvas } from "react-three-fiber";
+} from "components/pages/index/TextSection"
+import Head from "next/head"
+import { BiDollarCircle } from "react-icons/bi"
+import { BsArrowRepeat, BsEye } from "react-icons/bs"
+import { Canvas } from "react-three-fiber"
 
 export default function Index() {
     return (
@@ -172,5 +172,5 @@ export default function Index() {
                 <Footer />
             </main>
         </div>
-    );
+    )
 }

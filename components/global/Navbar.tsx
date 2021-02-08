@@ -1,15 +1,15 @@
-import { Children } from "utils/children";
-import Link from "next/link";
+import { Children } from "utils/children"
+import Link from "next/link"
 
 interface NavbarButtonProps extends Children {
-    href: string;
-    inverted?: boolean;
+    href: string
+    inverted?: boolean
 }
 
 const NavbarButton = ({ href, children, inverted }: NavbarButtonProps) => {
     const normalStyles =
-        "border-gray-600 bg-white text-black hover:bg-black hover:text-white";
-    const invertedStyles = "border-black bg-black text-white hover:bg-gray-900";
+        "border-gray-600 bg-white text-black hover:bg-black hover:text-white"
+    const invertedStyles = "border-black bg-black text-white hover:bg-gray-900"
 
     return (
         <Link href={href}>
@@ -21,16 +21,16 @@ const NavbarButton = ({ href, children, inverted }: NavbarButtonProps) => {
                 {children}
             </a>
         </Link>
-    );
-};
+    )
+}
 
 const NavbarItem = ({ children }: Children) => {
-    return <li>{children}</li>;
-};
+    return <li>{children}</li>
+}
 
 const Container = ({ children }: Children) => {
-    return <div className="flex flex-row space-x-5">{children}</div>;
-};
+    return <div className="flex flex-row space-x-5">{children}</div>
+}
 
 export const Navbar = () => {
     return (
@@ -53,5 +53,5 @@ export const Navbar = () => {
                 </Container>
             </ul>
         </nav>
-    );
-};
+    )
+}
