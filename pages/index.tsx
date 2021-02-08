@@ -2,6 +2,7 @@ import { Footer } from "components/global/Footer"
 import { Button } from "components/pages/index/Button"
 import { Content } from "components/pages/index/Content"
 import { Cube, Camera } from "components/pages/index/Cube"
+import { HeaderImage } from "components/pages/index/HeaderImage"
 import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard"
 import {
     HorizontalDivider,
@@ -20,15 +21,8 @@ export default function Index() {
             </Head>
 
             <main>
-                <img
-                    src="/circles.svg"
-                    className="absolute w-96 left-12 top-96 z-0"
-                />
-                <img
-                    src="/circles.svg"
-                    className="absolute w-96 right-12 top-36"
-                />
-                {/* <img src="/line.svg" className="absolute transform" /> */}
+                <HeaderImage img="/circles.svg" position="left-12 top-96" />
+                <HeaderImage img="/circles.svg" position="right-12 top-36" />
 
                 <Content>
                     <div className="px-4 md:px-0 overflow-hidden">
