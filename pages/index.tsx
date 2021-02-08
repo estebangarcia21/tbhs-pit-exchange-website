@@ -2,7 +2,7 @@ import { Footer } from "components/global/Footer"
 import { Button } from "components/pages/index/Button"
 import { Content } from "components/pages/index/Content"
 import { Cube, Camera } from "components/pages/index/Cube"
-import { HeaderImage } from "components/pages/index/HeaderImage"
+import { HeaderCircles } from "components/pages/index/HeaderImage"
 import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard"
 import {
     HorizontalDivider,
@@ -21,8 +21,8 @@ const Index = () => {
             </Head>
 
             <main>
-                <HeaderImage img="/circles.svg" position="left-12 top-96" />
-                <HeaderImage img="/circles.svg" position="right-12 top-36" />
+                <HeaderCircles position="left-12 top-96" />
+                <HeaderCircles position="right-12 top-36" />
 
                 <Content>
                     <div className="px-4 md:px-0 overflow-hidden">
@@ -91,7 +91,7 @@ const Index = () => {
                         <div className="transform skew-y-6">
                             <TextSection
                                 title="Intelligent Trade Searching"
-                                imgPath="/Root.svg"
+                                imgPath="/images/index/search-window.svg"
                             >
                                 The Pit Exchange features a strong search engine
                                 that makes it easy to find the items that you

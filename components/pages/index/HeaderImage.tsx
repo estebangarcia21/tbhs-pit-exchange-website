@@ -1,12 +1,11 @@
 interface HeaderImageProps {
-    img: string
     position: string
 }
 
-export const HeaderImage = ({ img, position }: HeaderImageProps) => {
+export const HeaderCircles = ({ position }: HeaderImageProps) => {
     return (
         <img
-            src={img}
+            src="/images/index/circles.svg"
             className={`absolute z-0 hidden lg:block w-96 ${position}`}
         />
     )
