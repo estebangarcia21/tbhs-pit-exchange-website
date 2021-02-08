@@ -14,7 +14,7 @@ export const TextSection = ({
 }: TextSectionProps) => {
     return (
         <div
-            className={`lg:flex lg:space-x-12 justify-evenly ${
+            className={`lg:flex justify-evenly ${
                 alignRight
                     ? "lg:text-right flex-row-reverse"
                     : "text-left flex-row items-center"
@@ -26,7 +26,12 @@ export const TextSection = ({
                 <p className="my-4 leading-8">{children}</p>
             </div>
 
-            <img src={imgPath} className="hidden lg:block lg:w-1/2 h-64" />
+            <img
+                src={imgPath}
+                className={`hidden lg:block lg:w-1/2 h-64 ${
+                    alignRight ? "mr-12" : "ml-12"
+                }`}
+            />
         </div>
     )
 }
