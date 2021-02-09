@@ -10,7 +10,7 @@ export const TextSection = ({
     title,
     img: [path, alt],
     alignRight,
-    children,
+    children
 }: TextSectionProps) => {
     return (
         <div

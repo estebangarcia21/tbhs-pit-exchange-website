@@ -6,19 +6,19 @@ module.exports = {
     theme: {
         extend: {
             height: {
-                500: "500px",
+                500: "500px"
             },
             minWidth: {
-                375: "375px",
+                375: "375px"
             },
             minHeight: {
-                64: "16rem",
-            },
+                64: "16rem"
+            }
         },
         colors: {
             ...colors,
             purpleBlue: "#4B36F8",
-            grayBlueTint: "#F6F9FC",
-        },
-    },
+            grayBlueTint: "#F6F9FC"
+        }
+    }
 }

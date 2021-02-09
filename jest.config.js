@@ -1,4 +1,4 @@
 module.exports = {
     moduleDirectories: ["node_modules", "."],
-    setupFilesAfterEnv: ["<rootDir>/setup-tests.ts"],
+    setupFilesAfterEnv: ["<rootDir>/setup-tests.ts"]
 }

@@ -5,9 +5,9 @@ module.exports = withPWA({
         disable: process.env.NODE_ENV === "development",
         register: true,
         scope: "/app",
-        sw: "service-worker.js",
+        sw: "service-worker.js"
     },
     images: {
-        domains: ["crafatar.com"],
-    },
+        domains: ["crafatar.com"]
+    }
 })

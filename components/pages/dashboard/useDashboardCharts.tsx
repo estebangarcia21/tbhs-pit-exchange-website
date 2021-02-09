@@ -15,7 +15,7 @@ const NetValueChart = () => {
                     "Thursday",
                     "Friday",
                     "Saturday",
-                    "Sunday",
+                    "Sunday"
                 ],
                 datasets: [
                     {
@@ -29,27 +29,27 @@ const NetValueChart = () => {
                             "rgba(75, 192, 192, 1)",
                             "rgba(153, 102, 255, 1)",
                             "rgba(255, 159, 64, 1)",
-                            "rgba(255, 159, 64, 1)",
+                            "rgba(255, 159, 64, 1)"
                         ],
-                        borderWidth: 1,
-                    },
-                ],
+                        borderWidth: 1
+                    }
+                ]
             },
             options: {
                 animation: {
                     duration: 750,
-                    easing: "easeOutCubic",
+                    easing: "easeOutCubic"
                 },
                 scales: {
                     yAxes: [
                         {
                             ticks: {
-                                beginAtZero: true,
-                            },
-                        },
-                    ],
-                },
-            },
+                                beginAtZero: true
+                            }
+                        }
+                    ]
+                }
+            }
         })
     })
 

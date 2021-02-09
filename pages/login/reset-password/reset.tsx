@@ -1,7 +1,7 @@
 import {
     passwordValidation,
     requiredFieldValidation,
-    StandardForm,
+    StandardForm
 } from "components/forms/StandardForm"
 import Head from "next/head"
 import { useRouter } from "next/router"
@@ -37,7 +37,7 @@ const Reset = () => {
                             type="password"
                             inRef={register({
                                 ...requiredFieldValidation,
-                                ...passwordValidation,
+                                ...passwordValidation
                             })}
                         >
                             New Password
@@ -54,7 +54,7 @@ const Reset = () => {
                             type="password"
                             inRef={register({
                                 ...requiredFieldValidation,
-                                ...passwordValidation,
+                                ...passwordValidation
                             })}
                         >
                             Confirm Password

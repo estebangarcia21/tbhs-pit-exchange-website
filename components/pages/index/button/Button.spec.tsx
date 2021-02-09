@@ -17,9 +17,9 @@ export const mockRouter: NextRouter = {
     events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
+        emit: jest.fn()
     },
-    isFallback: false,
+    isFallback: false
 }
 
 describe("Button", () => {

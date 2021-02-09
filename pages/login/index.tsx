@@ -4,13 +4,13 @@ import {
     noErrors,
     passwordValidation,
     requiredFieldValidation,
-    StandardForm,
+    StandardForm
 } from "components/forms/StandardForm"
 import { Navbar } from "components/global/Navbar"
 import {
     LoginDocument,
     LoginMutation,
-    LoginMutationVariables,
+    LoginMutationVariables
 } from "generated/graphql-types"
 import Head from "next/head"
 import Link from "next/link"
@@ -38,8 +38,8 @@ const Login = () => {
             mutation: LoginDocument,
             variables: {
                 email,
-                password,
-            },
+                password
+            }
         })
 
         if (data.login.successful) {
@@ -66,7 +66,7 @@ const Login = () => {
                         htmlFor="email"
                         inRef={register({
                             ...requiredFieldValidation,
-                            pattern: emailValidationRule,
+                            pattern: emailValidationRule
                         })}
                     >
                         Email
@@ -86,7 +86,7 @@ const Login = () => {
                         type="password"
                         inRef={register({
                             ...requiredFieldValidation,
-                            ...passwordValidation,
+                            ...passwordValidation
                         })}
                     >
                         Password

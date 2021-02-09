@@ -9,7 +9,7 @@ interface InfoCard extends Children {
 export const InfoCard = ({
     icon: [Icon, ariaLabel],
     title,
-    children,
+    children
 }: InfoCard) => {
     return (
         <div className="relative flex-grow md:m-5 xl:m-0 sm:flex-grow-0 sm:w-80 py-5">

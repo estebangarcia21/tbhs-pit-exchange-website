@@ -3,7 +3,7 @@ import Document, {
     Head,
     Html,
     Main,
-    NextScript,
+    NextScript
 } from "next/document"
 
 const AppDocument = ({ data }) => {
@@ -27,8 +27,8 @@ AppDocument.getInitialProps = async (ctx: DocumentContext) => {
     return {
         ...initialProps,
         data: {
-            isDark: await getUserTheme(),
-        },
+            isDark: await getUserTheme()
+        }
     }
 }
 

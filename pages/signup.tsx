@@ -4,13 +4,13 @@ import {
     noErrors,
     passwordValidation,
     requiredFieldValidation,
-    StandardForm,
+    StandardForm
 } from "components/forms/StandardForm"
 import { Navbar } from "components/global/Navbar"
 import {
     RegisterUserDocument,
     RegisterUserMutation,
-    RegisterUserMutationVariables,
+    RegisterUserMutationVariables
 } from "generated/graphql-types"
 import Head from "next/head"
 import { useRouter } from "next/router"
@@ -38,8 +38,8 @@ const Signup = () => {
             mutation: RegisterUserDocument,
             variables: {
                 email,
-                password,
-            },
+                password
+            }
         })
 
         if (data.registerUser.successful) {
@@ -66,7 +66,7 @@ const Signup = () => {
                         htmlFor="email"
                         inRef={register({
                             ...requiredFieldValidation,
-                            pattern: emailValidationRule,
+                            pattern: emailValidationRule
                         })}
                     >
                         Email
@@ -86,7 +86,7 @@ const Signup = () => {
                         type="password"
                         inRef={register({
                             ...requiredFieldValidation,
-                            ...passwordValidation,
+                            ...passwordValidation
                         })}
                     >
                         Password
@@ -119,7 +119,7 @@ const Signup = () => {
                             ...passwordValidation,
                             validate: (value) =>
                                 value === watch("password") ||
-                                "Password do not match",
+                                "Password do not match"
                         })}
                     >
                         Confirm Password

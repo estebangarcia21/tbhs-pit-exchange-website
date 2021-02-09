@@ -4,7 +4,7 @@ import { Content } from "components/pages/index/content/Content"
 import { Camera, Cube } from "components/pages/index/Cube"
 import {
     HorizontalDivider,
-    VerticalDivider,
+    VerticalDivider
 } from "components/pages/index/Dividers"
 import { HeaderCircles } from "components/pages/index/header-circles/HeaderCircles"
 import { InfoCard } from "components/pages/index/info-card/InfoCard"
@@ -103,7 +103,7 @@ const Index = () => {
                                 title="Intelligent Trade Searching"
                                 img={[
                                     "/images/index/search-window.svg",
-                                    "Player searching for mystics",
+                                    "Player searching for mystics"
                                 ]}
                             >
                                 The Pit Exchange features a strong search engine
@@ -122,7 +122,7 @@ const Index = () => {
                                 title="Trade Logging and Monitoring"
                                 img={[
                                     "/images/index/trend-graph.svg",
-                                    "Graph showing a trend line",
+                                    "Graph showing a trend line"
                                 ]}
                                 alignRight
                             >

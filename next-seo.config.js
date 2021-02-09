@@ -3,6 +3,6 @@ export default {
         type: "website",
         locale: "en_IE",
         url: "https://thepitexchange.com/",
-        site_name: "The Pit Exchange",
-    },
+        site_name: "The Pit Exchange"
+    }
 }

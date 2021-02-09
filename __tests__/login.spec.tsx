@@ -22,8 +22,8 @@ describe("login page", () => {
     it("sends a login request on submit", () => {
         jest.mock("utils/server-client", () => ({
             serverClient: {
-                request: jest.fn(),
-            },
+                request: jest.fn()
+            }
         }))
 
         const { getByText, getByLabelText } = render(<Login />)

@@ -13,7 +13,7 @@ interface StandardFormProps {
 export const StandardForm = ({
     title,
     children,
-    handleSubmit,
+    handleSubmit
 }: StandardFormProps & Children) => {
     return (
         <form
@@ -37,7 +37,7 @@ StandardForm.Input = ({
     htmlFor,
     type = "text",
     children,
-    inRef,
+    inRef
 }: InputProps & Children) => {
     return (
         <label htmlFor={htmlFor}>
@@ -61,7 +61,7 @@ interface ButtonProps {
 
 StandardForm.Button = ({
     type = "button",
-    children,
+    children
 }: ButtonProps & Children) => {
     return (
         <button
@@ -90,23 +90,23 @@ export const noErrors = (errors: DeepMap<unknown, FieldError>) =>
 
 export const emailValidationRule: ValidationRule<RegExp> = {
     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-    message: "Please enter a valid e-mail address",
+    message: "Please enter a valid e-mail address"
 }
 
 export const passwordValidation = {
     minLength: {
         value: 4,
-        message: "Must atleast 4 characters long",
+        message: "Must atleast 4 characters long"
     },
     maxLength: {
         value: 32,
-        message: "Must be less than 32 characters long",
-    },
+        message: "Must be less than 32 characters long"
+    }
 }
 
 export const requiredFieldValidation = {
     required: {
         value: true,
-        message: "Required field",
-    },
+        message: "Required field"
+    }
 }

@@ -2,12 +2,12 @@ import {
     emailValidationRule,
     noErrors,
     requiredFieldValidation,
-    StandardForm,
+    StandardForm
 } from "components/forms/StandardForm"
 import {
     ResetPasswordDocument,
     ResetPasswordMutation,
-    ResetPasswordMutationVariables,
+    ResetPasswordMutationVariables
 } from "generated/graphql-types"
 import { serverClient } from "utils/server-client"
 import Head from "next/head"
@@ -27,7 +27,7 @@ const ForgotPassword = () => {
             ResetPasswordMutation,
             ResetPasswordMutationVariables
         >(ResetPasswordDocument, {
-            email,
+            email
         })
 
         setSubmitResult(data)
@@ -55,7 +55,7 @@ const ForgotPassword = () => {
                             htmlFor="email"
                             inRef={register({
                                 ...requiredFieldValidation,
-                                pattern: emailValidationRule,
+                                pattern: emailValidationRule
                             })}
                         >
                             Email

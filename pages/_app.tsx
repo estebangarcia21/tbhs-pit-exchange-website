@@ -5,7 +5,7 @@ import SEO from "../next-seo.config"
 
 const client = new ApolloClient({
     credentials: "include",
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache()
 })
 
 export default function App({ Component, pageProps }) {
