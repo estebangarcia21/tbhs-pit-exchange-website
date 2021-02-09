@@ -12,7 +12,7 @@ import {
     TextSection,
 } from "components/pages/index/text-section/TextSection"
 import Head from "next/head"
-import { BiDollarCircle } fom "react-icons/bi"
+import { BiDollarCircle } from "react-icons/bi"
 import { BsArrowRepeat, BsEye } from "react-icons/bs"
 import { Canvas } from "react-three-fiber"
 
@@ -103,7 +103,10 @@ const Index = () => {
                         <div className="transform skew-y-6">
                             <TextSection
                                 title="Intelligent Trade Searching"
-                                img={["/images/index/search-window.svg", "Player searching for mystics"]}
+                                img={[
+                                    "/images/index/search-window.svg",
+                                    "Player searching for mystics",
+                                ]}
                             >
                                 The Pit Exchange features a strong search engine
                                 that makes it easy to find the items that you
@@ -119,7 +122,10 @@ const Index = () => {
 
                             <TextSection
                                 title="Trade Logging and Monitoring"
-                                img={["/images/index/trend-graph.svg", "Graph showing a trend line"]}
+                                img={[
+                                    "/images/index/trend-graph.svg",
+                                    "Graph showing a trend line",
+                                ]}
                                 alignRight
                             >
                                 The Pit Exchange keeps track of all of your
