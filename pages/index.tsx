@@ -1,4 +1,4 @@
-import { Footer } from "components/global/Footer"
+import { Footer } from "components/global/footer/Footer"
 import { Button } from "components/pages/index/Button"
 import { Content } from "components/pages/index/Content"
 import { Cube, Camera } from "components/pages/index/Cube"
