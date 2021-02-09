@@ -1,5 +1,5 @@
 import { Footer } from "components/global/footer/Footer"
-import { Button } from "components/pages/index/Button"
+import { Button } from "components/pages/index/button/Button"
 import { Content } from "components/pages/index/Content"
 import { Cube, Camera } from "components/pages/index/Cube"
 import { HeaderCircles } from "components/pages/index/header-circles/HeaderCircles"
