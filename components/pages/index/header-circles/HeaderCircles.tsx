@@ -7,6 +7,7 @@ export const HeaderCircles = ({ position }: HeaderImageProps) => {
         <img
             src="/images/index/circles.svg"
             className={`absolute z-0 hidden lg:block w-96 ${position}`}
+            alt="Circles"
         />
     )
 }

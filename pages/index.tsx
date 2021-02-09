@@ -2,7 +2,7 @@ import { Footer } from "components/global/footer/Footer"
 import { Button } from "components/pages/index/Button"
 import { Content } from "components/pages/index/Content"
 import { Cube, Camera } from "components/pages/index/Cube"
-import { HeaderCircles } from "components/pages/index/HeaderImage"
+import { HeaderCircles } from "components/pages/index/header-circles/HeaderCircles"
 import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard"
 import {
     HorizontalDivider,
