@@ -7,7 +7,9 @@
         "build": "next build",
         "start": "next start",
         "generate": "graphql-codegen",
-        "generate:watch": "graphql-codegen --watch"
+        "generate:watch": "graphql-codegen --watch",
+        "test": "jest",
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "@play-when-visible/react-spring": "^1.0.5",
