@@ -3,7 +3,10 @@ import { Button } from "components/pages/index/button/Button"
 import { Content } from "components/pages/index/content/Content"
 import { Cube, Camera } from "components/pages/index/Cube"
 import { HeaderCircles } from "components/pages/index/header-circles/HeaderCircles"
-import { InfoCard, VerticalDivider } from "components/pages/index/InfoCard"
+import {
+    InfoCard,
+    VerticalDivider,
+} from "components/pages/index/info-card/InfoCard"
 import {
     HorizontalDivider,
     TextSection,
@@ -59,7 +62,10 @@ const Index = () => {
                         </div>
 
                         <div className="my-12 flex flex-row mx-auto xl:justify-between flex-wrap max-w-3xl xl:max-w-none">
-                            <InfoCard title="Watch" icon={BsEye}>
+                            <InfoCard
+                                title="Watch"
+                                icon={[BsEye, "Watching for trades"]}
+                            >
                                 Watch for trade requests and offers in realtime.
                                 Maximize your potential profit by monitoring the
                                 market from a simple and intutive dashboard.
@@ -67,7 +73,10 @@ const Index = () => {
 
                             <VerticalDivider />
 
-                            <InfoCard title="Trade" icon={BiDollarCircle}>
+                            <InfoCard
+                                title="Trade"
+                                icon={[BiDollarCircle, "Gaining money"]}
+                            >
                                 Easily make trades by searching for open trades
                                 or by offering for an item that a player has.
                                 Utilize a powerful search tool to find your next
@@ -76,7 +85,10 @@ const Index = () => {
 
                             <VerticalDivider />
 
-                            <InfoCard title="Repeat" icon={BsArrowRepeat}>
+                            <InfoCard
+                                title="Repeat"
+                                icon={[BsArrowRepeat, "Repeating"]}
+                            >
                                 The Pit Exchange takes care of all your trading
                                 business in one place. Trade without the burden
                                 of having to search through countless discord
