@@ -27,7 +27,7 @@ describe("InfoCard", () => {
         expect(text).toBeInTheDocument()
     })
 
-    it("renders icon properly", () => {
+    it("renders two icons", () => {
         const { getAllByLabelText } = render(
             <InfoCard title="Card Title" icon={[BiDollarCircle, "Aria Text"]}>
                 Hello World!
