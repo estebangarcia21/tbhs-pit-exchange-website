@@ -2,13 +2,13 @@ import { Children } from "utils/children"
 
 interface TextSectionProps extends Children {
     title: string
-    imgPath: string
+    img: [string, string]
     alignRight?: boolean
 }
 
 export const TextSection = ({
     title,
-    imgPath,
+    img: [path, alt],
     alignRight,
     children,
 }: TextSectionProps) => {
@@ -27,10 +27,11 @@ export const TextSection = ({
             </div>
 
             <img
-                src={imgPath}
+                src={path}
                 className={`hidden lg:block lg:w-1/2 h-64 ${
                     alignRight ? "mr-12" : "ml-12"
                 }`}
+                alt={alt}
             />
         </div>
     )

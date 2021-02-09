@@ -10,9 +10,9 @@ import {
 import {
     HorizontalDivider,
     TextSection,
-} from "components/pages/index/TextSection"
+} from "components/pages/index/text-section/TextSection"
 import Head from "next/head"
-import { BiDollarCircle } from "react-icons/bi"
+import { BiDollarCircle } fom "react-icons/bi"
 import { BsArrowRepeat, BsEye } from "react-icons/bs"
 import { Canvas } from "react-three-fiber"
 
@@ -103,7 +103,7 @@ const Index = () => {
                         <div className="transform skew-y-6">
                             <TextSection
                                 title="Intelligent Trade Searching"
-                                imgPath="/images/index/search-window.svg"
+                                img={["/images/index/search-window.svg", "Player searching for mystics"]}
                             >
                                 The Pit Exchange features a strong search engine
                                 that makes it easy to find the items that you
@@ -119,7 +119,7 @@ const Index = () => {
 
                             <TextSection
                                 title="Trade Logging and Monitoring"
-                                imgPath="/images/index/trend-graph.svg"
+                                img={["/images/index/trend-graph.svg", "Graph showing a trend line"]}
                                 alignRight
                             >
                                 The Pit Exchange keeps track of all of your
@@ -138,7 +138,7 @@ const Index = () => {
 
                             <TextSection
                                 title="Personalized Markets"
-                                imgPath="/mag.svg"
+                                img={["/mag.svg", "Checking off a todo list"]}
                             >
                                 Create personilized markets to start your own
                                 business in the Pit. Advertise your items, your
