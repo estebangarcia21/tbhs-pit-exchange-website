@@ -7,7 +7,6 @@ describe("Button", () => {
 
         const text = getByText("Hello World!")
 
-        expect(text).toBeInTheDocument
         expect(text.textContent).toBe("Hello World!")
     })
 
