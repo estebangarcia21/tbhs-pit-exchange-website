@@ -29,4 +29,12 @@ describe("Button", () => {
 
         expect(whiteButton).toHaveClass("bg-white")
     })
+
+    it("has the specified href", () => {
+        const { getByText } = render(<Button href="/">Hello World!</Button>)
+
+        const tealButton = getByText("Hello World!", { selector: "a" })
+
+        expect(tealButton).toHaveAttribute("href", "/")
+    })
 })
