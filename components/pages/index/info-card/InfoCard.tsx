@@ -32,9 +32,3 @@ export const InfoCard = ({
         </div>
     )
 }
-
-export const VerticalDivider = () => {
-    return (
-        <div className="hidden xl:block w-0.5 border-r h-auto border-dashed border-gray-300" />
-    )
-}

@@ -40,18 +40,18 @@ StandardForm.Input = ({
     inRef,
 }: InputProps & Children) => {
     return (
-        <>
+        <label htmlFor={htmlFor}>
             <input
                 ref={inRef}
-                id={htmlFor}
                 name={htmlFor}
+                aria-label={htmlFor}
                 className={focusable(
                     "border border-gray-300 rounded-sm my-2 py-2 px-3.5"
                 )}
                 placeholder={children.toString()}
                 type={type}
             />
-        </>
+        </label>
     )
 }
 

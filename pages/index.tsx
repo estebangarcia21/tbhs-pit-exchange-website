@@ -1,16 +1,14 @@
 import { Footer } from "components/global/footer/Footer"
 import { Button } from "components/pages/index/button/Button"
 import { Content } from "components/pages/index/content/Content"
-import { Cube, Camera } from "components/pages/index/Cube"
-import { HeaderCircles } from "components/pages/index/header-circles/HeaderCircles"
-import {
-    InfoCard,
-    VerticalDivider,
-} from "components/pages/index/info-card/InfoCard"
+import { Camera, Cube } from "components/pages/index/Cube"
 import {
     HorizontalDivider,
-    TextSection,
-} from "components/pages/index/text-section/TextSection"
+    VerticalDivider,
+} from "components/pages/index/Dividers"
+import { HeaderCircles } from "components/pages/index/header-circles/HeaderCircles"
+import { InfoCard } from "components/pages/index/info-card/InfoCard"
+import { TextSection } from "components/pages/index/text-section/TextSection"
 import Head from "next/head"
 import { BiDollarCircle } from "react-icons/bi"
 import { BsArrowRepeat, BsEye } from "react-icons/bs"
