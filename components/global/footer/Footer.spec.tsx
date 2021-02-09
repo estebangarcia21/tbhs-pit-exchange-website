@@ -15,17 +15,22 @@ describe("Footer", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Community")
+            const link = parentElement.children[1]
 
-            expect(parentElement.children[1].textContent).toBe("Support")
+            expect(link.textContent).toBe("Support")
+            expect(link.firstChild).toHaveAttribute("href", "/support")
         })
 
         it("has a community guidelines link", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Community")
+            const link = parentElement.children[2]
 
-            expect(parentElement.children[2].textContent).toBe(
-                "Community Guidelines"
+            expect(link.textContent).toBe("Community Guidelines")
+            expect(link.firstChild).toHaveAttribute(
+                "href",
+                "/community-guidelines"
             )
         })
 
@@ -33,8 +38,10 @@ describe("Footer", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Community")
+            const link = parentElement.children[3]
 
-            expect(parentElement.children[3].textContent).toBe("Discord")
+            expect(link.textContent).toBe("Discord")
+            expect(link.firstChild).toHaveAttribute("href", "/social-media")
         })
     })
 
@@ -51,26 +58,30 @@ describe("Footer", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Legal")
+            const link = parentElement.children[1]
 
-            expect(parentElement.children[1].textContent).toBe(
-                "Account Security"
-            )
+            expect(link.textContent).toBe("Account Security")
+            expect(link.firstChild).toHaveAttribute("href", "/account-security")
         })
 
         it("has a cookie policy link", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Legal")
+            const link = parentElement.children[2]
 
-            expect(parentElement.children[2].textContent).toBe("Cookie Policy")
+            expect(link.textContent).toBe("Cookie Policy")
+            expect(link.firstChild).toHaveAttribute("href", "/cookie-policy")
         })
 
         it("has a terms of service link", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Legal")
+            const link = parentElement.children[3]
 
-            expect(parentElement.children[3].textContent).toBe("Donations")
+            expect(link.textContent).toBe("Donations")
+            expect(link.firstChild).toHaveAttribute("href", "/donate")
         })
     })
 
@@ -87,26 +98,36 @@ describe("Footer", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Company")
+            const link = parentElement.children[1]
 
-            expect(parentElement.children[1].textContent).toBe("Stevemmmmm")
+            expect(link.textContent).toBe("Stevemmmmm")
+            expect(link.firstChild).toHaveAttribute(
+                "href",
+                "/company/stevemmmmm"
+            )
         })
 
         it("has a the blue hats link", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Company")
+            const link = parentElement.children[2]
 
-            expect(parentElement.children[2].textContent).toBe("The Blue Hats")
+            expect(link.textContent).toBe("The Blue Hats")
+            expect(link.firstChild).toHaveAttribute(
+                "href",
+                "/company/the-blue-hats"
+            )
         })
 
         it("has a terms of service link", () => {
             const { getByText } = render(<Footer />)
 
             const { parentElement } = getByText("Company")
+            const link = parentElement.children[3]
 
-            expect(parentElement.children[3].textContent).toBe(
-                "Terms of Service"
-            )
+            expect(link.textContent).toBe("Terms of Service")
+            expect(link.firstChild).toHaveAttribute("href", "/terms-of-service")
         })
     })
 })

@@ -54,21 +54,23 @@ export const Footer = () => {
                     </div>
 
                     <Section title="Community">
-                        <Item href="/">Support</Item>
-                        <Item href="/">Community Guidelines</Item>
-                        <Item href="/">Discord</Item>
+                        <Item href="/support">Support</Item>
+                        <Item href="/community-guidelines">
+                            Community Guidelines
+                        </Item>
+                        <Item href="/social-media">Discord</Item>
                     </Section>
 
                     <Section title="Legal" odd>
-                        <Item href="/">Account Security</Item>
-                        <Item href="/">Cookie Policy</Item>
-                        <Item href="/">Donations</Item>
+                        <Item href="/account-security">Account Security</Item>
+                        <Item href="/cookie-policy">Cookie Policy</Item>
+                        <Item href="/donate">Donations</Item>
                     </Section>
 
                     <Section title="Company">
-                        <Item href="/">Stevemmmmm</Item>
-                        <Item href="/">The Blue Hats</Item>
-                        <Item href="/">Terms of Service</Item>
+                        <Item href="/company/stevemmmmm">Stevemmmmm</Item>
+                        <Item href="/company/the-blue-hats">The Blue Hats</Item>
+                        <Item href="/terms-of-service">Terms of Service</Item>
                     </Section>
                 </footer>
             </Content>
