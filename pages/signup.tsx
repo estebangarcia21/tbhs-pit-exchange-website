@@ -1,3 +1,4 @@
+import { useApolloClient } from "@apollo/client"
 import {
     emailValidationRule,
     noErrors,
@@ -15,7 +16,6 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
-import { serverClient } from "utils/server-client"
 
 interface FormInputs {
     email: string
@@ -25,21 +25,21 @@ interface FormInputs {
 
 const Signup = () => {
     const router = useRouter()
+    const client = useApolloClient()
 
     const { register, handleSubmit, errors, watch } = useForm<FormInputs>()
     const [loginResponse, setLoginResponse] = useState<RegisterUserMutation>()
 
-    const onSubmit = async ({
-        email,
-        password,
-        confirmPassword,
-    }: FormInputs) => {
-        const data = await serverClient.request<
+    const onSubmit = async ({ email, password }: FormInputs) => {
+        const { data } = await client.mutate<
             RegisterUserMutation,
             RegisterUserMutationVariables
-        >(RegisterUserDocument, {
-            email,
-            password,
+        >({
+            mutation: RegisterUserDocument,
+            variables: {
+                email,
+                password,
+            },
         })
 
         if (data.registerUser.successful) {

@@ -6,6 +6,6 @@ generates:
         plugins:
             - typescript
             - typescript-operations
-            - typescript-graphql-request
+            - typescript-react-apollo
 config:
     skipTypename: true
