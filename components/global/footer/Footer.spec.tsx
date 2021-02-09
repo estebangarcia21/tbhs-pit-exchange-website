@@ -8,7 +8,7 @@ describe("Footer", () => {
 
             const header = getByText("Community")
 
-            expect(header).toBeInTheDocument
+            expect(header).toBeInTheDocument()
         })
 
         it("has a support link", () => {
@@ -44,7 +44,7 @@ describe("Footer", () => {
 
             const header = getByText("Legal")
 
-            expect(header).toBeInTheDocument
+            expect(header).toBeInTheDocument()
         })
 
         it("has an account security link", () => {
@@ -80,7 +80,7 @@ describe("Footer", () => {
 
             const header = getByText("Company")
 
-            expect(header).toBeInTheDocument
+            expect(header).toBeInTheDocument()
         })
 
         it("has a stevemmmmm link", () => {
