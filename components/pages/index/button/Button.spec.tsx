@@ -5,13 +5,13 @@ describe("Button", () => {
     it("renders a button with the child text", () => {
         const { getByText } = render(<Button href="/">Hello World!</Button>)
 
-        const text = getByText("Hello World!", { selector: "a" })
+        const text = getByText("Hello World!")
 
         expect(text).toBeInTheDocument
         expect(text.textContent).toBe("Hello World!")
     })
 
-    it("is teal if the white prop is equal to false", () => {
+    it("has a teal background if white is equal to false", () => {
         const { getByText } = render(<Button href="/">Hello World!</Button>)
 
         const tealButton = getByText("Hello World!")
@@ -19,7 +19,7 @@ describe("Button", () => {
         expect(tealButton).toHaveClass("bg-teal-500")
     })
 
-    it("is white if the white is equal to true true", () => {
+    it("is has a white background if white is equal to true", () => {
         const { getByText } = render(
             <Button href="/" white>
                 Hello World!
