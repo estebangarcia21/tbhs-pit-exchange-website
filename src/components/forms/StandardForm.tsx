@@ -93,7 +93,7 @@ export const emailValidationRule: ValidationRule<RegExp> = {
 export const passwordValidation = {
     minLength: {
         value: 4,
-        message: "Must atleast 4 characters long"
+        message: "Must be atleast 4 characters long"
     },
     maxLength: {
         value: 32,
