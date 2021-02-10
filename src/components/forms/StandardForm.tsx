@@ -59,13 +59,10 @@ interface ButtonProps {
     type?: "button" | "submit" | "reset"
 }
 
-StandardForm.Button = ({
-    type = "button",
-    children
-}: ButtonProps & Children) => {
+StandardForm.Button = ({ type, children }: ButtonProps & Children) => {
     return (
         <button
-            type={type}
+            type={type || "button"}
             className={focusable(
                 "bg-black rounded-sm mt-4 px-4 py-2.5 text-white text-center cursor-pointer hover:bg-gray-900"
             )}
@@ -85,7 +82,7 @@ StandardForm.Error = ({ error }: ErrorProps) => {
     ) : null
 }
 
-export const noErrors = (errors: DeepMap<unknown, FieldError>) =>
+export const noErrors = <T extends unknown>(errors: DeepMap<T, FieldError>) =>
     !Object.values(errors).some((k) => k !== null)
 
 export const emailValidationRule: ValidationRule<RegExp> = {
