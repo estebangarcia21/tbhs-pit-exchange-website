@@ -13,8 +13,15 @@ import { BiDollarCircle } from "react-icons/bi"
 import { BsFillEyeFill, BsEye } from "react-icons/bs"
 import { IoIosCheckmarkCircle, IoIosRewind } from "react-icons/io"
 import { AiFillDollarCircle } from "react-icons/ai"
+import { List, ListItem } from "components/pages/index/list/List"
+import { IconType } from "react-icons"
 
 const Index = () => {
+    const checkmarkIcon: [IconType, string] = [
+        IoIosCheckmarkCircle,
+        "checkmark"
+    ]
+
     return (
         <div>
             <Head>
@@ -28,7 +35,7 @@ const Index = () => {
                 <Content>
                     <div className="px-4 md:px-0 overflow-hidden">
                         <div className="flex flex-row items-center mt-14">
-                            <div className="text-left md:text-left text-coolGray-900 max-w-xl lg:w-1/2">
+                            <div className="text-left text-coolGray-800 md:text-left max-w-xl lg:w-1/2">
                                 <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl">
                                     Connecting the{" "}
                                     <span className="text-indigo-500">
@@ -78,7 +85,7 @@ const Index = () => {
 
                             <InfoCard
                                 title="Repeat"
-                                icon={[IoIosRewind, "Repeating"]}
+                                icon={[IoIosCheckmarkCircle, "Repeating"]}
                             >
                                 The Pit Exchange takes care of all your trading
                                 business in one place. Trade without the burden
@@ -89,22 +96,49 @@ const Index = () => {
                     </div>
                 </Content>
 
-                {/* 
-                <div className="mt-10 mb-60 px-5 py-28 bg-violet-700 text-white transform -skew-y-6">
+                <div className="bg-white mt-10">
+                    {/* <div className="bg-gradient-to-br from-lightBlue-50 via-rose-50 to-orange-50 mt-10"> */}
                     <Content>
-                        <div className="transform skew-y-6">
-                            <h1 className="text-4xl font-semibold">
-                                Virtually Unlimited Throughput
-                            </h1>
+                        <div className="flex flex-row justify-center space-x-10">
+                            <div className="max-w-lg">
+                                <h1 className="text-3xl text-coolGray-800 font-semibold">
+                                    Intelligent Trade Searching
+                                </h1>
 
-                            <p>
-                                BSK-2020 is a battle-tested bastion ready to
-                                take on the heavest of the loads with up to 3000
-                                IOPS / hr
-                            </p>
+                                <p className="my-4 max-w-xl text-coolGray-600 leading-6">
+                                    The days of making your way around discord
+                                    servers are over. Easily search for trades
+                                    through an easy to use search bar to find
+                                    your next trade. Search by...
+                                </p>
+
+                                <List>
+                                    <ListItem icon={checkmarkIcon}>
+                                        Multiple enchants
+                                    </ListItem>
+                                    <ListItem icon={checkmarkIcon}>
+                                        Player UUID or username
+                                    </ListItem>
+                                    <ListItem icon={checkmarkIcon}>
+                                        Item UUID
+                                    </ListItem>
+                                    <ListItem icon={checkmarkIcon}>
+                                        Pants color
+                                    </ListItem>
+                                </List>
+
+                                <Button href="/login" white>
+                                    Search for your next trade
+                                </Button>
+                            </div>
+
+                            <img
+                                src="/images/index/search.svg"
+                                className="w-64 h-64"
+                            />
                         </div>
                     </Content>
-                </div> */}
+                </div>
 
                 {/* 
                 <div className="mt-5 px-5 py-28 bg-purpleBlue text-white transform -skew-y-6">
