@@ -58,7 +58,7 @@ describe("Index page", () => {
 
             const signupButton = getByText(/sign up/i, { selector: "a" })
 
-            expect(signupButton).toHaveClass("bg-teal-500")
+            expect(signupButton).toHaveClass("bg-coolGray-800")
         })
     })
 })

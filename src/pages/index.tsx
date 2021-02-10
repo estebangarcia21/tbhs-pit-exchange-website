@@ -10,7 +10,9 @@ import { InfoCard } from "components/pages/index/info-card/InfoCard"
 import { TextSection } from "components/pages/index/text-section/TextSection"
 import Head from "next/head"
 import { BiDollarCircle } from "react-icons/bi"
-import { BsArrowRepeat, BsEye } from "react-icons/bs"
+import { BsFillEyeFill, BsEye } from "react-icons/bs"
+import { IoIosCheckmarkCircle, IoIosRewind } from "react-icons/io"
+import { AiFillDollarCircle } from "react-icons/ai"
 
 const Index = () => {
     return (
@@ -20,16 +22,16 @@ const Index = () => {
             </Head>
 
             <main>
-                <HeaderSquares position="left-12 top-96" />
-                <HeaderSquares position="right-12 top-36" />
+                <HeaderSquares position="top-80 left-12" />
+                <HeaderSquares position="top-24 right-12" />
 
                 <Content>
                     <div className="px-4 md:px-0 overflow-hidden">
                         <div className="flex flex-row items-center mt-14">
-                            <div className="text-left md:text-left text-coolGray-800 max-w-xl lg:w-1/2">
+                            <div className="text-left md:text-left text-coolGray-900 max-w-xl lg:w-1/2">
                                 <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl">
                                     Connecting the{" "}
-                                    <span className="text-teal-500">
+                                    <span className="text-indigo-500">
                                         Hypixel Pit's Economy
                                     </span>
                                 </h1>
@@ -39,7 +41,7 @@ const Index = () => {
                                     the community of the Hypixel Pit
                                 </h2>
 
-                                <div className="flex flex-col space-y-4 sm:flex-row sm:justify-between sm:space-x-7">
+                                <div className="flex flex-row flex-wrap space-x-7">
                                     <Button href="/signup">Sign Up</Button>
                                     <Button href="/login" white>
                                         Log In
@@ -53,7 +55,7 @@ const Index = () => {
                         <div className="my-12 flex flex-row mx-auto xl:justify-between flex-wrap max-w-3xl xl:max-w-none">
                             <InfoCard
                                 title="Watch"
-                                icon={[BsEye, "Watching for trades"]}
+                                icon={[BsFillEyeFill, "Watching for trades"]}
                             >
                                 Watch for trade requests and offers in realtime.
                                 Maximize your potential profit by monitoring the
@@ -64,7 +66,7 @@ const Index = () => {
 
                             <InfoCard
                                 title="Trade"
-                                icon={[BiDollarCircle, "Gaining money"]}
+                                icon={[AiFillDollarCircle, "Gaining money"]}
                             >
                                 Easily make trades by searching for open trades
                                 or by offering for an item that a player has.
@@ -76,7 +78,7 @@ const Index = () => {
 
                             <InfoCard
                                 title="Repeat"
-                                icon={[BsArrowRepeat, "Repeating"]}
+                                icon={[IoIosRewind, "Repeating"]}
                             >
                                 The Pit Exchange takes care of all your trading
                                 business in one place. Trade without the burden
@@ -87,6 +89,24 @@ const Index = () => {
                     </div>
                 </Content>
 
+                {/* 
+                <div className="mt-10 mb-60 px-5 py-28 bg-violet-700 text-white transform -skew-y-6">
+                    <Content>
+                        <div className="transform skew-y-6">
+                            <h1 className="text-4xl font-semibold">
+                                Virtually Unlimited Throughput
+                            </h1>
+
+                            <p>
+                                BSK-2020 is a battle-tested bastion ready to
+                                take on the heavest of the loads with up to 3000
+                                IOPS / hr
+                            </p>
+                        </div>
+                    </Content>
+                </div> */}
+
+                {/* 
                 <div className="mt-5 px-5 py-28 bg-purpleBlue text-white transform -skew-y-6">
                     <Content>
                         <div className="transform skew-y-6">
@@ -146,8 +166,8 @@ const Index = () => {
                             </TextSection>
                         </div>
                     </Content>
-                </div>
-
+                </div> */}
+                {/* 
                 <Content>
                     <div className="px-16 py-12 flex flex-row justify-between">
                         <div>
@@ -164,7 +184,7 @@ const Index = () => {
                             </ol>
                         </div>
                     </div>
-                </Content>
+                </Content> */}
 
                 <Footer />
             </main>

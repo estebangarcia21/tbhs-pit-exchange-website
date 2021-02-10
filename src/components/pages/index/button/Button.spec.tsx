@@ -5,17 +5,17 @@ describe("Button", () => {
     it("renders a button with the child text", () => {
         const { getByText } = render(<Button href="/">Hello World!</Button>)
 
-        const text = getByText("Hello World!")
+        const text = getByText(/hello world!/i)
 
-        expect(text.textContent).toBe("Hello World!")
+        expect(text.textContent).toBe("Hello World! ")
     })
 
-    it("has a teal background if white is equal to false", () => {
+    it("has a gray background if white is equal to false", () => {
         const { getByText } = render(<Button href="/">Hello World!</Button>)
 
-        const tealButton = getByText("Hello World!")
+        const tealButton = getByText(/hello world!/i)
 
-        expect(tealButton).toHaveClass("bg-teal-500")
+        expect(tealButton).toHaveClass("bg-coolGray-800")
     })
 
     it("is has a white background if white is equal to true", () => {
@@ -25,7 +25,7 @@ describe("Button", () => {
             </Button>
         )
 
-        const whiteButton = getByText("Hello World!")
+        const whiteButton = getByText(/hello world!/i)
 
         expect(whiteButton).toHaveClass("bg-white")
     })
@@ -33,7 +33,7 @@ describe("Button", () => {
     it("has the specified href", () => {
         const { getByText } = render(<Button href="/">Hello World!</Button>)
 
-        const tealButton = getByText("Hello World!", { selector: "a" })
+        const tealButton = getByText(/hello world!/i, { selector: "a" })
 
         expect(tealButton).toHaveAttribute("href", "/")
     })
