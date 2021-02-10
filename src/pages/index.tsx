@@ -1,7 +1,6 @@
 import { Footer } from "components/global/footer/Footer"
 import { Button } from "components/pages/index/button/Button"
 import { Content } from "components/pages/index/content/Content"
-import { Camera, Cube } from "components/pages/index/Cube"
 import {
     HorizontalDivider,
     VerticalDivider
@@ -12,7 +11,6 @@ import { TextSection } from "components/pages/index/text-section/TextSection"
 import Head from "next/head"
 import { BiDollarCircle } from "react-icons/bi"
 import { BsArrowRepeat, BsEye } from "react-icons/bs"
-import { Canvas } from "react-three-fiber"
 
 const Index = () => {
     return (
@@ -49,14 +47,7 @@ const Index = () => {
                                 </div>
                             </div>
 
-                            <div className="hidden lg:block lg:w-1/2 ml-16">
-                                <Canvas style={{ height: "425px" }}>
-                                    <Camera />
-                                    <ambientLight />
-                                    <pointLight position={[10, 10, 10]} />
-                                    <Cube />
-                                </Canvas>
-                            </div>
+                            <div className="hidden lg:block lg:w-1/2 ml-16"></div>
                         </div>
 
                         <div className="my-12 flex flex-row mx-auto xl:justify-between flex-wrap max-w-3xl xl:max-w-none">
