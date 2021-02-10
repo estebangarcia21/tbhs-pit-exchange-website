@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Footer } from "components/global/footer/Footer"
 import { Button } from "components/pages/index/button/Button"
 import { Content } from "components/pages/index/content/Content"
@@ -15,6 +16,8 @@ import { IoIosCheckmarkCircle, IoIosRewind } from "react-icons/io"
 import { AiFillDollarCircle } from "react-icons/ai"
 import { List, ListItem } from "components/pages/index/list/List"
 import { IconType } from "react-icons"
+import React from "react"
+import { TradeCard } from "components/pages/index/trade-card/TradeCard"
 
 const Index = () => {
     const checkmarkIcon: [IconType, string] = [
@@ -132,93 +135,45 @@ const Index = () => {
                                 </Button>
                             </div>
 
-                            <img
-                                src="/images/index/search.svg"
-                                className="w-64 h-64"
-                            />
+                            <div className="w-64 h-64 relative">
+                                <Image
+                                    src="/images/index/search.svg"
+                                    layout="fill"
+                                    alt="Searching"
+                                />
+                            </div>
                         </div>
                     </Content>
                 </div>
 
-                {/* 
-                <div className="mt-5 px-5 py-28 bg-purpleBlue text-white transform -skew-y-6">
-                    <Content>
-                        <div className="transform skew-y-6">
-                            <TextSection
-                                title="Intelligent Trade Searching"
-                                img={[
-                                    "/images/index/search-window.svg",
-                                    "Player searching for mystics"
-                                ]}
-                            >
-                                The Pit Exchange features a strong search engine
-                                that makes it easy to find the items that you
-                                want to trade for. Instead of manually searching
-                                through various discord servers and pit lobbies,
-                                search through a single search bar by an
-                                enchant, a combination of enchants, enchant
-                                levels, player names, player UUIDs, item UUIDs,
-                                pants color, and more.
-                            </TextSection>
+                <div className="my-10">
+                    <h1 className="font-bold text-3xl text-center">
+                        Realtime Market Streaming
+                    </h1>
 
-                            <HorizontalDivider />
-
-                            <TextSection
-                                title="Trade Logging and Monitoring"
-                                img={[
-                                    "/images/index/trend-graph.svg",
-                                    "Graph showing a trend line"
-                                ]}
-                                alignRight
-                            >
-                                The Pit Exchange keeps track of all of your
-                                previous trades while giving a total trade value
-                                according to the{" "}
-                                <strong>Item Value Index (IVI)</strong>. The Pit
-                                Exchange also monitors your value as a player
-                                compared to other pit players according to the{" "}
-                                <strong>Player Value Index (PVI)</strong>. Use
-                                The Pit Exchange to get insightful value
-                                estimates from trades to maximize your profit
-                                from trades and minimize value loss.
-                            </TextSection>
-
-                            <HorizontalDivider />
-
-                            <TextSection
-                                title="Personalized Markets"
-                                img={["/mag.svg", "Checking off a todo list"]}
-                            >
-                                Create personilized markets to start your own
-                                business in the Pit. Advertise your items, your
-                                rates, and your available trading times in a
-                                discoverable market. Compare your prices to
-                                similar markets and use the IVI to always
-                                deliver the lowest possible prices for your
-                                customers while still gaining profit and
-                                boosting your overall score on the PVI.
-                            </TextSection>
-                        </div>
-                    </Content>
-                </div> */}
-                {/* 
-                <Content>
-                    <div className="px-16 py-12 flex flex-row justify-between">
-                        <div>
-                            <h1 className="mt-10 mb-3 font-medium text-4xl text-gray-900">
-                                Ready to Get Started?
-                            </h1>
-
-                            <p>Signing up happens in three simple steps!</p>
-
-                            <ol className="list-decimal list-inside ml-2 my-5 space-y-2">
-                                <li>Sign up for a Metropolitan account</li>
-                                <li>Connect your Minecraft account</li>
-                                <li>Start making trades</li>
-                            </ol>
-                        </div>
+                    <div className="flex flex-row justify-center">
+                        <TradeCard
+                            player="Stevemmmmm"
+                            trade="Looking for moct pants!"
+                            item="Leggings"
+                        />
+                        <TradeCard
+                            player="Haberno"
+                            trade="Looking for a fresh bow!"
+                            item="Leggings"
+                        />
+                        <TradeCard
+                            player="Stevemmmmm"
+                            trade="Looking for moct pants!"
+                            item="Leggings"
+                        />
+                        <TradeCard
+                            player="Stevemmmmm"
+                            trade="Looking for moct pants!"
+                            item="Leggings"
+                        />
                     </div>
-                </Content> */}
+                </div>
 
                 <Footer />
             </main>
