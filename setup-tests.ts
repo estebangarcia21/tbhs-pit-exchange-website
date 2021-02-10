@@ -2,7 +2,6 @@ import "@testing-library/jest-dom"
 
 const children = () => ({ children }) => children
 
-jest.mock("next/link", () => children())
 jest.mock("next/head", () => children())
 
 process.env = {

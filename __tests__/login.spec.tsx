@@ -7,6 +7,8 @@ import {
 } from "generated/graphql-types"
 import Login from "pages/login"
 
+jest.mock("next/link", () => ({ children }) => children)
+
 describe("login page", () => {
     it("has an email field", () => {
         const { getByLabelText } = render(
