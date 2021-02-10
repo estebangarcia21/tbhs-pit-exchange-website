@@ -1,3 +1,4 @@
+import { useApolloClient } from "@apollo/client"
 import {
     emailValidationRule,
     noErrors,
@@ -9,7 +10,6 @@ import {
     ResetPasswordMutation,
     ResetPasswordMutationVariables
 } from "generated/graphql-types"
-import { serverClient } from "utils/server-client"
 import Head from "next/head"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
@@ -19,15 +19,20 @@ interface FormInputs {
 }
 
 const ForgotPassword = () => {
+    const client = useApolloClient()
+
     const { handleSubmit, register, errors } = useForm<FormInputs>()
     const [submitResult, setSubmitResult] = useState<ResetPasswordMutation>()
 
     const onSubmit = async ({ email }: FormInputs) => {
-        const data = await serverClient.request<
+        const { data } = await client.mutate<
             ResetPasswordMutation,
             ResetPasswordMutationVariables
-        >(ResetPasswordDocument, {
-            email
+        >({
+            mutation: ResetPasswordDocument,
+            variables: {
+                email
+            }
         })
 
         setSubmitResult(data)
