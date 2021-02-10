@@ -5,7 +5,7 @@ import {
     HorizontalDivider,
     VerticalDivider
 } from "components/pages/index/Dividers"
-import { HeaderCircles } from "components/pages/index/header-circles/HeaderCircles"
+import { HeaderSquares } from "components/pages/index/header-circles/HeaderSquares"
 import { InfoCard } from "components/pages/index/info-card/InfoCard"
 import { TextSection } from "components/pages/index/text-section/TextSection"
 import Head from "next/head"
@@ -20,8 +20,8 @@ const Index = () => {
             </Head>
 
             <main>
-                <HeaderCircles position="left-12 top-96" />
-                <HeaderCircles position="right-12 top-36" />
+                <HeaderSquares position="left-12 top-96" />
+                <HeaderSquares position="right-12 top-36" />
 
                 <Content>
                     <div className="px-4 md:px-0 overflow-hidden">
