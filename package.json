@@ -9,7 +9,8 @@
         "generate": "graphql-codegen",
         "generate:watch": "graphql-codegen --watch",
         "test": "jest",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "coverage": "jest --coverage"
     },
     "dependencies": {
         "@apollo/client": "^3.3.9",
