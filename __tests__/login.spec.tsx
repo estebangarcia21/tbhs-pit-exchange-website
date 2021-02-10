@@ -101,6 +101,26 @@ describe("login page", () => {
                         }
                     } as LoginMutation
                 }
+            },
+            {
+                request: {
+                    query: LoginDocument,
+                    variables: {
+                        email: "example@email.com",
+                        password: "123457"
+                    } as LoginMutationVariables
+                },
+                result: {
+                    data: {
+                        login: {
+                            successful: false,
+                            error: {
+                                object: "password",
+                                message: "Incorrect password."
+                            }
+                        }
+                    } as LoginMutation
+                }
             }
         ]
 
@@ -129,6 +149,28 @@ describe("login page", () => {
             expect(routerPush).not.toHaveBeenCalledWith("/dashboard")
 
             const errorMessage = getByText(/incorrect email./i)
+
+            expect(errorMessage).toBeInTheDocument()
+        })
+
+        fireEvent.change(password, { target: { value: "123457" } })
+        fireEvent.click(submitButton)
+
+        await waitFor(() => {
+            expect(routerPush).not.toHaveBeenCalledWith("/dashboard")
+
+            const errorMessage = getByText(/incorrect password./i)
+
+            expect(errorMessage).toBeInTheDocument()
+        })
+
+        fireEvent.change(password, { target: { value: "1" } })
+        fireEvent.click(submitButton)
+
+        await waitFor(() => {
+            expect(routerPush).not.toHaveBeenCalledWith("/dashboard")
+
+            const errorMessage = getByText(/must be atleast 4 characters long/i)
 
             expect(errorMessage).toBeInTheDocument()
         })
