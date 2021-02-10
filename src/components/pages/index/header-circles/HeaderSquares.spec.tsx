@@ -9,8 +9,6 @@ describe("Header Image", () => {
 
         const container = getByAltText("Squares in a grid pattern")
 
-        expect(container.className).toBe(
-            "absolute z-0 hidden lg:block w-96 left-96 top-48"
-        )
+        expect(container).toHaveClass("left-96 top-48")
     })
 })
