@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import { TextSection } from "."
+import TextSection from "."
 
 describe("TextSection", () => {
   it("renders the children", () => {

@@ -61,10 +61,10 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset"
 }
 
-const Button = ({ type, children }: ButtonProps & Children) => {
+const Button = ({ type = "button", children }: ButtonProps & Children) => {
   return (
     <button
-      type={type || "button"}
+      type={type}
       className={focusable(
         "bg-black rounded-sm mt-4 px-4 py-2.5 text-white text-center cursor-pointer hover:bg-gray-900"
       )}

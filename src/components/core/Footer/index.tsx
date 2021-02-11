@@ -1,7 +1,7 @@
-import { Content } from "components/pages/index/Content"
+import Content from "components/pages/index/Content"
 import Link from "next/link"
 import React from "react"
-import { Children } from "utils/children"
+import Children from "utils/children"
 
 interface SectionProps extends Children {
   title: string

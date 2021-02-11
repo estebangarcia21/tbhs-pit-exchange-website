@@ -14,18 +14,34 @@ describe("Standard Form", () => {
     expect(title).toBeInTheDocument()
   })
 
-  it("creates an accessible input field", () => {
-    const { getByLabelText } = render(
-      <Form title="Title" handleSubmit={jest.fn()}>
-        <Form.Input htmlFor="email" inRef={undefined} type="text">
-          Email
-        </Form.Input>
-      </Form>
-    )
+  describe("Input", () => {
+    it("creates an accessible input field", () => {
+      const { getByLabelText } = render(
+        <Form title="Title" handleSubmit={jest.fn()}>
+          <Form.Input htmlFor="email" inRef={undefined}>
+            Email
+          </Form.Input>
+        </Form>
+      )
 
-    const input = getByLabelText(/email/i, { selector: "input" })
+      const input = getByLabelText(/email/i, { selector: "input" })
 
-    expect(input).toBeInTheDocument()
+      expect(input).toBeInTheDocument()
+    })
+
+    it("sets text as the default input type", () => {
+      const { getByLabelText } = render(
+        <Form title="Title" handleSubmit={jest.fn()}>
+          <Form.Input htmlFor="email" inRef={undefined}>
+            Email
+          </Form.Input>
+        </Form>
+      )
+
+      const input = getByLabelText(/email/i, { selector: "input" })
+
+      expect(input).toHaveAttribute("type", "text")
+    })
   })
 
   describe("Button", () => {
@@ -65,6 +81,18 @@ describe("Standard Form", () => {
       const error = getByText(/my error/i)
 
       expect(error).toBeInTheDocument()
+    })
+
+    it("shows no error message if the error is undefined", () => {
+      const { queryByText } = render(
+        <Form title="Title" handleSubmit={jest.fn()}>
+          <Form.Error error={undefined} />
+        </Form>
+      )
+
+      const error = queryByText(/my error/i)
+
+      expect(error).toBeNull()
     })
 
     it("calculuates if there are errors on a react hook form", () => {

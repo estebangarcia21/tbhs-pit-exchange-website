@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react"
 import { BiDollarCircle } from "react-icons/bi"
-import { InfoCard } from "."
+import InfoCard from "."
 
 describe("InfoCard", () => {
   it("renders the title", () => {

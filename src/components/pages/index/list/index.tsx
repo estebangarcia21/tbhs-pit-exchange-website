@@ -1,5 +1,5 @@
 import { IconType } from "react-icons"
-import { Children } from "utils/children"
+import Children from "utils/children"
 
 export const List = ({ children }: Children) => {
   return <ul className="text-coolGray-600 my-3 space-y-2">{children}</ul>

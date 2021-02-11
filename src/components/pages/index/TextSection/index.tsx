@@ -1,4 +1,4 @@
-import { Children } from "utils/children"
+import Children from "utils/children"
 
 interface TextSectionProps extends Children {
   title: string
@@ -6,7 +6,7 @@ interface TextSectionProps extends Children {
   alignRight?: boolean
 }
 
-export const TextSection = ({
+const TextSection = ({
   title,
   img: [path, alt],
   alignRight,
@@ -36,3 +36,5 @@ export const TextSection = ({
     </div>
   )
 }
+
+export default TextSection

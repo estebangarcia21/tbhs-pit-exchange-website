@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import { Content } from "."
+import Content from "."
 
 describe("Content", () => {
   it("renders its children", () => {

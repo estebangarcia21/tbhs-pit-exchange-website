@@ -1,5 +1,5 @@
-import { Button } from "components/pages/index/Button"
-import { Content } from "components/pages/index/Content"
+import Button from "components/pages/index/Button"
+import Content from "components/pages/index/Content"
 import { List, ListItem } from "components/pages/index/List"
 import { TradeCard, TradeCardProps } from "components/pages/index/TradeCard"
 import Image from "next/image"
