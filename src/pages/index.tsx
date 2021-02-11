@@ -1,28 +1,39 @@
-import Image from "next/image"
 import { Footer } from "components/global/footer/Footer"
 import { Button } from "components/pages/index/button/Button"
 import { Content } from "components/pages/index/content/Content"
-import {
-    HorizontalDivider,
-    VerticalDivider
-} from "components/pages/index/Dividers"
+import { VerticalDivider } from "components/pages/index/Dividers"
 import { HeaderSquares } from "components/pages/index/header-circles/HeaderSquares"
 import { InfoCard } from "components/pages/index/info-card/InfoCard"
-import { TextSection } from "components/pages/index/text-section/TextSection"
-import Head from "next/head"
-import { BiDollarCircle } from "react-icons/bi"
-import { BsFillEyeFill, BsEye } from "react-icons/bs"
-import { IoIosCheckmarkCircle, IoIosRewind } from "react-icons/io"
-import { AiFillDollarCircle } from "react-icons/ai"
 import { List, ListItem } from "components/pages/index/list/List"
-import { IconType } from "react-icons"
+import {
+    TradeCard,
+    TradeCardProps
+} from "components/pages/index/trade-card/TradeCard"
+import Head from "next/head"
+import Image from "next/image"
 import React from "react"
-import { TradeCard } from "components/pages/index/trade-card/TradeCard"
+import { IconType } from "react-icons"
+import { AiFillDollarCircle } from "react-icons/ai"
+import { BsFillEyeFill } from "react-icons/bs"
+import { IoIosCheckmarkCircle } from "react-icons/io"
 
 const Index = () => {
     const checkmarkIcon: [IconType, string] = [
         IoIosCheckmarkCircle,
         "checkmark"
+    ]
+
+    const tradeCards: TradeCardProps[] = [
+        {
+            item: "Leggings",
+            player: "Stevemmmmm",
+            trade: "Does anyone have a Gamble 2 Executioner 2?"
+        },
+        {
+            item: "Leggings",
+            player: "Haberno",
+            trade: "Im looking for Moctezuma pants!"
+        }
     ]
 
     return (
@@ -151,27 +162,10 @@ const Index = () => {
                         Realtime Market Streaming
                     </h1>
 
-                    <div className="flex flex-row justify-center">
-                        <TradeCard
-                            player="Stevemmmmm"
-                            trade="Looking for moct pants!"
-                            item="Leggings"
-                        />
-                        <TradeCard
-                            player="Haberno"
-                            trade="Looking for a fresh bow!"
-                            item="Leggings"
-                        />
-                        <TradeCard
-                            player="Stevemmmmm"
-                            trade="Looking for moct pants!"
-                            item="Leggings"
-                        />
-                        <TradeCard
-                            player="Stevemmmmm"
-                            trade="Looking for moct pants!"
-                            item="Leggings"
-                        />
+                    <div className="flex flex-row justify-center overflow-hidden">
+                        {tradeCards.map(props => (
+                            <TradeCard {...props} />
+                        ))}
                     </div>
                 </div>
 
