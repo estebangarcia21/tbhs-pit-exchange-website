@@ -1,11 +1,12 @@
 import { Children } from "utils/children"
 
 interface ContentProps extends Children {
+  className?: string
   noXPadding?: boolean
 }
 
-export const Content = ({ noXPadding, children }: ContentProps) => {
-  return (
+export const Content = ({ noXPadding, className, children }: ContentProps) => {
+  const element = (
     <div
       className={`relative z-10 mx-auto max-w-7xl ${
         !noXPadding && "px-4 md:px-16"
@@ -14,4 +15,6 @@ export const Content = ({ noXPadding, children }: ContentProps) => {
       {children}
     </div>
   )
+
+  return className ? <div className={className}>{element}</div> : element
 }

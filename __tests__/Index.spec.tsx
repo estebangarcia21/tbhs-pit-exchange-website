@@ -6,7 +6,6 @@ describe("Index page", () => {
     const { getByTestId } = render(<Index />)
 
     const footer = getByTestId("std-footer")
-
     expect(footer).toBeInTheDocument()
   })
 
@@ -15,7 +14,6 @@ describe("Index page", () => {
       const { getByText } = render(<Index />)
 
       const loginButton = getByText(/log in/i, { selector: "a" })
-
       expect(loginButton).toBeInTheDocument()
     })
 
@@ -23,7 +21,6 @@ describe("Index page", () => {
       const { getByText } = render(<Index />)
 
       const loginButton = getByText(/log in/i, { selector: "a" })
-
       expect(loginButton).toHaveAttribute("href", "/login")
     })
 
@@ -31,7 +28,6 @@ describe("Index page", () => {
       const { getByText } = render(<Index />)
 
       const loginButton = getByText(/log in/i, { selector: "a" })
-
       expect(loginButton).toHaveClass("bg-white")
     })
   })
@@ -41,7 +37,6 @@ describe("Index page", () => {
       const { getByText } = render(<Index />)
 
       const signupButton = getByText(/sign up/i, { selector: "a" })
-
       expect(signupButton).toBeInTheDocument()
     })
 
@@ -49,7 +44,6 @@ describe("Index page", () => {
       const { getByText } = render(<Index />)
 
       const signupButton = getByText(/sign up/i, { selector: "a" })
-
       expect(signupButton).toHaveAttribute("href", "/signup")
     })
 
@@ -57,7 +51,6 @@ describe("Index page", () => {
       const { getByText } = render(<Index />)
 
       const signupButton = getByText(/sign up/i, { selector: "a" })
-
       expect(signupButton).toHaveClass("bg-coolGray-800")
     })
   })
