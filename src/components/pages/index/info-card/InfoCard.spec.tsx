@@ -3,39 +3,39 @@ import { BiDollarCircle } from "react-icons/bi"
 import { InfoCard } from "./InfoCard"
 
 describe("InfoCard", () => {
-    it("renders the title", () => {
-        const { getByText } = render(
-            <InfoCard title="Card Title" icon={[BiDollarCircle, "Aria Text"]}>
-                Hello World!
-            </InfoCard>
-        )
+  it("renders the title", () => {
+    const { getByText } = render(
+      <InfoCard title="Card Title" icon={[BiDollarCircle, "Aria Text"]}>
+        Hello World!
+      </InfoCard>
+    )
 
-        const title = getByText("Card Title")
+    const title = getByText("Card Title")
 
-        expect(title).toBeInTheDocument()
-    })
+    expect(title).toBeInTheDocument()
+  })
 
-    it("renders the children", () => {
-        const { getByText } = render(
-            <InfoCard title="Card Title" icon={[BiDollarCircle, "Aria Text"]}>
-                Hello World!
-            </InfoCard>
-        )
+  it("renders the children", () => {
+    const { getByText } = render(
+      <InfoCard title="Card Title" icon={[BiDollarCircle, "Aria Text"]}>
+        Hello World!
+      </InfoCard>
+    )
 
-        const text = getByText("Hello World!")
+    const text = getByText("Hello World!")
 
-        expect(text).toBeInTheDocument()
-    })
+    expect(text).toBeInTheDocument()
+  })
 
-    it("renders two icons", () => {
-        const { getAllByLabelText } = render(
-            <InfoCard title="Card Title" icon={[BiDollarCircle, "Aria Text"]}>
-                Hello World!
-            </InfoCard>
-        )
+  it("renders two icons", () => {
+    const { getAllByLabelText } = render(
+      <InfoCard title="Card Title" icon={[BiDollarCircle, "Aria Text"]}>
+        Hello World!
+      </InfoCard>
+    )
 
-        const icons = getAllByLabelText("Aria Text")
+    const icons = getAllByLabelText("Aria Text")
 
-        expect(icons.length).toBe(2)
-    })
+    expect(icons.length).toBe(2)
+  })
 })

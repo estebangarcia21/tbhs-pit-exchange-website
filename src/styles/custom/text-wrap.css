@@ -1,15 +1,15 @@
 @layer utilities {
-    @variants responsive {
-        .wrap-text-30 {
-            max-width: 30ch;
-        }
-
-        .wrap-text-50 {
-            max-width: 50ch;
-        }
-
-        .wrap-text-70 {
-            max-width: 70ch;
-        }
+  @variants responsive {
+    .wrap-text-30 {
+      max-width: 30ch;
     }
+
+    .wrap-text-50 {
+      max-width: 50ch;
+    }
+
+    .wrap-text-70 {
+      max-width: 70ch;
+    }
+  }
 }

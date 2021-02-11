@@ -1,16 +1,16 @@
 query PitInventory($uuid: String!) {
-    pitInventory(uuid: $uuid) {
-        player {
-            ...Contents
-        }
-        enderChest {
-            ...Contents
-        }
-        stash {
-            ...Contents
-        }
-        mysticWell {
-            ...Contents
-        }
+  pitInventory(uuid: $uuid) {
+    player {
+      ...Contents
     }
+    enderChest {
+      ...Contents
+    }
+    stash {
+      ...Contents
+    }
+    mysticWell {
+      ...Contents
+    }
+  }
 }
