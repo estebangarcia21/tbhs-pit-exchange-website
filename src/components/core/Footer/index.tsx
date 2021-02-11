@@ -1,4 +1,4 @@
-import { Content } from "components/pages/index/content/Content"
+import { Content } from "components/pages/index/Content"
 import Link from "next/link"
 import React from "react"
 import { Children } from "utils/children"

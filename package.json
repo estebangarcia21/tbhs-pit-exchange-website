@@ -35,7 +35,8 @@
     "react-icons": "^4.1.0",
     "react-query": "^3.5.11",
     "react-spring": "^8.0.27",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "tsconfig-paths-jest": "^0.0.1"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.20.0",

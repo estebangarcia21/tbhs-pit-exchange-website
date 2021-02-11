@@ -5,8 +5,8 @@ import {
   passwordValidation,
   requiredFieldValidation,
   StandardForm
-} from "components/forms/StandardForm"
-import { Navbar } from "components/global/Navbar"
+} from "components/core/Form"
+import { Navbar } from "components/core/Navbar"
 import {
   RegisterUserDocument,
   RegisterUserMutation,

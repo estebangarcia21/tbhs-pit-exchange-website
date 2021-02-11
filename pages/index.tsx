@@ -1,6 +1,6 @@
-import { Footer } from "components/global/footer/Footer"
-import { Header } from "components/pages/index/layout/Header"
-import { Sections } from "components/pages/index/layout/Sections"
+import { Footer } from "components/core/Footer"
+import { Header } from "components/pages/index/Header"
+import { Sections } from "components/pages/index/Sections"
 import Head from "next/head"
 
 const Index = () => {

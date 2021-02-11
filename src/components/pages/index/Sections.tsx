@@ -1,10 +1,7 @@
-import { Button } from "components/pages/index/button/Button"
-import { Content } from "components/pages/index/content/Content"
-import { List, ListItem } from "components/pages/index/list/List"
-import {
-  TradeCard,
-  TradeCardProps
-} from "components/pages/index/trade-card/TradeCard"
+import { Button } from "components/pages/index/Button"
+import { Content } from "components/pages/index/Content"
+import { List, ListItem } from "components/pages/index/List"
+import { TradeCard, TradeCardProps } from "components/pages/index/TradeCard"
 import Image from "next/image"
 import { IconType } from "react-icons"
 import { IoIosCheckmarkCircle } from "react-icons/io"

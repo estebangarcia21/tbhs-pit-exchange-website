@@ -1,11 +1,11 @@
 import { MockedProvider, MockedResponse } from "@apollo/client/testing"
+import Login from "@Pages/login"
 import { fireEvent, render, waitFor } from "@testing-library/react"
 import {
   LoginDocument,
   LoginMutation,
   LoginMutationVariables
 } from "generated/graphql-types"
-import Login from "pages/login"
 
 jest.mock("next/link", () => ({ children }) => children)
 

@@ -1,5 +1,5 @@
+import Index from "@Pages/index"
 import { render } from "@testing-library/react"
-import Index from "pages/index"
 
 describe("Index page", () => {
   it("has the standard footer", () => {
