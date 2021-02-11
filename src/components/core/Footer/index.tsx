@@ -38,7 +38,7 @@ const Item = ({ href, children }: ItemProps) => {
   )
 }
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className="bg-grayBlueTint">
       <Content>
@@ -76,3 +76,5 @@ export const Footer = () => {
     </div>
   )
 }
+
+export default Footer

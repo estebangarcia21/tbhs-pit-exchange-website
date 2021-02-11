@@ -1,7 +1,7 @@
 import {
   passwordValidation,
   requiredFieldValidation,
-  StandardForm
+  Form
 } from "components/core/Form"
 import Head from "next/head"
 import { useRouter } from "next/router"
@@ -28,11 +28,8 @@ const Reset = () => {
 
       <main>
         <div className="mx-auto max-w-xl">
-          <StandardForm
-            title="Reset Password"
-            handleSubmit={handleSubmit(onSubmit)}
-          >
-            <StandardForm.Input
+          <Form title="Reset Password" handleSubmit={handleSubmit(onSubmit)}>
+            <Form.Input
               htmlFor="password"
               type="password"
               inRef={register({
@@ -41,7 +38,7 @@ const Reset = () => {
               })}
             >
               New Password
-            </StandardForm.Input>
+            </Form.Input>
 
             {errors.password && (
               <span className="text-xs text-red-500">
@@ -49,7 +46,7 @@ const Reset = () => {
               </span>
             )}
 
-            <StandardForm.Input
+            <Form.Input
               htmlFor="confirmPassword"
               type="password"
               inRef={register({
@@ -58,7 +55,7 @@ const Reset = () => {
               })}
             >
               Confirm Password
-            </StandardForm.Input>
+            </Form.Input>
 
             {errors.confirmPassword && (
               <span className="text-xs text-red-500">
@@ -66,10 +63,8 @@ const Reset = () => {
               </span>
             )}
 
-            <StandardForm.Button type="submit">
-              Reset Password
-            </StandardForm.Button>
-          </StandardForm>
+            <Form.Button type="submit">Reset Password</Form.Button>
+          </Form>
         </div>
       </main>
     </div>

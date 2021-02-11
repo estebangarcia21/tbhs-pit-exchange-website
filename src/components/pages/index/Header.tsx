@@ -1,24 +1,27 @@
-import { HeaderSquares } from "components/pages/index/HeaderSquares"
-import { Button } from "components/pages/index/Button"
-import { Content } from "components/pages/index/Content"
-import { VerticalDivider } from "components/pages/index/Dividers"
-import { InfoCard } from "components/pages/index/InfoCard"
+import Button from "components/pages/index/Button"
+import Content from "components/pages/index/Content"
+import VerticalDivider from "components/pages/index/dividers/Vertical"
+import HeaderSquares from "components/pages/index/HeaderSquares"
+import InfoCard from "components/pages/index/InfoCard"
 import { AiFillDollarCircle } from "react-icons/ai"
 import { BsFillEyeFill } from "react-icons/bs"
 import { IoIosCheckmarkCircle } from "react-icons/io"
 
-export const Header = () => {
+const Header = () => {
   return (
-    <>
+    <header>
       <HeaderSquares position="top-80 left-12" />
-      <HeaderSquares position="top-24 right-12" />3
+      <HeaderSquares position="top-24 right-12" />
+
       <Content>
-        <header className="px-4 md:px-0 overflow-hidden">
+        <div className="px-4 md:px-0 overflow-hidden">
           <div className="flex flex-row items-center mt-14">
             <div className="text-left text-coolGray-800 md:text-left max-w-xl lg:w-1/2">
               <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl">
                 Connecting the{" "}
-                <span className="text-indigo-500">Hypixel Pit's Economy</span>
+                <span className="text-indigo-500">
+                  Hypixel Pit&apos;s Economy
+                </span>
               </h1>
 
               <h2 className="mt-5 font-semibold text-md sm:text-xl font-base text-coolGray-700">
@@ -66,8 +69,10 @@ export const Header = () => {
               countless discord servers.
             </InfoCard>
           </div>
-        </header>
+        </div>
       </Content>
-    </>
+    </header>
   )
 }
+
+export default Header

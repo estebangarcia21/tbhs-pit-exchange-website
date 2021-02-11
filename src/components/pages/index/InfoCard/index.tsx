@@ -1,7 +1,7 @@
 import { IconType } from "react-icons"
-import { Children } from "utils/children"
+import Children from "utils/children"
 
-interface InfoCard extends Children {
+interface InfoCardProps extends Children {
   title: string
   icon: [IconType, string]
 }
@@ -10,7 +10,7 @@ export const InfoCard = ({
   icon: [Icon, ariaLabel],
   title,
   children
-}: InfoCard) => {
+}: InfoCardProps) => {
   return (
     <div className="relative flex-grow md:m-5 xl:m-0 sm:flex-grow-0 sm:w-80 py-5">
       <Icon
@@ -32,3 +32,5 @@ export const InfoCard = ({
     </div>
   )
 }
+
+export default InfoCard

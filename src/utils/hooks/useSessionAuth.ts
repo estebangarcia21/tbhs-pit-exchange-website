@@ -2,7 +2,7 @@ import { useMeQuery } from "generated/graphql-types"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 
-export const useSessionAuth = () => {
+const useSessionAuth = () => {
   const router = useRouter()
 
   const { data, loading } = useMeQuery()
@@ -15,3 +15,5 @@ export const useSessionAuth = () => {
 
   return { isLoading: loading && !data }
 }
+
+export default useSessionAuth

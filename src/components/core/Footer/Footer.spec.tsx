@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import { Footer } from "."
+import Footer from "."
 
 describe("Footer", () => {
   describe("community section", () => {

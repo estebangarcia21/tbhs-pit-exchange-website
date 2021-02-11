@@ -4,7 +4,7 @@ import {
   noErrors,
   passwordValidation,
   requiredFieldValidation,
-  StandardForm
+  Form
 } from "components/core/Form"
 import { Navbar } from "components/core/Navbar"
 import {
@@ -58,8 +58,8 @@ const Signup = () => {
       <Navbar />
 
       <div className="mx-auto max-w-xl">
-        <StandardForm title="Sign Up" handleSubmit={handleSubmit(onSubmit)}>
-          <StandardForm.Input
+        <Form title="Sign Up" handleSubmit={handleSubmit(onSubmit)}>
+          <Form.Input
             htmlFor="email"
             inRef={register({
               ...requiredFieldValidation,
@@ -67,7 +67,7 @@ const Signup = () => {
             })}
           >
             Email
-          </StandardForm.Input>
+          </Form.Input>
 
           {loginResponse?.registerUser.error.object === "email" &&
             noErrors(errors) && (
@@ -76,9 +76,9 @@ const Signup = () => {
               </span>
             )}
 
-          <StandardForm.Error error={errors.email} />
+          <Form.Error error={errors.email} />
 
-          <StandardForm.Input
+          <Form.Input
             htmlFor="password"
             type="password"
             inRef={register({
@@ -87,7 +87,7 @@ const Signup = () => {
             })}
           >
             Password
-          </StandardForm.Input>
+          </Form.Input>
 
           {loginResponse?.registerUser.error.object === "password" &&
             noErrors(errors) && (
@@ -108,7 +108,7 @@ const Signup = () => {
             )
           )}
 
-          <StandardForm.Input
+          <Form.Input
             htmlFor="confirmPassword"
             type="password"
             inRef={register({
@@ -119,7 +119,7 @@ const Signup = () => {
             })}
           >
             Confirm Password
-          </StandardForm.Input>
+          </Form.Input>
 
           {errors.confirmPassword && (
             <span className="text-xs text-red-500">
@@ -127,8 +127,8 @@ const Signup = () => {
             </span>
           )}
 
-          <StandardForm.Button type="submit">Sign Up</StandardForm.Button>
-        </StandardForm>
+          <Form.Button type="submit">Sign Up</Form.Button>
+        </Form>
       </div>
     </div>
   )

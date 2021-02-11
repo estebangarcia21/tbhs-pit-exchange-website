@@ -1,12 +1,12 @@
 import { render } from "@testing-library/react"
-import { StandardForm, noErrors } from "."
+import { Form, noErrors } from "."
 
 describe("Standard Form", () => {
   it("renders the form title", () => {
     const { getByText } = render(
-      <StandardForm title="Title" handleSubmit={jest.fn()}>
+      <Form title="Title" handleSubmit={jest.fn()}>
         Content
-      </StandardForm>
+      </Form>
     )
 
     const title = getByText(/title/i)
@@ -16,11 +16,11 @@ describe("Standard Form", () => {
 
   it("creates an accessible input field", () => {
     const { getByLabelText } = render(
-      <StandardForm title="Title" handleSubmit={jest.fn()}>
-        <StandardForm.Input htmlFor="email" inRef={undefined} type="text">
+      <Form title="Title" handleSubmit={jest.fn()}>
+        <Form.Input htmlFor="email" inRef={undefined} type="text">
           Email
-        </StandardForm.Input>
-      </StandardForm>
+        </Form.Input>
+      </Form>
     )
 
     const input = getByLabelText(/email/i, { selector: "input" })
@@ -31,9 +31,9 @@ describe("Standard Form", () => {
   describe("Button", () => {
     it("creates a normal button by default", () => {
       const { getByText } = render(
-        <StandardForm title="Title" handleSubmit={jest.fn()}>
-          <StandardForm.Button>Button</StandardForm.Button>
-        </StandardForm>
+        <Form title="Title" handleSubmit={jest.fn()}>
+          <Form.Button>Button</Form.Button>
+        </Form>
       )
 
       const button = getByText(/button/i)
@@ -43,9 +43,9 @@ describe("Standard Form", () => {
 
     it("creates a button with the specified type", () => {
       const { getByText } = render(
-        <StandardForm title="Title" handleSubmit={jest.fn()}>
-          <StandardForm.Button type="submit">Button</StandardForm.Button>
-        </StandardForm>
+        <Form title="Title" handleSubmit={jest.fn()}>
+          <Form.Button type="submit">Button</Form.Button>
+        </Form>
       )
 
       const button = getByText(/button/i)
@@ -57,11 +57,9 @@ describe("Standard Form", () => {
   describe("Error", () => {
     it("shows an error message if the error is not undefined", () => {
       const { getByText } = render(
-        <StandardForm title="Title" handleSubmit={jest.fn()}>
-          <StandardForm.Error
-            error={{ type: "maxLength", message: "My Error" }}
-          />
-        </StandardForm>
+        <Form title="Title" handleSubmit={jest.fn()}>
+          <Form.Error error={{ type: "maxLength", message: "My Error" }} />
+        </Form>
       )
 
       const error = getByText(/my error/i)

@@ -4,7 +4,7 @@ interface HeaderImageProps {
   position: string
 }
 
-export const HeaderSquares = ({ position }: HeaderImageProps) => {
+const HeaderSquares = ({ position }: HeaderImageProps) => {
   return (
     <div className={`absolute z-0 hidden lg:block w-96 h-96 ${position}`}>
       <Image
@@ -15,3 +15,5 @@ export const HeaderSquares = ({ position }: HeaderImageProps) => {
     </div>
   )
 }
+
+export default HeaderSquares

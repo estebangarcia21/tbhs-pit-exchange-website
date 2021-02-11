@@ -3,7 +3,7 @@ import {
   emailValidationRule,
   noErrors,
   requiredFieldValidation,
-  StandardForm
+  Form
 } from "components/core/Form"
 import {
   ResetPasswordDocument,
@@ -46,16 +46,13 @@ const ForgotPassword = () => {
 
       <main>
         <div className="mx-auto max-w-xl">
-          <StandardForm
-            title="Reset Password"
-            handleSubmit={handleSubmit(onSubmit)}
-          >
+          <Form title="Reset Password" handleSubmit={handleSubmit(onSubmit)}>
             <span>
               Enter your email that you used to register. We will send you an
               email with a link to reset your password.
             </span>
 
-            <StandardForm.Input
+            <Form.Input
               htmlFor="email"
               inRef={register({
                 ...requiredFieldValidation,
@@ -63,7 +60,7 @@ const ForgotPassword = () => {
               })}
             >
               Email
-            </StandardForm.Input>
+            </Form.Input>
 
             {submitResult?.resetPassword.successful && noErrors(errors) ? (
               <span className="text-xs text-green-700">
@@ -84,10 +81,8 @@ const ForgotPassword = () => {
               </span>
             )}
 
-            <StandardForm.Button type="submit">
-              Send Reset Email
-            </StandardForm.Button>
-          </StandardForm>
+            <Form.Button type="submit">Send Reset Email</Form.Button>
+          </Form>
         </div>
       </main>
     </div>

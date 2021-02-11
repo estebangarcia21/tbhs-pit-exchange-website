@@ -4,7 +4,7 @@ import {
   noErrors,
   passwordValidation,
   requiredFieldValidation,
-  StandardForm
+  Form
 } from "components/core/Form"
 import { Navbar } from "components/core/Navbar"
 import {
@@ -57,8 +57,8 @@ const Login = () => {
       <Navbar />
 
       <div className="mx-auto max-w-xl">
-        <StandardForm title="Login" handleSubmit={handleSubmit(onSubmit)}>
-          <StandardForm.Input
+        <Form title="Login" handleSubmit={handleSubmit(onSubmit)}>
+          <Form.Input
             htmlFor="email"
             inRef={register({
               ...requiredFieldValidation,
@@ -66,7 +66,7 @@ const Login = () => {
             })}
           >
             Email
-          </StandardForm.Input>
+          </Form.Input>
 
           {loginResponse?.login.error.object === "email" &&
             noErrors(errors) && (
@@ -75,9 +75,9 @@ const Login = () => {
               </span>
             )}
 
-          <StandardForm.Error error={errors.email} />
+          <Form.Error error={errors.email} />
 
-          <StandardForm.Input
+          <Form.Input
             htmlFor="password"
             type="password"
             inRef={register({
@@ -86,7 +86,7 @@ const Login = () => {
             })}
           >
             Password
-          </StandardForm.Input>
+          </Form.Input>
 
           {loginResponse?.login.error.object === "password" &&
             noErrors(errors) && (
@@ -101,8 +101,8 @@ const Login = () => {
             </span>
           )}
 
-          <StandardForm.Button type="submit">Login</StandardForm.Button>
-        </StandardForm>
+          <Form.Button type="submit">Login</Form.Button>
+        </Form>
 
         <div className="flex flex-row justify-center">
           <Link href="/login/reset-password">

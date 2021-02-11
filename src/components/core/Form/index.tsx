@@ -1,4 +1,4 @@
-import { Children } from "utils/children"
+import Children from "utils/children"
 import { FormEvent } from "react"
 import { DeepMap, FieldError, ValidationRule } from "react-hook-form"
 
@@ -10,7 +10,7 @@ interface StandardFormProps {
   handleSubmit: (event: FormEvent<HTMLFormElement>) => void
 }
 
-export const StandardForm = ({
+export const Form = ({
   title,
   children,
   handleSubmit
@@ -33,7 +33,7 @@ interface InputProps {
   type?: "text" | "password"
 }
 
-StandardForm.Input = ({
+const Input = ({
   htmlFor,
   type = "text",
   children,
@@ -55,11 +55,13 @@ StandardForm.Input = ({
   )
 }
 
+Form.Input = Input
+
 interface ButtonProps {
   type?: "button" | "submit" | "reset"
 }
 
-StandardForm.Button = ({ type, children }: ButtonProps & Children) => {
+const Button = ({ type, children }: ButtonProps & Children) => {
   return (
     <button
       type={type || "button"}
@@ -72,15 +74,19 @@ StandardForm.Button = ({ type, children }: ButtonProps & Children) => {
   )
 }
 
+Form.Button = Button
+
 interface ErrorProps {
   error: FieldError
 }
 
-StandardForm.Error = ({ error }: ErrorProps) => {
+const Error = ({ error }: ErrorProps) => {
   return error ? (
     <span className="text-xs text-red-500">* {error.message}</span>
   ) : null
 }
+
+Form.Error = Error
 
 export const noErrors = <T extends unknown>(errors: DeepMap<T, FieldError>) =>
   !Object.values(errors).some(k => k !== null)

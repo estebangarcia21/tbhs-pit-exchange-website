@@ -6,7 +6,7 @@ import Image from "next/image"
 import { IconType } from "react-icons"
 import { IoIosCheckmarkCircle } from "react-icons/io"
 
-export const Sections = () => {
+const Sections = () => {
   const checkmarkIcon: [IconType, string] = [IoIosCheckmarkCircle, "checkmark"]
 
   const tradeCards: TradeCardProps[] = [
@@ -73,3 +73,5 @@ export const Sections = () => {
     </div>
   )
 }
+
+export default Sections
