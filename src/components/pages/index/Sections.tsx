@@ -23,7 +23,7 @@ export const Sections = () => {
   ]
 
   return (
-    <>
+    <div>
       <Content>
         <section className="flex flex-row justify-center space-x-10">
           <div className="max-w-lg">
@@ -70,6 +70,6 @@ export const Sections = () => {
           ))}
         </div>
       </section>
-    </>
+    </div>
   )
 }
