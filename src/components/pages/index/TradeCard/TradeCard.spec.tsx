@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import { TradeCard } from "."
+import TradeCard from "."
 
 describe("TradeCard", () => {
   it("renders the title", () => {

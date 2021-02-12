@@ -1,3 +1,4 @@
+import Content from "components/pages/index/Content"
 import NextLink from "next/link"
 import Children from "utils/children"
 
@@ -9,7 +10,9 @@ const Link = ({ href, children }: LinkProps) => {
   return (
     <li>
       <NextLink href={href}>
-        <a>{children}</a>
+        <a className="text-coolGray-700 font-medium transition hover:text-coolGray-500">
+          {children}
+        </a>
       </NextLink>
     </li>
   )
@@ -17,12 +20,15 @@ const Link = ({ href, children }: LinkProps) => {
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul className="flex flex-row">
-        <Link href="/mystic-searcher">Mystic Searcher</Link>
-        <Link href="/realtime">Real Time Market</Link>
-      </ul>
-    </nav>
+    <Content noYPadding className="bg-coolGray-50 border-b border-gray-100">
+      <nav>
+        <ul className="flex flex-row justify-between items-center h-20 max-w-lg">
+          <Link href="/mystic-searcher">Mystic Searcher</Link>
+          <Link href="/mystic-searcher">Purchase</Link>
+          <Link href="/realtime">Real Time Market</Link>
+        </ul>
+      </nav>
+    </Content>
   )
 }
 

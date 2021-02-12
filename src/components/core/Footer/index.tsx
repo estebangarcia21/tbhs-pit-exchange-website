@@ -19,7 +19,7 @@ const Section = ({ title, odd, children }: SectionProps) => {
         odd ?? "sm:border-l"
       } lg:border-l border-gray-200 border-dashed h-auto px-6 pb-6`}
     >
-      <li className="text-md font-semibold">{title}</li>
+      <li className="text-md font-medium">{title}</li>
 
       {children}
     </ul>
@@ -47,7 +47,7 @@ const Footer = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-64 py-6"
         >
           <div className="px-6 lg:px-0 mb-6">
-            <h1 className="font-bold text-2xl mr-10">The Pit Exchange</h1>
+            <h1 className="font-semibold text-2xl mr-10">The Pit Exchange</h1>
 
             <h2 className="text-gray-500 text-sm">
               &copy; Stevemmmmm 2020 - {new Date().getFullYear()}

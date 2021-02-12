@@ -15,7 +15,7 @@ const Button = ({ children, href, white }: ButtonProps) => {
   return (
     <Link href={href}>
       <a
-        className={`${styles} flex flex-row w-max items-center relative text-center py-1.5 px-6 mt-5 text-sm rounded-3xl font-semibold cursor-pointer text-black transition`}
+        className={`${styles} flex flex-row w-max items-center relative text-center py-1.5 px-6 mt-5 text-sm rounded-3xl font-medium cursor-pointer text-black transition`}
       >
         {children} <HiChevronRight className="-mr-1" />
       </a>
