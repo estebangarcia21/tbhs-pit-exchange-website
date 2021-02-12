@@ -1,12 +1,12 @@
 import { useApolloClient } from "@apollo/client"
 import {
   emailValidationRule,
+  Form,
   noErrors,
   passwordValidation,
-  requiredFieldValidation,
-  Form
+  requiredFieldValidation
 } from "components/core/Form"
-import { Navbar } from "components/core/Navbar"
+import Navbar from "components/core/Navbar"
 import {
   LoginDocument,
   LoginMutation,
