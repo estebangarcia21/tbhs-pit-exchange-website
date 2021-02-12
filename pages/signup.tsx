@@ -6,7 +6,7 @@ import {
   requiredFieldValidation,
   Form
 } from "components/core/Form"
-import { Navbar } from "components/core/Navbar"
+import Navbar from "components/core/Navbar"
 import {
   RegisterUserDocument,
   RegisterUserMutation,
