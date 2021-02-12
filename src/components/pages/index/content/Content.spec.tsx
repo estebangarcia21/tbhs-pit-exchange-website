@@ -26,6 +26,14 @@ describe("Content", () => {
     expect(content).not.toHaveClass("px-4 md:px-16")
   })
 
+  it("has no y padding if noYPadding is equal to true", () => {
+    const { getByText } = render(<Content noYPadding>Hello World!</Content>)
+
+    const content = getByText(/hello world!/i)
+
+    expect(content).not.toHaveClass("py-2 md:py-12")
+  })
+
   it("injects the className prop to a wrapper div", () => {
     const { getByText } = render(
       <Content className="bg-gray-50">Hello World!</Content>
