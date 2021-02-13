@@ -2,6 +2,7 @@ import Button from "components/pages/index/Button"
 import Content from "components/pages/index/Content"
 import HeaderSquares from "components/pages/index/HeaderSquares"
 import InfoCard from "components/pages/index/InfoCard"
+import Image from "next/image"
 import { AiFillDollarCircle } from "react-icons/ai"
 import { BsFillEyeFill } from "react-icons/bs"
 import { IoIosCheckmarkCircle } from "react-icons/io"
@@ -33,7 +34,15 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:w-1/2 ml-16"></div>
+          <div className="hidden lg:block lg:w-1/2 ml-16">
+            <div className="relative w-full h-64">
+              <Image
+                src="/images/index/dashboard.png"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-2 xl:gap-x-5">
