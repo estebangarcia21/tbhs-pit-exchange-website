@@ -1,15 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://use.typekit.net/hch8igg.css");
 
 * {
   box-sizing: border-box;
 }
 
 h1,
-h2 {
-  font-family: "Poppins", sans-serif;
-}
-
+h2,
 h3,
 label,
 a,
@@ -17,5 +14,11 @@ button,
 li,
 p {
   font-family: "Poppins", sans-serif;
-  /* font-family: "Open sans", sans-serif; */
+}
+
+pre,
+code {
+  font-family: droid-sans-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
 }
