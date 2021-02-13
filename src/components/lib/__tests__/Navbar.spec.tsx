@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import Navbar from "."
+import Navbar from "../Navbar"
 
 describe("Navbar", () => {
   it("has a mystic searcher link", () => {

@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import { Form, noErrors } from "."
+import { Form, noErrors } from "../Form"
 
 describe("Standard Form", () => {
   it("renders the form title", () => {

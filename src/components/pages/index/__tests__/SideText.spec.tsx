@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import SideText from "."
+import SideText from "../SideText"
 
 describe("SideText", () => {
   it("renders the title", () => {

@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react"
 import { BiDollarCircle } from "react-icons/bi"
-import { List, ListItem } from "."
+import { List, ListItem } from "../List"
 
 describe("List", () => {
   it("renders its content", () => {

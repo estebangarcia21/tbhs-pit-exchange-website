@@ -4,7 +4,7 @@ import {
   noErrors,
   requiredFieldValidation,
   Form
-} from "components/core/Form"
+} from "components/lib/Form"
 import {
   ResetPasswordDocument,
   ResetPasswordMutation,

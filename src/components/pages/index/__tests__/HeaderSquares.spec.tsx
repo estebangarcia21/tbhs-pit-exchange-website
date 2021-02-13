@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import HeaderSquares from "."
+import HeaderSquares from "../HeaderSquares"
 
 describe("Header Image", () => {
   it("displays an image of squares with the specified classnames", () => {

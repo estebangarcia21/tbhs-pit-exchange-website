@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import Content from "."
+import Content from "../Content"
 
 describe("Content", () => {
   it("renders its children", () => {
@@ -10,20 +10,12 @@ describe("Content", () => {
     expect(content).toBeInTheDocument()
   })
 
-  it("has x padding if noXPadding is equal to false", () => {
-    const { getByText } = render(<Content>Hello World!</Content>)
-
-    const content = getByText(/hello world!/i)
-
-    expect(content).toHaveClass("px-4 md:px-16")
-  })
-
   it("has no y padding if noYPadding is equal to true", () => {
     const { getByText } = render(<Content noYPadding>Hello World!</Content>)
 
     const content = getByText(/hello world!/i)
 
-    expect(content).not.toHaveClass("py-2 md:py-12")
+    expect(content).not.toHaveClass("py-8 md:py-12")
   })
 
   it("injects the className prop to a wrapper div", () => {

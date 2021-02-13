@@ -2,7 +2,7 @@ import {
   passwordValidation,
   requiredFieldValidation,
   Form
-} from "components/core/Form"
+} from "components/lib/Form"
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { useForm } from "react-hook-form"

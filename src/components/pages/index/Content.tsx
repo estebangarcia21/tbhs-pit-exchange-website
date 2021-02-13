@@ -6,8 +6,8 @@ interface ContentProps extends Children {
 }
 
 const Content = ({ noYPadding, className, children }: ContentProps) => {
-  const element = (
-    <div className="mx-8 md:mx-16">
+  return (
+    <div className={`mx-8 md:mx-16 ${className}`}>
       <div
         className={`relative z-10 mx-auto max-w-7xl ${
           !noYPadding && "py-8 md:py-12"
@@ -17,8 +17,6 @@ const Content = ({ noYPadding, className, children }: ContentProps) => {
       </div>
     </div>
   )
-
-  return className ? <div className={className}>{element}</div> : element
 }
 
 export default Content

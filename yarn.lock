@@ -9891,11 +9891,6 @@ ts-toolbelt@*:
   resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-9.3.10.tgz"
   integrity sha512-UVUlC0WKjCoAOzvwZqL5xzChihyn2qLEAmQ4nhfmnK+vzbFSCtw9cc+3104jKAJSeQNZRxmd8SPeEt+dSJq/4g==
 
-tsconfig-paths-jest@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/tsconfig-paths-jest/-/tsconfig-paths-jest-0.0.1.tgz"
-  integrity sha1-qXelZIxDQDe2mITmRM4bgr8CW2g=
-
 tslib@^1.10.0, tslib@^1.14.1, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz"
