@@ -10,7 +10,7 @@ const Content = ({ noYPadding, className, children }: ContentProps) => {
     <div className="mx-8 md:mx-16">
       <div
         className={`relative z-10 mx-auto max-w-7xl ${
-          !noYPadding && "py-6 md:py-12"
+          !noYPadding && "py-8 md:py-12"
         }`}
       >
         {children}
