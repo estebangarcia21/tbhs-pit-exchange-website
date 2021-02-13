@@ -3,9 +3,11 @@ import Content from "components/pages/index/Content"
 import { List, ListItem } from "components/pages/index/List"
 import TradeCard, { TradeCardProps } from "components/pages/index/TradeCard"
 import Image from "next/image"
+import React from "react"
 import { IconType } from "react-icons"
 import { IoIosCheckmarkCircle } from "react-icons/io"
 import Children from "utils/children"
+import Code from "./Code"
 import SideText from "./SideText"
 
 const CheckMarkListItem = ({ children }: Children) => {
@@ -30,7 +32,7 @@ const Sections = () => {
 
   return (
     <div>
-      <Content className="border-t border-coolGray-200 border-dashed py-6">
+      <Content className="border-t border-coolGray-200 border-dashed">
         <section className="flex flex-row space-x-10 justify-between transform">
           <div className="max-w-lg">
             <h1 className="text-3xl font-semibold text-grayBlue">
@@ -67,7 +69,7 @@ const Sections = () => {
       </Content>
 
       <section
-        className="py-20 relative z-10 mb-40"
+        className="relative z-10"
         style={{
           backgroundColor: "#f5f6fa"
         }}
@@ -91,27 +93,21 @@ const Sections = () => {
       </section>
 
       <Content>
-        <div className="flex flex-row">
-          <div>
-            <h1 className="font-semibold text-grayBlue text-4xl">
-              A Powerful SDK
-            </h1>
+        <div>
+          <h1 className="font-semibold text-grayBlue text-4xl">
+            A Powerful API
+          </h1>
 
-            <p className="my-1 text-transparentBlue">
-              Utilize a powerful public-facing GraphQL API to power your next
-              project.
-            </p>
-          </div>
+          <p className="my-1 text-transparentBlue mr-10">
+            Consume a powerful public-facing GraphQL API to gain insight on the
+            Pit&apos;s economy.
+          </p>
+        </div>
 
-          <div className="w-full max-w-2xl h-64 shadow-lg rounded-sm overflow-hidden">
-            <div className="h-12 bg-indigo-500" />
+        <div className="mt-5 w-full shadow-lg rounded-sm overflow-hidden">
+          <div className="h-12 bg-indigo-500" />
 
-            <div className="p-2">
-              <code className="text-sm whitespace-pre">
-                {`const api = require(@the-pit-exchange/sdk)("3203802-3200002394");\n\napi.onEvent("Trade", function(err, data) {\n\tconsole.log("Great!")\n}); `}
-              </code>
-            </div>
-          </div>
+          <Code />
         </div>
       </Content>
 
