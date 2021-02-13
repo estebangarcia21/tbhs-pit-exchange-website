@@ -1,7 +1,8 @@
 import Button from "components/pages/index/Button"
 import Content from "components/pages/index/Content"
 import { List, ListItem } from "components/pages/index/List"
-import TradeCard, { TradeCardProps } from "components/pages/index/TradeCard"
+import { TradeCardData } from "components/pages/index/TradeCard"
+import TradeCards from "./useTradeCards"
 import Image from "next/image"
 import React from "react"
 import { IconType } from "react-icons"
@@ -17,7 +18,7 @@ const CheckMarkListItem = ({ children }: Children) => {
 }
 
 const Sections = () => {
-  const tradeCards: TradeCardProps[] = [
+  const tradeCards: TradeCardData[] = [
     {
       item: "Sword",
       player: "Stevemmmmm",
@@ -26,13 +27,17 @@ const Sections = () => {
     {
       item: "Leggings",
       player: "Haberno",
-      trade: "Im looking for Moctezuma pants!"
+      trade: "Im looking for Moctezuma pantsTRISM!"
     },
-
     {
       item: "Bow",
       player: "Haberno",
       trade: "Im looking for Moctezuma pants!"
+    },
+    {
+      item: "Bow",
+      player: "Habernox",
+      trade: "Im looking for Moctezuma pantsk!"
     }
   ]
 
@@ -91,9 +96,7 @@ const Sections = () => {
           </p>
 
           <div className="flex flex-row overflow-hidden space-x-5 my-4">
-            {tradeCards.map(props => (
-              <TradeCard {...props} key={props.player} />
-            ))}
+            <TradeCards cards={tradeCards} />
           </div>
         </Content>
       </section>
