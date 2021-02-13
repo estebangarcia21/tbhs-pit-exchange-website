@@ -9,7 +9,8 @@ export interface TradeCardProps {
 const TradeCard = ({ player, trade, item }: TradeCardProps) => {
   const images = {
     Leggings: "/minecraft/items/aqua-pants.png",
-    Sword: "/minecraft/items/gold-sword.png"
+    Sword: "/minecraft/items/gold-sword.png",
+    Bow: "/minecraft/items/bow.png"
   }
 
   return (
