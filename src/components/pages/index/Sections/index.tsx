@@ -75,7 +75,7 @@ const Sections = () => {
         }}
       >
         <Content>
-          <h1 className="font-semibold text-4xl text-grayBlue">
+          <h1 className="font-semibold text-3xl text-grayBlue">
             A Realtime Business Platform
           </h1>
 
@@ -94,7 +94,7 @@ const Sections = () => {
 
       <Content>
         <div>
-          <h1 className="font-semibold text-grayBlue text-4xl">
+          <h1 className="font-semibold text-grayBlue text-3xl">
             A Powerful API
           </h1>
 
