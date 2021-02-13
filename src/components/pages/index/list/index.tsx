@@ -14,8 +14,8 @@ export const ListItem = ({
   icon: [Icon, ariaLabel]
 }: ListItemProps) => {
   return (
-    <li className="flex flex-row items-center">
-      <Icon className="mr-2 text-emerald-500" aria-label={ariaLabel} />{" "}
+    <li className="flex flex-row items-center text-transparentBlue">
+      <Icon className="mr-2 text-indigo-500" aria-label={ariaLabel} />{" "}
       {children}
     </li>
   )

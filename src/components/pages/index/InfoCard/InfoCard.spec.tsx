@@ -38,4 +38,32 @@ describe("InfoCard", () => {
 
     expect(icons.length).toBe(2)
   })
+
+  it("spans no columns if spanColumns is false", () => {
+    const { getByText } = render(
+      <InfoCard title="Card Title" icon={[BiDollarCircle, "Alt Text"]}>
+        Hello World!
+      </InfoCard>
+    )
+
+    const container = getByText("Hello World!").parentElement
+
+    expect(container).not.toHaveClass("md:col-span-2")
+  })
+
+  it("spans two columns if spanColumns is true", () => {
+    const { getByText } = render(
+      <InfoCard
+        title="Card Title"
+        spanColumns
+        icon={[BiDollarCircle, "Alt Text"]}
+      >
+        Hello World!
+      </InfoCard>
+    )
+
+    const container = getByText("Hello World!").parentElement
+
+    expect(container).toHaveClass("md:col-span-2")
+  })
 })

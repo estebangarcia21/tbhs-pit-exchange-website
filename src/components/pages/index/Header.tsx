@@ -1,6 +1,5 @@
 import Button from "components/pages/index/Button"
 import Content from "components/pages/index/Content"
-import VerticalDivider from "components/pages/index/dividers/Vertical"
 import HeaderSquares from "components/pages/index/HeaderSquares"
 import InfoCard from "components/pages/index/InfoCard"
 import { AiFillDollarCircle } from "react-icons/ai"
@@ -15,15 +14,13 @@ const Header = () => {
 
       <Content noYPadding className="px-4 md:px-0 overflow-hidden">
         <div className="flex flex-row items-center">
-          <div className="text-coolGray-800 max-w-xl lg:w-1/2">
-            <h1 className="font-semibold text-4xl sm:text-5xl lg:text-6xl">
-              Connecting the{" "}
-              <span className="text-indigo-500">
-                Hypixel Pit&apos;s Economy
-              </span>
+          <div className="max-w-xl lg:w-1/2">
+            <h1 className="font-semibold text-4xl sm:text-5xl lg:text-5xl text-grayBlue">
+              Connecting the <br />
+              Hypixel Pit&apos;s Economy
             </h1>
 
-            <h2 className="mt-5 font-semibold text-md sm:text-xl font-base text-coolGray-700">
+            <h2 className="mt-5 font-medium text-md sm:text-xl font-base text-coolGray-700">
               The Pit Exchange is a trading service for the community of the
               Hypixel Pit
             </h2>
@@ -39,14 +36,12 @@ const Header = () => {
           <div className="hidden lg:block lg:w-1/2 ml-16"></div>
         </div>
 
-        <div className="flex flex-row mx-auto xl:justify-between flex-wrap max-w-3xl xl:max-w-none mt-10">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-2 xl:gap-x-5">
           <InfoCard title="Watch" icon={[BsFillEyeFill, "Watching for trades"]}>
             Watch for trade requests and offers in realtime. Maximize your
             potential profit by monitoring the market from a simple and intutive
             dashboard.
           </InfoCard>
-
-          <VerticalDivider />
 
           <InfoCard title="Trade" icon={[AiFillDollarCircle, "Gaining money"]}>
             Easily make trades by searching for open trades or by offering for
@@ -54,9 +49,11 @@ const Header = () => {
             your next trade.
           </InfoCard>
 
-          <VerticalDivider />
-
-          <InfoCard title="Repeat" icon={[IoIosCheckmarkCircle, "Repeating"]}>
+          <InfoCard
+            title="Repeat"
+            icon={[IoIosCheckmarkCircle, "Repeating"]}
+            spanColumns
+          >
             The Pit Exchange takes care of all your trading business in one
             place. Trade without the burden of having to search through
             countless discord servers.

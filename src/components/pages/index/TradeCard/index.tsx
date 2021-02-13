@@ -8,20 +8,28 @@ export interface TradeCardProps {
 
 const TradeCard = ({ player, trade, item }: TradeCardProps) => {
   const images = {
-    Leggings: "/images/index/search.svg"
+    Leggings: "/minecraft/items/aqua-pants.png",
+    Sword: "/minecraft/items/gold-sword.png"
   }
 
   return (
-    <figure className="bg-white flex flex-row min-w-72 h-20 rounded-md shadow-lg border border-coolGray-100 p-2">
-      <div className="w-1/3 relative">
-        <Image src={images[item]} layout="fill" alt={item} />
-      </div>
+    <div className="shadow-lg">
+      <figure className="bg-white flex flex-row min-w-72 h-20 rounded-md p-2">
+        <div className="w-1/3 h-12 my-auto relative">
+          <Image
+            src={images[item]}
+            layout="fill"
+            objectFit="contain"
+            alt={item}
+          />
+        </div>
 
-      <div className="w-2/3">
-        <h1 className="text-black text-sm font-medium">{player}</h1>
-        <p className="text-coolGray-600 text-xs">{trade}</p>
-      </div>
-    </figure>
+        <div className="w-2/3">
+          <h1 className="text-black text-sm font-medium">{player}</h1>
+          <p className="text-coolGray-600 text-xs">{trade}</p>
+        </div>
+      </figure>
+    </div>
   )
 }
 

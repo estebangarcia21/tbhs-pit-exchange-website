@@ -22,8 +22,9 @@ module.exports = {
     },
     colors: {
       ...colors,
-      purpleBlue: "#4B36F8",
-      grayBlueTint: "#F6F9FC"
+      grayBlue: "#2c385a",
+      transparentBlue: "rgba(37,38,94,0.7)",
+      lightGray: "#f9fafc"
     }
   }
 }

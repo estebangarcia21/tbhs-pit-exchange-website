@@ -11,7 +11,7 @@ const Index = () => {
         <title>The Pit Exchange</title>
       </Head>
 
-      <main>
+      <main className="bg-lightGray">
         <Navbar />
         <Header />
         <Sections />
