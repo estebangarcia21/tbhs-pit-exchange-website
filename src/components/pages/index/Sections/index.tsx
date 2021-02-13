@@ -27,6 +27,12 @@ const Sections = () => {
       item: "Leggings",
       player: "Haberno",
       trade: "Im looking for Moctezuma pants!"
+    },
+
+    {
+      item: "Bow",
+      player: "Haberno",
+      trade: "Im looking for Moctezuma pants!"
     }
   ]
 
