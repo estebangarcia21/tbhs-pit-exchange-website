@@ -30,7 +30,7 @@ const Item = ({ href, children }: ItemProps) => {
   return (
     <li>
       <Link href={href}>
-        <a className="text-sm text-transparentBlue cursor-pointer transition hover:text-indigo-500">
+        <a className="text-sm text-transparentBlue cursor-pointer transition hover:text-indigo-400">
           {children}
         </a>
       </Link>
