@@ -1,5 +1,5 @@
 import { MockedProvider, MockedResponse } from "@apollo/client/testing"
-import Login from "@Pages/login"
+import Login from "pages/login"
 import { fireEvent, render, waitFor } from "@testing-library/react"
 import {
   LoginDocument,

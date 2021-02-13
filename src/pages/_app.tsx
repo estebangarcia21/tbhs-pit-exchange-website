@@ -1,7 +1,7 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client"
 import { DefaultSeo } from "next-seo"
 import "styles/index.css"
-import SEO from "../next-seo.config"
+import SEO from "../../next-seo.config"
 
 const client = new ApolloClient({
   credentials: "include",

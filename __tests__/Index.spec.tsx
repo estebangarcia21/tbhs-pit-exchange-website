@@ -1,4 +1,4 @@
-import Index from "@Pages/index"
+import Index from "pages/index"
 import { render } from "@testing-library/react"
 
 describe("Index page", () => {
