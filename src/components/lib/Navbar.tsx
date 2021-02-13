@@ -20,7 +20,7 @@ const Link = ({ href, children }: LinkProps) => {
 
 const Navbar = () => {
   return (
-    <Content noYPadding className="bg-white border-b shadow-sm">
+    <Content noXMargin noYPadding className="bg-white border-b shadow-sm">
       <nav>
         <ul className="flex flex-row justify-between items-center h-20 max-w-lg">
           <Link href="/mystic-searcher">Mystic Searcher</Link>
