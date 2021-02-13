@@ -2,7 +2,7 @@
 
 #container {
   --block-img-path: url(/minecraft/item-map.png);
-  --potion-img-path: url();
+  --potion-img-path: url(/minecraft/potion-map.png);
 }
 
 .item_ {
