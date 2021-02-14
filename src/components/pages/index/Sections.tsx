@@ -16,8 +16,6 @@ const CheckMarkListItem = ({ children }: Children) => {
   return <ListItem icon={checkmarkIcon}>{children}</ListItem>
 }
 
-class PublicFacingAPI {}
-
 const Sections = () => {
   return (
     <div>
