@@ -1,8 +1,6 @@
 import Button from "components/pages/index/Button"
 import Content from "components/pages/index/Content"
 import { List, ListItem } from "components/pages/index/List"
-import { TradeCardData } from "components/pages/index/TradeCard"
-import TradeCards from "./section-utils/TradeCards"
 import Image from "next/image"
 import React from "react"
 import { IconType } from "react-icons"
@@ -18,29 +16,6 @@ const CheckMarkListItem = ({ children }: Children) => {
 }
 
 const Sections = () => {
-  const tradeCards: TradeCardData[] = [
-    {
-      item: "Sword",
-      player: "Stevemmmmm",
-      trade: "Does anyone have a Gamble 2 Executioner 2?"
-    },
-    {
-      item: "Leggings",
-      player: "Haberno",
-      trade: "Im looking for Moctezuma pantsTRISM!"
-    },
-    {
-      item: "Bow",
-      player: "Haberno",
-      trade: "Im looking for Moctezuma pants!"
-    },
-    {
-      item: "Bow",
-      player: "Habernox",
-      trade: "Im looking for Moctezuma pantsk!"
-    }
-  ]
-
   return (
     <div>
       <Content className="border-t border-coolGray-200 border-dashed">
@@ -95,9 +70,7 @@ const Sections = () => {
             looking for is created.
           </p>
 
-          <div className="flex flex-row overflow-hidden space-x-5 my-4">
-            <TradeCards cards={tradeCards} />
-          </div>
+          <div className="mt-1"></div>
         </Content>
       </section>
 

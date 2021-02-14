@@ -40,7 +40,7 @@ const Item = ({ href, children }: ItemProps) => {
 
 const Footer = () => {
   return (
-    <Content className="bg-white shadow-inner">
+    <Content noXMargin className="bg-white shadow-inner">
       <footer
         data-testid="std-footer"
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-64 py-6"
