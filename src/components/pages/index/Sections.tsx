@@ -1,3 +1,4 @@
+import { Header, Text } from "components/lib/Typography"
 import Button from "components/pages/index/Button"
 import Content from "components/pages/index/Content"
 import { List, ListItem } from "components/pages/index/List"
@@ -15,21 +16,21 @@ const CheckMarkListItem = ({ children }: Children) => {
   return <ListItem icon={checkmarkIcon}>{children}</ListItem>
 }
 
+class PublicFacingAPI {}
+
 const Sections = () => {
   return (
     <div>
       <Content className="border-t border-coolGray-200 border-dashed">
         <section className="flex flex-row space-x-10 justify-between transform">
-          <div className="max-w-lg">
-            <h1 className="text-3xl font-semibold text-grayBlue">
-              Intelligent Trade Searching
-            </h1>
+          <div className="w-1/2 pr-5">
+            <Header>Intelligent Trade Searching</Header>
 
-            <p className="my-4 max-w-xl leading-7 text-transparentBlue">
+            <Text>
               The days of making your way around discord servers are over.
               Easily search for trades through an easy to use search bar to find
               your next trade. Search by...
-            </p>
+            </Text>
 
             <List>
               <CheckMarkListItem>Multiple enchants</CheckMarkListItem>
@@ -54,37 +55,26 @@ const Sections = () => {
         </section>
       </Content>
 
-      <section
-        className="relative z-10"
-        style={{
-          backgroundColor: "#f5f6fa"
-        }}
-      >
+      <section className="relative z-10 bg-grayBlueTint">
         <Content>
-          <h1 className="font-semibold text-3xl text-grayBlue">
-            A Realtime Business Platform
-          </h1>
+          <Header>A Realtime Business Platform</Header>
 
-          <p className="my-1 text-transparentBlue">
+          <Text>
             Receive notifications when a trade or similar trade that you are
             looking for is created.
-          </p>
+          </Text>
 
           <div className="mt-1"></div>
         </Content>
       </section>
 
       <Content>
-        <div>
-          <h1 className="font-semibold text-grayBlue text-3xl">
-            A Powerful API
-          </h1>
+        <Header>A Powerful API</Header>
 
-          <p className="my-1 text-transparentBlue mr-10">
-            Consume a powerful public-facing GraphQL API to gain insight on the
-            Pit&apos;s economy.
-          </p>
-        </div>
+        <Text>
+          Consume a powerful public-facing GraphQL API to gain insight on the
+          Pit&apos;s economy.
+        </Text>
 
         <div className="mt-5 w-full shadow-lg rounded-sm overflow-hidden">
           <div className="h-12 bg-indigo-500" />
