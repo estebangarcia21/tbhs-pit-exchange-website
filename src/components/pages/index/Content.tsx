@@ -13,7 +13,7 @@ const Content = ({
   children
 }: ContentProps) => {
   return (
-    <div className={`${noXMargin ?? "mx-8 md:mx-16"} ${className}`}>
+    <div className={`${noXMargin ?? "px-8 md:px-16"} ${className}`}>
       <div
         className={`relative z-10 mx-auto max-w-7xl ${
           noYPadding ?? "py-8 md:py-12"

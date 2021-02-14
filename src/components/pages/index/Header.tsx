@@ -4,8 +4,7 @@ import HeaderSquares from "components/pages/index/HeaderSquares"
 import InfoCard from "components/pages/index/InfoCard"
 import Image from "next/image"
 import { AiFillDollarCircle } from "react-icons/ai"
-import { BsFillEyeFill } from "react-icons/bs"
-import { IoIosCheckmarkCircle } from "react-icons/io"
+import { IoIosCheckmarkCircle, IoMdLock } from "react-icons/io"
 
 const Header = () => {
   return (
@@ -46,20 +45,23 @@ const Header = () => {
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-2 xl:gap-x-5">
-          <InfoCard title="Watch" icon={[BsFillEyeFill, "Watching for trades"]}>
-            Watch for trade requests and offers in realtime. Maximize your
-            potential profit by monitoring the market from a simple and intutive
-            dashboard.
-          </InfoCard>
-
-          <InfoCard title="Trade" icon={[AiFillDollarCircle, "Gaining money"]}>
+          <InfoCard title="Secure Trading" icon={[IoMdLock, "Gaining money"]}>
             Easily make trades by searching for open trades or by offering for
             an item that a player has. Utilize a powerful search tool to find
             your next trade.
           </InfoCard>
 
           <InfoCard
-            title="Repeat"
+            title="Instant Price Checks"
+            icon={[AiFillDollarCircle, "Watching for trades"]}
+          >
+            Watch for trade requests and offers in realtime. Maximize your
+            potential profit by monitoring the market from a simple and intutive
+            dashboard.
+          </InfoCard>
+
+          <InfoCard
+            title="Verified Middlemen"
             icon={[IoIosCheckmarkCircle, "Repeating"]}
             spanColumns
           >

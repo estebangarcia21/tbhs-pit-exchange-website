@@ -1,22 +1,22 @@
 import { IconType } from "react-icons"
 import Children from "utils/children"
+import tw from "twin.macro"
 
-export const List = ({ children }: Children) => {
-  return <ul className="text-coolGray-600 my-3 space-y-2">{children}</ul>
-}
+export const List = tw.ul`text-coolGray-600 my-3 space-y-2`
+export const ListItem = tw.ul`flex flex-row items-center text-transparentBlue`
 
-interface ListItemProps extends Children {
+interface ListItemWithIconProps extends Children {
   icon: [IconType, string]
 }
 
-export const ListItem = ({
+export const ListItemWithIcon = ({
   children,
   icon: [Icon, ariaLabel]
-}: ListItemProps) => {
+}: ListItemWithIconProps) => {
   return (
-    <li className="flex flex-row items-center text-transparentBlue">
+    <ListItem>
       <Icon className="mr-2 text-indigo-500" aria-label={ariaLabel} />{" "}
       {children}
-    </li>
+    </ListItem>
   )
 }

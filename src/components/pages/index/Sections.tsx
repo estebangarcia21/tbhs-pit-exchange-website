@@ -1,11 +1,12 @@
 import { Header, Text } from "components/lib/Typography"
 import Button from "components/pages/index/Button"
 import Content from "components/pages/index/Content"
-import { List, ListItem } from "components/pages/index/List"
+import { List, ListItemWithIcon } from "components/pages/index/List"
 import Image from "next/image"
 import React from "react"
 import { IconType } from "react-icons"
 import { IoIosCheckmarkCircle } from "react-icons/io"
+import "twin.macro"
 import Children from "utils/children"
 import Code from "./section-utils/Code"
 import SideText from "./SideText"
@@ -13,16 +14,16 @@ import SideText from "./SideText"
 const CheckMarkListItem = ({ children }: Children) => {
   const checkmarkIcon: [IconType, string] = [IoIosCheckmarkCircle, ""]
 
-  return <ListItem icon={checkmarkIcon}>{children}</ListItem>
+  return <ListItemWithIcon icon={checkmarkIcon}>{children}</ListItemWithIcon>
 }
 
 const Sections = () => {
   return (
-    <div>
+    <>
       <Content className="border-t border-coolGray-200 border-dashed">
-        <section className="flex flex-row space-x-10 justify-between transform">
-          <div className="w-1/2 pr-5">
-            <Header>Intelligent Trade Searching</Header>
+        <div tw="flex flex-row justify-between space-x-10">
+          <div tw="lg:w-1/2 pr-5">
+            <Header>Effortless Trade Discovery</Header>
 
             <Text>
               The days of making your way around discord servers are over.
@@ -42,7 +43,7 @@ const Sections = () => {
             </Button>
           </div>
 
-          <div className="relative w-1/2 h-72">
+          <div tw="hidden lg:block relative w-1/2 h-72">
             <Image
               src="/images/index/search.png"
               layout="fill"
@@ -50,21 +51,18 @@ const Sections = () => {
               alt="Searching for items"
             />
           </div>
-        </section>
+        </div>
       </Content>
 
-      <section className="relative z-10 bg-grayBlueTint">
-        <Content>
-          <Header>A Realtime Business Platform</Header>
+      <Content className="relative z-10 bg-grayBlueTint">
+        <Header>Personalized Player Markets</Header>
 
-          <Text>
-            Receive notifications when a trade or similar trade that you are
-            looking for is created.
-          </Text>
-
-          <div className="mt-1"></div>
-        </Content>
-      </section>
+        <Text>
+          Gain insight on your value as a player through the{" "}
+          <strong>Player Value Index</strong>, a ranking system based on the
+          value of the items on your minecraft account.
+        </Text>
+      </Content>
 
       <Content>
         <Header>A Powerful API</Header>
@@ -74,28 +72,28 @@ const Sections = () => {
           Pit&apos;s economy.
         </Text>
 
-        <div className="mt-5 w-full shadow-lg rounded-sm overflow-hidden">
-          <div className="h-12 bg-indigo-500" />
+        <div tw="mt-5 w-full shadow-lg rounded-sm overflow-hidden">
+          <div tw="h-12 bg-indigo-500" />
 
           <Code />
         </div>
       </Content>
 
       <Content className="py-20 border-t border-coolGray-200 border-dashed">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div tw="grid grid-cols-1 lg:grid-cols-2">
           <div>
-            <h1 className="font-semibold text-grayBlue text-4xl">
+            <h1 tw="font-semibold text-grayBlue text-4xl">
               Ready to Get Started?
             </h1>
 
             <Button href="/signup">Sign Up for an Account</Button>
           </div>
 
-          <div className="grid grid-cols-1 gap-y-8 md:gap-y-0 md:grid-cols-2 mt-10 lg:mt-0">
+          <div tw="grid grid-cols-1 gap-y-8 md:gap-y-0 md:grid-cols-2 mt-10 lg:mt-0">
             <SideText title="Sign Up For Free">
               No special requirements are needed to sign up. However, a{" "}
-              <span className="text-indigo-500">verified mineraft account</span>{" "}
-              is required to be able to trade.
+              <span tw="text-indigo-500">verified mineraft account</span> is
+              required to be able to trade.
             </SideText>
 
             <SideText title="Leave Anytime">
@@ -105,7 +103,7 @@ const Sections = () => {
           </div>
         </div>
       </Content>
-    </div>
+    </>
   )
 }
 

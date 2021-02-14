@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react"
 import { BiDollarCircle } from "react-icons/bi"
-import { List, ListItem } from "../List"
+import { List, ListItemWithIcon } from "../List"
 
 describe("List", () => {
   it("renders its content", () => {
@@ -14,7 +14,9 @@ describe("List", () => {
   it("renders a list item with the specified icon", () => {
     const { getByText, getByLabelText } = render(
       <List>
-        <ListItem icon={[BiDollarCircle, "dollar"]}>Renders object</ListItem>
+        <ListItemWithIcon icon={[BiDollarCircle, "dollar"]}>
+          Renders object
+        </ListItemWithIcon>
       </List>
     )
 
