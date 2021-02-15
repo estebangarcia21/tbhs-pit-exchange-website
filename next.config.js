@@ -9,12 +9,5 @@ module.exports = withPWA({
     register: true,
     scope: "/app",
     sw: "service-worker.js"
-  },
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.node = { fs: "empty", module: "empty" }
-    }
-
-    return config
   }
 })

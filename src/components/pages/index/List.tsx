@@ -1,9 +1,9 @@
 import { IconType } from "react-icons"
+import twc from "tailwindcss-components"
 import Children from "utils/children"
-import tw from "twin.macro"
 
-export const List = tw.ul`text-coolGray-600 my-3 space-y-2`
-export const ListItem = tw.ul`flex flex-row items-center text-transparentBlue`
+export const List = twc.ul`text-coolGray-600 my-3 space-y-2`
+export const ListItem = twc.ul`flex flex-row items-center text-transparentBlue`
 
 interface ListItemWithIconProps extends Children {
   icon: [IconType, string]
