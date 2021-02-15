@@ -1,7 +1,6 @@
 import Content from "components/pages/index/Content"
 import Link from "next/link"
 import React from "react"
-import tw from "twin.macro"
 import Children from "utils/children"
 
 interface SectionProps extends Children {
@@ -9,30 +8,29 @@ interface SectionProps extends Children {
   odd?: boolean
 }
 
+interface ItemProps extends Children {
+  href: string
+}
+
 const Section = ({ title, odd, children }: SectionProps) => {
   return (
     <ul
-      css={[
-        tw`flex flex-col space-y-1 h-auto sm:px-6 pb-6 lg:border-l border-gray-200 border-dashed`,
-        !odd && tw`sm:border-l`
-      ]}
+      className={`flex flex-col space-y-1 ${
+        odd ?? "sm:border-l"
+      } lg:border-l border-gray-200 border-dashed h-auto px-6 pb-6`}
     >
-      <li tw="text-grayBlue font-medium">{title}</li>
+      <li className="text-md text-grayBlue font-medium">{title}</li>
 
       {children}
     </ul>
   )
 }
 
-interface ItemProps extends Children {
-  href: string
-}
-
 const Item = ({ href, children }: ItemProps) => {
   return (
     <li>
       <Link href={href}>
-        <a tw="text-sm text-transparentBlue cursor-pointer transition hover:text-indigo-500">
+        <a className="text-sm text-transparentBlue cursor-pointer transition hover:text-indigo-500">
           {children}
         </a>
       </Link>
@@ -42,17 +40,17 @@ const Item = ({ href, children }: ItemProps) => {
 
 const Footer = () => {
   return (
-    <Content className="bg-white shadow-inner">
+    <Content noXMargin className="bg-white shadow-inner">
       <footer
         data-testid="std-footer"
-        tw="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-64 py-6"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-64 py-6"
       >
-        <div tw="sm:px-6 mb-6">
-          <h1 tw="font-semibold text-2xl text-grayBlue mr-10">
+        <div className="px-6 lg:px-0 mb-6">
+          <h1 className="font-semibold text-2xl text-grayBlue mr-10">
             The Pit Exchange
           </h1>
 
-          <h2 tw="text-transparentBlue text-sm">
+          <h2 className="text-transparentBlue text-sm">
             &copy; Stevemmmmm 2020 - {new Date().getFullYear()}
           </h2>
         </div>

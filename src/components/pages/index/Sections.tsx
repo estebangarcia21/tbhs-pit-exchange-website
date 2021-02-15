@@ -6,7 +6,6 @@ import Image from "next/image"
 import React from "react"
 import { IconType } from "react-icons"
 import { IoIosCheckmarkCircle } from "react-icons/io"
-import "twin.macro"
 import Children from "utils/children"
 import Code from "./section-utils/Code"
 import SideText from "./SideText"
@@ -21,8 +20,8 @@ const Sections = () => {
   return (
     <>
       <Content className="border-t border-coolGray-200 border-dashed">
-        <div tw="flex flex-row justify-between space-x-10">
-          <div tw="lg:w-1/2 pr-5">
+        <div className="flex flex-row justify-beclassNameeen space-x-10">
+          <div className="lg:w-1/2 pr-5">
             <Header>Effortless Trade Discovery</Header>
 
             <Text>
@@ -43,7 +42,7 @@ const Sections = () => {
             </Button>
           </div>
 
-          <div tw="hidden lg:block relative w-1/2 h-72">
+          <div className="hidden lg:block relative w-1/2 h-72">
             <Image
               src="/images/index/search.png"
               layout="fill"
@@ -72,28 +71,28 @@ const Sections = () => {
           Pit&apos;s economy.
         </Text>
 
-        <div tw="mt-5 w-full shadow-lg rounded-sm overflow-hidden">
-          <div tw="h-12 bg-indigo-500" />
+        <div className="mt-5 w-full shadow-lg rounded-sm overflow-hidden">
+          <div className="h-12 bg-indigo-500" />
 
           <Code />
         </div>
       </Content>
 
       <Content className="py-20 border-t border-coolGray-200 border-dashed">
-        <div tw="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           <div>
-            <h1 tw="font-semibold text-grayBlue text-4xl">
+            <h1 className="font-semibold text-grayBlue text-4xl">
               Ready to Get Started?
             </h1>
 
             <Button href="/signup">Sign Up for an Account</Button>
           </div>
 
-          <div tw="grid grid-cols-1 gap-y-8 md:gap-y-0 md:grid-cols-2 mt-10 lg:mt-0">
+          <div className="grid grid-cols-1 gap-y-8 md:gap-y-0 md:grid-cols-2 mt-10 lg:mt-0">
             <SideText title="Sign Up For Free">
               No special requirements are needed to sign up. However, a{" "}
-              <span tw="text-indigo-500">verified mineraft account</span> is
-              required to be able to trade.
+              <span className="text-indigo-500">verified mineraft account</span>{" "}
+              is required to be able to trade.
             </SideText>
 
             <SideText title="Leave Anytime">
