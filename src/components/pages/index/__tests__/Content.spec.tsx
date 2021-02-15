@@ -9,18 +9,18 @@ describe("Content", () => {
     expect(content).toBeInTheDocument()
   })
 
-  it("has x margin if noXMargin is equal to false", () => {
+  it("has x padding if noXPadding is equal to false", () => {
     const { getByText } = render(<Content>Hello World!</Content>)
 
     const content = getByText(/hello world!/i).parentElement
-    expect(content).toHaveClass("mx-8 md:mx-16")
+    expect(content).toHaveClass("px-8 md:px-16")
   })
 
-  it("has no x margin if noXMargin is equal to true", () => {
+  it("has no x padding if noXPadding is equal to true", () => {
     const { getByText } = render(<Content noXMargin>Hello World!</Content>)
 
     const content = getByText(/hello world!/i).parentElement
-    expect(content).not.toHaveClass("mx-8 md:mx-16")
+    expect(content).not.toHaveClass("px-8 md:px-16")
   })
 
   it("has y padding if noYPadding is equal to false", () => {
