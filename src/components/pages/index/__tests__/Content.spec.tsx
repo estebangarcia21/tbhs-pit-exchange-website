@@ -17,7 +17,7 @@ describe("Content", () => {
   })
 
   it("has no x padding if noXPadding is equal to true", () => {
-    const { getByText } = render(<Content noXMargin>Hello World!</Content>)
+    const { getByText } = render(<Content noXPadding>Hello World!</Content>)
 
     const content = getByText(/hello world!/i).parentElement
     expect(content).not.toHaveClass("px-8 md:px-16")

@@ -80,7 +80,7 @@ const Code = () => {
   `
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2 text-left">
       <GraphQLCodeBlock code={req} />
       <GraphQLCodeBlock code={res} border />
     </div>
