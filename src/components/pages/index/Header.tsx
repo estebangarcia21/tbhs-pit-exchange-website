@@ -46,28 +46,25 @@ const Header = () => {
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-2 xl:gap-x-5">
           <InfoCard title="Secure Trading" icon={[IoMdLock, "Gaining money"]}>
-            Easily make trades by searching for open trades or by offering for
-            an item that a player has. Utilize a powerful search tool to find
-            your next trade.
+            The Pit Exchange verifies that you are not trading with a scammer by
+            checking all players across an always up-to-date scammer database.
           </InfoCard>
 
           <InfoCard
-            title="Instant Price Checks"
+            title="Instant Price Estimates"
             icon={[AiFillDollarCircle, "Watching for trades"]}
           >
-            Watch for trade requests and offers in realtime. Maximize your
-            potential profit by monitoring the market from a simple and intutive
-            dashboard.
+            Receive price estimates before you make a trade to ensure that you
+            always make the right decision for maximum profit.
           </InfoCard>
 
           <InfoCard
             title="Verified Middlemen"
-            icon={[IoIosCheckmarkCircle, "Repeating"]}
+            icon={[IoIosCheckmarkCircle, "Checkmark"]}
             spanColumns
           >
-            The Pit Exchange takes care of all your trading business in one
-            place. Trade without the burden of having to search through
-            countless discord servers.
+            The Pit Exchange verifies the most trusted members of the community
+            to middleman through a thorough review process.
           </InfoCard>
         </div>
       </Content>

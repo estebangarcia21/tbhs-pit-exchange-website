@@ -20,14 +20,14 @@ const Sections = () => {
   return (
     <>
       <Content className="border-t border-coolGray-200 border-dashed">
-        <div className="flex flex-row justify-beclassNameeen space-x-10">
+        <div className="flex flex-row justify-between space-x-10">
           <div className="lg:w-1/2 pr-5">
             <Header>Effortless Trade Discovery</Header>
 
             <Text>
-              The days of making your way around discord servers are over.
-              Easily search for trades through an easy to use search bar to find
-              your next trade. Search by...
+              No more hassling through discord servers to find your next trade.
+              Search for trades through a powerful search bar that is fully
+              customizable. Search by...
             </Text>
 
             <List>
@@ -36,15 +36,11 @@ const Sections = () => {
               <CheckMarkListItem>Item UUID</CheckMarkListItem>
               <CheckMarkListItem>Pants color</CheckMarkListItem>
             </List>
-
-            <Button href="/login" white>
-              Search for your next trade
-            </Button>
           </div>
 
-          <div className="hidden lg:block relative w-1/2 h-72">
+          <div className="hidden lg:block relative w-1/2">
             <Image
-              src="/images/index/search.png"
+              src="/images/index/search.svg"
               layout="fill"
               objectFit="contain"
               alt="Searching for items"
@@ -54,16 +50,34 @@ const Sections = () => {
       </Content>
 
       <Content className="relative z-10 bg-grayBlueTint">
-        <Header>Personalized Player Markets</Header>
+        <div className="flex flex-row justify-between space-x-10">
+          <div className="hidden lg:block relative w-1/2">
+            <Image
+              src="/images/index/growth.svg"
+              layout="fill"
+              objectFit="contain"
+              alt="Searching for items"
+            />
+          </div>
 
-        <Text>
-          Gain insight on your value as a player through the{" "}
-          <strong>Player Value Index</strong>, a ranking system based on the
-          value of the items on your minecraft account.
-        </Text>
+          <div className="w-1/2">
+            <Header>Total Player and Item Worth Caluclator</Header>
+
+            <Text>
+              View your worth as a player based on the{" "}
+              <strong>Player Value Index</strong>, a measurement of a players
+              value based on the contents of their inventories in the Pit.{" "}
+              <br /> <br />
+              The Pit Exchange uses the <strong>Item Value Index</strong> to
+              give insightful price estimates before trading. The Item Value
+              Index uses Machine Learning to calculate the prices of items based
+              off of the prices other similar trades.
+            </Text>
+          </div>
+        </div>
       </Content>
 
-      <Content>
+      <Content className="text-center">
         <Header>A Powerful API</Header>
 
         <Text>
