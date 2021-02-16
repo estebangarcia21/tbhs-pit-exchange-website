@@ -12,7 +12,7 @@ const Header = () => {
       <HeaderSquares position="top-60 left-12" />
       <HeaderSquares position="top-36 right-12" />
 
-      <Content noYPadding className="overflow-hidden">
+      <Content noYPadding className="overflow-hidden relative">
         <div className="flex flex-row items-center">
           <div className="max-w-xl lg:w-1/2">
             <h1 className="font-semibold text-4xl sm:text-5xl lg:text-5xl text-grayBlue">
