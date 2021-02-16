@@ -8,7 +8,7 @@ import { IoIosCheckmarkCircle, IoMdLock } from "react-icons/io"
 
 const Header = () => {
   return (
-    <header className="my-16">
+    <header className="mb-16">
       <HeaderSquares position="top-60 left-12" />
       <HeaderSquares position="top-36 right-12" />
 

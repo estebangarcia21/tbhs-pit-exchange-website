@@ -20,7 +20,7 @@ export const InfoCard = ({
       }`}
     >
       <Icon
-        className="text-3xl text-indigo-600 z-50 relative"
+        className="text-3xl text-indigo-600 z-10 relative"
         role="img"
         aria-label={ariaLabel}
       />

@@ -20,7 +20,7 @@ const Sections = () => {
   return (
     <>
       <Content className="border-t border-coolGray-200 border-dashed">
-        <div className="flex flex-row justify-between space-x-10">
+        <div className="flex flex-row justify-between">
           <div className="lg:w-1/2 pr-5">
             <Header>Effortless Trade Discovery</Header>
 
