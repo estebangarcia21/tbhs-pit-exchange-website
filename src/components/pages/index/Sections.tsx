@@ -10,13 +10,7 @@ import Children from "utils/children"
 import Code from "./section-utils/Code"
 import SideText from "./SideText"
 
-const CheckMarkListItem = ({ children }: Children) => {
-  const checkmarkIcon: [IconType, string] = [IoIosCheckmarkCircle, ""]
-
-  return <ListItemWithIcon icon={checkmarkIcon}>{children}</ListItemWithIcon>
-}
-
-const Sections = () => {
+export default function Sections() {
   return (
     <>
       <Content className="border-t border-coolGray-200 border-dashed">
@@ -50,7 +44,7 @@ const Sections = () => {
       </Content>
 
       <Content className="relative z-10 bg-grayBlueTint">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between lg:space-x-10">
           <div className="hidden lg:block relative w-1/2">
             <Image
               src="/images/index/growth.svg"
@@ -77,7 +71,7 @@ const Sections = () => {
         </div>
       </Content>
 
-      <Content className="text-center">
+      <Content className="text-left lg:text-center">
         <Header>A Powerful API</Header>
 
         <Text>
@@ -120,4 +114,8 @@ const Sections = () => {
   )
 }
 
-export default Sections
+function CheckMarkListItem({ children }: Children) {
+  const checkmarkIcon: [IconType, string] = [IoIosCheckmarkCircle, ""]
+
+  return <ListItemWithIcon icon={checkmarkIcon}>{children}</ListItemWithIcon>
+}
