@@ -3,49 +3,14 @@ import Link from "next/link"
 import React from "react"
 import Children from "utils/children"
 
-interface SectionProps extends Children {
-  title: string
-  odd?: boolean
-}
-
-interface ItemProps extends Children {
-  href: string
-}
-
-const Section = ({ title, odd, children }: SectionProps) => {
+export default function Footer() {
   return (
-    <ul
-      className={`flex flex-col space-y-1 ${
-        odd ?? "sm:border-l"
-      } lg:border-l border-gray-200 border-dashed h-auto px-6 pb-6`}
-    >
-      <li className="text-md text-grayBlue font-medium">{title}</li>
-
-      {children}
-    </ul>
-  )
-}
-
-const Item = ({ href, children }: ItemProps) => {
-  return (
-    <li>
-      <Link href={href}>
-        <a className="text-sm text-transparentBlue cursor-pointer transition hover:text-indigo-500">
-          {children}
-        </a>
-      </Link>
-    </li>
-  )
-}
-
-const Footer = () => {
-  return (
-    <Content noXMargin className="bg-white shadow-inner">
+    <Content className="bg-white shadow-inner">
       <footer
         data-testid="std-footer"
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center min-h-64 py-6"
       >
-        <div className="px-6 lg:px-0 mb-6">
+        <div className="pr-6 lg:pr-0 mb-6">
           <h1 className="font-semibold text-2xl text-grayBlue mr-10">
             The Pit Exchange
           </h1>
@@ -77,4 +42,37 @@ const Footer = () => {
   )
 }
 
-export default Footer
+interface SectionProps extends Children {
+  title: string
+  odd?: boolean
+}
+
+interface ItemProps extends Children {
+  href: string
+}
+
+function Section({ title, odd, children }: SectionProps) {
+  return (
+    <ul
+      className={`flex flex-col space-y-1 ${
+        odd ?? "sm:border-l sm:px-6"
+      } lg:border-l lg:px-6 border-gray-200 border-dashed h-auto pb-6`}
+    >
+      <li className="text-md text-grayBlue font-medium">{title}</li>
+
+      {children}
+    </ul>
+  )
+}
+
+function Item({ href, children }: ItemProps) {
+  return (
+    <li>
+      <Link href={href}>
+        <a className="text-sm text-transparentBlue cursor-pointer transition hover:text-indigo-500">
+          {children}
+        </a>
+      </Link>
+    </li>
+  )
+}
