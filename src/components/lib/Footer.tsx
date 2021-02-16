@@ -58,7 +58,7 @@ function Section({ title, odd, children }: SectionProps) {
         odd ?? "sm:border-l sm:px-6"
       } lg:border-l lg:px-6 border-gray-200 border-dashed h-auto pb-6`}
     >
-      <li className="text-md text-grayBlue font-medium">{title}</li>
+      <li className="text-md text-grayBlue font-semibold">{title}</li>
 
       {children}
     </ul>

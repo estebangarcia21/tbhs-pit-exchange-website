@@ -30,7 +30,7 @@ export const InfoCard = ({
         aria-label={ariaLabel}
       />
 
-      <h2 className="my-1 font-medium text-2xl text-grayBlue">{title}</h2>
+      <h3 className="my-1 font-semibold text-2xl text-grayBlue">{title}</h3>
 
       <p className="leading-7 text-transparentBlue">{children}</p>
     </div>

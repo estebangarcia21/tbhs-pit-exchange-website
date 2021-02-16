@@ -6,7 +6,7 @@ import Image from "next/image"
 import { AiFillDollarCircle } from "react-icons/ai"
 import { IoIosCheckmarkCircle, IoMdLock } from "react-icons/io"
 
-const Header = () => {
+export default function Header() {
   return (
     <header className="mb-16">
       <HeaderSquares position="top-60 left-12" />
@@ -15,7 +15,7 @@ const Header = () => {
       <Content noYPadding className="overflow-hidden relative">
         <div className="flex flex-row items-center">
           <div className="max-w-xl lg:w-1/2">
-            <h1 className="font-semibold text-4xl sm:text-5xl lg:text-5xl text-grayBlue">
+            <h1 className="font-semibold text-4xl lg:text-5xl text-grayBlue">
               Connecting the <br />
               Hypixel Pit&apos;s Economy
             </h1>
@@ -71,5 +71,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header
